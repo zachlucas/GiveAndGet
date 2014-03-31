@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
-        <deployment defaultVersion="1072" identifier="iOS"/>
+        <deployment defaultVersion="1280" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
@@ -9,7 +9,9 @@
             <connections>
                 <outlet property="charCounter" destination="uTE-bp-BX1" id="JAS-eA-PXL"/>
                 <outlet property="mainLabel" destination="f0Z-UR-pMO" id="pTO-t0-aHi"/>
+                <outlet property="mainView" destination="6" id="UCp-nS-w6p"/>
                 <outlet property="messageText" destination="nGn-Qt-pJI" id="2Pj-t9-4BP"/>
+                <outlet property="picSender" destination="L4Z-2e-sRp" id="WJT-jK-xD4"/>
                 <outlet property="sentBy" destination="1o1-RA-IRr" id="vQp-Gw-KR8"/>
                 <outlet property="sentHeader" destination="0m1-V0-sbD" id="bNN-0W-hZl"/>
                 <outlet property="view" destination="6" id="7"/>
@@ -23,7 +25,7 @@
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Give &amp; Get" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="8">
                     <rect key="frame" x="-6" y="27" width="333" height="81"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="68"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="72"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -62,9 +64,12 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.60554710880109375" green="0.35747454176497945" blue="0.85572350539999997" alpha="0.63" colorSpace="calibratedRGB"/>
                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    <state key="normal" title="Send a pic instead">
+                    <state key="normal" title="Send a pic instead!">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="picClicked:" destination="-1" eventType="touchUpInside" id="ajj-0n-EAg"/>
+                    </connections>
                 </button>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1o1-RA-IRr">
                     <rect key="frame" x="81" y="183" width="159" height="21"/>
@@ -116,11 +121,46 @@
             <color key="backgroundColor" red="0.85572350543478259" green="0.53355250421331391" blue="0.68255656631857176" alpha="0.63" colorSpace="calibratedRGB"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
         </view>
-        <viewController id="Pz9-Hz-Fuo" customClass="ParseStarterProjectViewController">
-            <view key="view" contentMode="scaleToFill" id="gBB-in-v2d">
+        <viewController id="L4Z-2e-sRp">
+            <view key="view" contentMode="scaleToFill" id="oNI-Rr-Ms4">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                <subviews>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Give Pics " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DVL-Ds-EHi">
+                        <rect key="frame" x="9" y="20" width="302" height="56"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="59"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&amp;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HOR-uV-Sar">
+                        <rect key="frame" x="108" y="76" width="104" height="68"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="59"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get Pics" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CEv-3C-uHl">
+                        <rect key="frame" x="52" y="138" width="216" height="70"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="59"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dnL-Pp-X7x">
+                        <rect key="frame" x="21" y="518" width="279" height="30"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="0.92549026010000002" green="0.7607843876" blue="0.83137261870000001" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <state key="normal" title="Back">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="backToMain:" destination="-1" eventType="touchUpInside" id="IYS-BZ-Gda"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" red="0.60554710879999996" green="0.35747454179999999" blue="0.85572350539999997" alpha="0.63" colorSpace="calibratedRGB"/>
             </view>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>

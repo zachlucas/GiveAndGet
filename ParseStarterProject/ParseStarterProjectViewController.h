@@ -7,5 +7,7 @@
 
 @property(nonatomic) UIReturnKeyType returnKeyType;
 
+@property (strong, nonatomic) IBOutlet UIViewController *picSender;
+@property (strong, nonatomic) IBOutlet UIView *mainView;
 
 @end

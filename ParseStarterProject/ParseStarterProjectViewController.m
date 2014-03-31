@@ -26,6 +26,12 @@
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
+
+- (IBAction)goBackToTheMainScreen:(UIStoryboardSegue *)segue {
+    //nothing goes here
+}
+
+
 - (IBAction)mainButton:(id)sender {
     
 
@@ -117,6 +123,8 @@
 
         NSLog(@"Data Sending: %@",self.messageText.text);
     }
+    self.messageText.text = @"";
+    [self.view endEditing:YES];
 }
 
 -(UIColor*)colorWithHexString:(NSString*)hex
@@ -165,6 +173,13 @@
     NSLog(@"FDSF");
     [self mainButton:(@"3")];
     return YES;
+}
+- (IBAction)picClicked:(id)sender {
+    [self presentViewController:_picSender animated:YES completion:nil];
+}
+- (IBAction)backToMain:(id)sender {
+    NSLog(@"trying to go back");
+    self.view = _mainView;
 }
 
 @end

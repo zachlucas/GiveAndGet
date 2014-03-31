@@ -8,4 +8,7 @@
 
 @property (nonatomic, strong) IBOutlet ParseStarterProjectViewController *viewController;
 
+
+@property (strong, nonatomic) IBOutlet UIWindow *sendPic;
+
 @end

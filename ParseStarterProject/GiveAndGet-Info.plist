@@ -26,8 +26,6 @@
 	<string>1.2.18</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>NSMainNibFile</key>
-	<string>MainWindow</string>
 	<key>UILaunchImages</key>
 	<array>
 		<dict>
@@ -71,6 +69,8 @@
 			<string>{320, 480}</string>
 		</dict>
 	</array>
+	<key>UIMainStoryboardFile</key>
+	<string>Storyboard</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

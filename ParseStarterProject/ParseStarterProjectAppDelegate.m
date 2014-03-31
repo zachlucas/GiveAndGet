@@ -29,8 +29,8 @@
     [PFACL setDefaultACL:defaultACL withAccessForCurrentUser:YES];
     
     // Override point for customization after application launch.
-     
-    self.window.rootViewController = self.viewController;
+     //***
+    //self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
 
     if (application.applicationState != UIApplicationStateBackground) {
