@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "09ABC06C13A1D52D009C3FCF"
                BuildableName = "ParseStarterProject.app"
-               BlueprintName = "ParseStarterProject"
-               ReferencedContainer = "container:ParseStarterProject.xcodeproj">
+               BlueprintName = "GiveAndGet"
+               ReferencedContainer = "container:GiveAndGet.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "09ABC06C13A1D52D009C3FCF"
             BuildableName = "ParseStarterProject.app"
-            BlueprintName = "ParseStarterProject"
-            ReferencedContainer = "container:ParseStarterProject.xcodeproj">
+            BlueprintName = "GiveAndGet"
+            ReferencedContainer = "container:GiveAndGet.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -53,8 +53,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "09ABC06C13A1D52D009C3FCF"
             BuildableName = "ParseStarterProject.app"
-            BlueprintName = "ParseStarterProject"
-            ReferencedContainer = "container:ParseStarterProject.xcodeproj">
+            BlueprintName = "GiveAndGet"
+            ReferencedContainer = "container:GiveAndGet.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -71,8 +71,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "09ABC06C13A1D52D009C3FCF"
             BuildableName = "ParseStarterProject.app"
-            BlueprintName = "ParseStarterProject"
-            ReferencedContainer = "container:ParseStarterProject.xcodeproj">
+            BlueprintName = "GiveAndGet"
+            ReferencedContainer = "container:GiveAndGet.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

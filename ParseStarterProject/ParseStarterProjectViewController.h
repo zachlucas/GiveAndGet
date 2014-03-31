@@ -5,4 +5,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *sentHeader;
 @property (strong, nonatomic) IBOutlet UILabel *charCounter;
 
+@property(nonatomic) UIReturnKeyType returnKeyType;
+
+
 @end
