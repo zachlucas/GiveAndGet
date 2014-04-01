@@ -3,6 +3,8 @@
 
 @implementation ParseStarterProjectViewController
 
+NSString *nameToUseWhenSendingMessage = @"";
+NSString *twitterUsername = @"";
 
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
@@ -114,7 +116,12 @@
     
     else{
         PFObject *testObject = [PFObject objectWithClassName:@"Message"];
-        testObject[@"name"] = @"Anonymous";
+        if ([nameToUseWhenSendingMessage isEqualToString:@""]){
+            testObject[@"name"] = @"Anonymous";
+        }
+        else{
+            testObject[@"name"] = nameToUseWhenSendingMessage;
+        }
         testObject[@"seen"] = @"no";
         testObject[@"message"] = self.messageText.text;
         [testObject saveInBackground];
@@ -180,6 +187,34 @@
     self.view = _mainView;
 }
 
+- (NSString*)getTwitterAccountInformation
+{
+    NSString *tempUsername;
+    ACAccountStore *accountStore = [[ACAccountStore alloc] init];
+    ACAccountType *accountType = [accountStore accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierTwitter];
+    
+    [accountStore requestAccessToAccountsWithType:accountType options:nil completion:^(BOOL granted, NSError *error) {
+        if(granted) {
+            NSArray *accountsArray = [accountStore accountsWithAccountType:accountType];
+            
+            if ([accountsArray count] > 0) {
+                ACAccount *twitterAccount = [accountsArray objectAtIndex:0];
+                NSLog(@"un:%@",twitterAccount.username);
+                NSLog(@"%@",twitterAccount.accountType);
+                nameToUseWhenSendingMessage = twitterAccount.username;
+                //_sendingAs.text = [NSString stringWithFormat:@"Sending as: %@",nameToUseWhenSendingMessage];
+                __block tempUsername = twitterAccount.username;
+            }
+        }
+    }];
+    
+    return tempUsername;
+}
+- (IBAction)getTwitterHandle:(id)sender {
+    [self getTwitterAccountInformation];
+    NSLog(@"second un: %@",twitterUsername);
+    _sendingAs.text = [NSString stringWithFormat:@"Sending as: %@",twitterUsername];
+}
 
 
 

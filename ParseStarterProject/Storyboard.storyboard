@@ -107,20 +107,23 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(0/50)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5j6-6n-am4">
-                                <rect key="frame" x="8" y="339" width="32" height="15"/>
+                                <rect key="frame" x="8" y="333" width="32" height="15"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O7n-ZT-fg8">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O7n-ZT-fg8">
                                 <rect key="frame" x="71" y="378" width="179" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.076190041020000002" green="0.1941284267" blue="0.90252311860000001" alpha="0.63" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <state key="normal" title="Log in with Twitter">
+                                <state key="normal" title="Use Your Twitter Handle">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="getTwitterHandle:" destination="Pof-WN-BuM" eventType="touchUpInside" id="2mB-1U-nWT"/>
+                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't wanna be anonymous?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0bp-Rd-7Bj">
                                 <rect key="frame" x="79" y="359" width="163" height="15"/>
@@ -129,7 +132,7 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8T2-we-om1">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8T2-we-om1">
                                 <rect key="frame" x="70" y="432" width="180" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.38833411899999998" green="0.43671305129999999" blue="0.85572350539999997" alpha="0.63" colorSpace="calibratedRGB"/>
@@ -138,6 +141,13 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sending as: Anonymous" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1w7-gT-IJe">
+                                <rect key="frame" x="8" y="276" width="187" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.92549026010000002" green="0.7607843876" blue="0.83137261870000001" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
@@ -151,7 +161,7 @@
                             <constraint firstItem="du7-Ap-92d" firstAttribute="top" secondItem="iyo-ah-dH8" secondAttribute="bottom" constant="91" id="W2l-2K-RjT"/>
                             <constraint firstItem="O7n-ZT-fg8" firstAttribute="height" secondItem="8T2-we-om1" secondAttribute="height" id="WgH-hh-NWC"/>
                             <constraint firstItem="CFa-OK-oyY" firstAttribute="top" secondItem="iyo-ah-dH8" secondAttribute="bottom" constant="7" id="ZYG-lF-ZjN"/>
-                            <constraint firstItem="5j6-6n-am4" firstAttribute="top" secondItem="6Hk-pm-di3" secondAttribute="bottom" constant="10" id="b3c-eg-Vft"/>
+                            <constraint firstItem="5j6-6n-am4" firstAttribute="top" secondItem="6Hk-pm-di3" secondAttribute="bottom" constant="4" id="b3c-eg-Vft"/>
                             <constraint firstItem="UqQ-Iu-R6r" firstAttribute="centerX" secondItem="UYQ-Tq-8Q5" secondAttribute="centerX" constant="0.5" id="bHU-Gd-Onc"/>
                             <constraint firstItem="UYQ-Tq-8Q5" firstAttribute="top" secondItem="du7-Ap-92d" secondAttribute="bottom" constant="8" id="c5b-35-zMf"/>
                             <constraint firstItem="O7n-ZT-fg8" firstAttribute="width" secondItem="8T2-we-om1" secondAttribute="width" id="e66-vX-trn"/>
@@ -177,6 +187,7 @@
                         <outlet property="charCounter" destination="5j6-6n-am4" id="uBp-yR-d1L"/>
                         <outlet property="mainLabel" destination="UYQ-Tq-8Q5" id="LAR-XI-pNe"/>
                         <outlet property="messageText" destination="6Hk-pm-di3" id="UVM-bn-MZj"/>
+                        <outlet property="sendingAs" destination="1w7-gT-IJe" id="xug-Om-8hG"/>
                         <outlet property="sentBy" destination="UqQ-Iu-R6r" id="ZRr-yO-uDo"/>
                         <outlet property="sentHeader" destination="du7-Ap-92d" id="M9u-15-Xhg"/>
                     </connections>
@@ -200,10 +211,10 @@
             </objects>
             <point key="canvasLocation" x="1100" y="121"/>
         </scene>
-        <!--View Controller-->
+        <!--Get Picture Controller-->
         <scene sceneID="LNj-x3-7TO">
             <objects>
-                <viewController id="juf-tN-yrL" sceneMemberID="viewController">
+                <viewController id="juf-tN-yrL" customClass="GetPictureController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="M7F-96-nRC"/>
                         <viewControllerLayoutGuide type="bottom" id="Waw-zU-ojy"/>
@@ -241,6 +252,9 @@
                                 <state key="normal" title="Take a Picture">
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="showCameraUI" destination="juf-tN-yrL" eventType="touchUpInside" id="hF3-GH-B25"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A7w-fw-NzL">
                                 <rect key="frame" x="11" y="327" width="298" height="47"/>
@@ -250,6 +264,9 @@
                                 <state key="normal" title="Use Existing Picture">
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="showSavedMediaBrowser" destination="juf-tN-yrL" eventType="touchUpInside" id="gai-zI-WmP"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Zh-04-fYw">
                                 <rect key="frame" x="111" y="512" width="99" height="47"/>
