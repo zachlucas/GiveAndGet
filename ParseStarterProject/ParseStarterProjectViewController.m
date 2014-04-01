@@ -67,11 +67,12 @@
                 _mainLabel.text = [objects[randomIndex] objectForKey:@"message"];
                 _sentBy.text = [@"Sent by: " stringByAppendingString:[objects[randomIndex] objectForKey:@"name"]];
                 _mainLabel.backgroundColor = [self colorWithHexString:@"dc99b8"];
+                _sentBy.backgroundColor = [self colorWithHexString:@"dc99b8"];
                 _mainLabel.textColor = [UIColor whiteColor];
                 
-                NSString *objectId = [objects[randomIndex] objectId];
+               // NSString *objectId = [objects[randomIndex] objectId];
                 
-                [query getObjectInBackgroundWithId:objectId block:^(PFObject *gameScore, NSError *error) {
+                [query getObjectInBackgroundWithId:[objects[randomIndex] objectId] block:^(PFObject *gameScore, NSError *error) {
                     
                     // Now let's update it with some new data. In this case, only cheatMode and score
                     // will get sent to the cloud. playerName hasn't changed.
@@ -94,10 +95,7 @@
 }
 - (IBAction)keyPressed:(id)sender {
     if (_messageText.text.length < 51) {
-        NSMutableString* aString = [NSMutableString stringWithFormat:@"("];
-        [aString appendFormat:@"%d", _messageText.text.length];
-        [aString appendString:@"/50)"];
-        _charCounter.text = aString;
+        _charCounter.text = [NSString stringWithFormat:@"(%d/50)",_messageText.text.length];
     }
 }
 
@@ -181,5 +179,9 @@
     NSLog(@"trying to go back");
     self.view = _mainView;
 }
+
+
+
+
 
 @end
