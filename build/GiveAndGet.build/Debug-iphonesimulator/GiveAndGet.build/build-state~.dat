@@ -1,0 +1,740 @@
+TGiveAndGet
+v6
+r1
+cCheck dependencies
+cProcessPCH /var/folders/h7/m5985s451mgf9_cflndjn1kr0000gn/C/com.apple.DeveloperTools/5.1-5B130a/Xcode/SharedPrecompiledHeaders/GiveAndGet-Prefix-bmqncjxldplhmrhleclgqfedyhsz/GiveAndGet-Prefix.pch.pch ParseStarterProject/GiveAndGet-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/i386/main.o /Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/i386/GetPictureController.o /Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/GetPictureController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/i386/ParseStarterProjectAppDelegate.o /Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/ParseStarterProjectAppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/i386/ParseStarterProjectViewController.o /Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/ParseStarterProjectViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cLd /Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/GiveAndGet normal i386
+cCpResource Default~iphone.png build/Debug-iphonesimulator/GiveAndGet.app/Default~iphone.png
+cCpResource Default.png build/Debug-iphonesimulator/GiveAndGet.app/Default.png
+cCpResource ParseStarterProject/Default.png build/Debug-iphonesimulator/GiveAndGet.app/Default.png
+cCpResource Icon~iphone.png build/Debug-iphonesimulator/GiveAndGet.app/Icon~iphone.png
+cCpResource Icon.png build/Debug-iphonesimulator/GiveAndGet.app/Icon.png
+cCopyStringsFile /Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/en.lproj/InfoPlist.strings ParseStarterProject/en.lproj/InfoPlist.strings
+cCompileStoryboard /Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/Storyboard.storyboard
+cCompileXIB /Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/en.lproj/MainWindow.xib
+cCompileXIB /Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/en.lproj/ParseStarterProjectViewController.xib
+cCopyPlistFile /Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/Entitlements.plist ParseStarterProject/Entitlements.plist
+cCpResource ParseStarterProject/Default-568h@2x.png build/Debug-iphonesimulator/GiveAndGet.app/Default-568h@2x.png
+cCpResource ParseStarterProject/Default@2x.png build/Debug-iphonesimulator/GiveAndGet.app/Default@2x.png
+cCompileAssetCatalog /Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app /Users/gohome190/Documents/Code/GiveAndGet/GiveAndGet/Images.xcassets
+cProcessInfoPlistFile /Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/Info.plist /Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/GiveAndGet-Info.plist
+cGenerateDSYMFile /Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app.dSYM /Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/GiveAndGet
+cTouch /Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk
+c0000000053119F8A0000000000000198
+t1393663882
+s408
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/SDKSettings.plist
+c0000000053384D7400000000000003B4
+t1396198772
+s948
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/CoreServices/SystemVersion.plist
+c0000000053384D8A000000000000019E
+t1396198794
+s414
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/Accounts.framework/Accounts
+c0000000053384D8B00000000000942B0
+t1396198795
+s606896
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/AudioToolbox.framework/AudioToolbox
+c0000000053384D8F0000000000904120
+t1396198799
+s9453856
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CFNetwork.framework/CFNetwork
+c0000000053384D8F000000000058E0E0
+t1396198799
+s5824736
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c0000000053384D8F0000000000446820
+t1396198799
+s4483104
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreLocation.framework/CoreLocation
+c0000000053384D8F00000000000F1A80
+t1396198799
+s989824
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c0000000053384D93000000000088D8C0
+t1396198803
+s8968384
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/MobileCoreServices.framework/MobileCoreServices
+c0000000053384D9500000000001BE790
+t1396198805
+s1828752
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore
+c0000000053384D97000000000048F720
+t1396198807
+s4781856
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/Security.framework/Security
+c0000000053384D97000000000013FD70
+t1396198807
+s1310064
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/StoreKit.framework/StoreKit
+c0000000053384D97000000000006E450
+t1396198807
+s451664
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/SystemConfiguration.framework/SystemConfiguration
+c0000000053384D9800000000001081C0
+t1396198808
+s1081792
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/Twitter.framework/Twitter
+c0000000053384D97000000000000C370
+t1396198807
+s50032
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c0000000053384D9E0000000001F1DE10
+t1396198814
+s32628240
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libz.1.1.3.dylib
+c0000000053384DD5000000000002B700
+t1396198869
+s177920
+
+N/Users/gohome190/Documents/Code/GiveAndGet/Default.png
+c00000000533B5D4B00000000000038E3
+t1396399435
+s14563
+
+N/Users/gohome190/Documents/Code/GiveAndGet/Default~iphone.png
+c00000000533B5D4B0000000000003227
+t1396399435
+s12839
+
+N/Users/gohome190/Documents/Code/GiveAndGet/GiveAndGet/Images.xcassets
+c00000000533B5D4B00000000000000CC
+t1396399435
+s204
+
+N/Users/gohome190/Documents/Code/GiveAndGet/Icon.png
+c00000000533B5D4B000000000000024A
+t1396399435
+s586
+
+N/Users/gohome190/Documents/Code/GiveAndGet/Icon~iphone.png
+c00000000533B5D4B0000000000000506
+t1396399435
+s1286
+
+N/Users/gohome190/Documents/Code/GiveAndGet/Parse.framework/Parse
+c000000005334C1F20000000001CD6EF4
+t1395966450
+s30240500
+
+N/Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/Default-568h@2x.png
+c000000005334C1F400000000000042C3
+t1395966452
+s17091
+
+N/Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/Default.png
+c000000005334C1F40000000000001681
+t1395966452
+s5761
+
+N/Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/Default@2x.png
+c000000005334C1F40000000000002FF8
+t1395966452
+s12280
+
+N/Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/Entitlements.plist
+c000000005334C1F400000000000000E0
+t1395966452
+s224
+
+N/Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/GetPictureController.m
+c00000000533B5D4B0000000000000E54
+t1396399435
+s3668
+
+N/Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/GiveAndGet-Info.plist
+c00000000533B5D4B0000000000000449
+t1396399435
+s1097
+
+N/Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/GiveAndGet-Prefix.pch
+c00000000533B5D4B0000000000000158
+t1396399435
+s344
+
+N/Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/ParseStarterProjectAppDelegate.m
+c00000000533B5D4B00000000000018B5
+t1396399435
+s6325
+
+N/Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/ParseStarterProjectViewController.m
+c00000000533B63500000000000001E57
+t1396400976
+s7767
+
+N/Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/Storyboard.storyboard
+c00000000533B5D4B0000000000008078
+t1396399435
+s32888
+
+N/Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/en.lproj/InfoPlist.strings
+c000000005334C1F4000000000000002D
+t1395966452
+s45
+
+N/Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/en.lproj/MainWindow.xib
+c00000000533B5D4B0000000000000AF0
+t1396399435
+s2800
+
+N/Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/en.lproj/ParseStarterProjectViewController.xib
+c00000000533B5D4B0000000000003E23
+t1396399435
+s15907
+
+N/Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/main.m
+c000000005334C1F4000000000000012D
+t1395966452
+s301
+
+N/Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app
+t1396401000
+s544
+
+N/Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app.dSYM
+t2
+s0
+
+N/Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/Default-568h@2x.png
+t1396400998
+s17091
+
+N/Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/Default.png
+t1396400998
+s14563
+
+N/Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/Default@2x.png
+t1396400998
+s12280
+
+N/Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/Default~iphone.png
+t1396400988
+s12839
+
+N/Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/Entitlements.plist
+t1396400998
+s62
+
+N/Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/GiveAndGet
+t1396400988
+s2271016
+
+N/Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/Icon.png
+t1396400988
+s586
+
+N/Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/Icon~iphone.png
+t1396400988
+s1286
+
+N/Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/Info.plist
+t1396401000
+s879
+
+N/Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/PkgInfo
+t1396401000
+s8
+
+N/Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/Storyboard.storyboardc
+t1396400999
+s238
+
+N/Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/en.lproj/InfoPlist.strings
+t1396400988
+s42
+
+N/Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/en.lproj/MainWindow.nib
+t1396400997
+s136
+
+N/Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/en.lproj/ParseStarterProjectViewController.nib
+t1396400998
+s136
+
+N/Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/i386/GetPictureController.o
+t1396400986
+s48056
+
+N/Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/i386/GiveAndGet.LinkFileList
+c00000000533B63580000000000000257
+t1396400984
+s599
+
+N/Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/i386/ParseStarterProjectAppDelegate.o
+t1396400986
+s78576
+
+N/Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/i386/ParseStarterProjectViewController.o
+t1396400986
+s93152
+
+N/Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/i386/main.o
+t1396400986
+s3200
+
+N/Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/assetcatalog_dependencies.txt
+t1396400998
+s466
+
+N/Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/assetcatalog_generated_info.plist
+t1396400998
+s406
+
+N/var/folders/h7/m5985s451mgf9_cflndjn1kr0000gn/C/com.apple.DeveloperTools/5.1-5B130a/Xcode/SharedPrecompiledHeaders/GiveAndGet-Prefix-bmqncjxldplhmrhleclgqfedyhsz/GiveAndGet-Prefix.pch.pch
+t1396400985
+s5378728
+
+CBuild AST from /Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/GetPictureController.m
+r0
+
+CBuild AST from /Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/ParseStarterProjectAppDelegate.m
+r0
+
+CBuild AST from /Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/ParseStarterProjectViewController.m
+r0
+
+CBuild AST from /Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/main.m
+r0
+
+CCheck dependencies
+r0
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependenciesa7410dd89aebb841^a5a423d89aebb841^-147"Warning: Multiple build commands for output file /Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/Default.png1(21%IDEActivityLogMessage2@146"Warning: Multiple build commands for output file /Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/Default.png-418093784#18446744073709551615#0#-1#27"com.apple.dt.IDE.LogMessage-27"Dependency Analysis Warning--0#1#1#--18"Check dependencies36"673EFD37-D391-429F-810E-3FEE646BC5C9-
+
+CCompileAssetCatalog /Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app /Users/gohome190/Documents/Code/GiveAndGet/GiveAndGet/Images.xcassets
+s418093798.357694
+e418093798.457793
+r1
+xCompileAssetCatalog
+x/Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app
+x/Users/gohome190/Documents/Code/GiveAndGet/GiveAndGet/Images.xcassets
+o/* com.apple.actool.document.warnings */
+o/Users/gohome190/Documents/Code/GiveAndGet/GiveAndGet/Images.xcassets:./AppIcon.appiconset: warning: A 57x57 app icon is required for iPhone apps targeting releases of iOS prior to 7.0
+o/Users/gohome190/Documents/Code/GiveAndGet/GiveAndGet/Images.xcassets:./LaunchImage.launchimage/[][][][][][][Default.png]: warning: The launch image set "LaunchImage" has 2 unassigned images.
+o/* com.apple.actool.compilation-results */
+o/Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/AppIcon57x57@2x.png
+o/Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/AppIcon60x60@2x.png
+o/Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/Default.png
+o/Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/assetcatalog_generated_info.plist
+o
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection89"CompileAssetCatalog build/Debug-iphonesimulator/GiveAndGet.app GiveAndGet/Images.xcassets89"CompileAssetCatalog build/Debug-iphonesimulator/GiveAndGet.app GiveAndGet/Images.xcassetsf0a65be69aebb841^0b4675e69aebb841^-911"/* com.apple.actool.document.warnings *//Users/gohome190/Documents/Code/GiveAndGet/GiveAndGet/Images.xcassets:./AppIcon.appiconset: warning: A 57x57 app icon is required for iPhone apps targeting releases of iOS prior to 7.0/Users/gohome190/Documents/Code/GiveAndGet/GiveAndGet/Images.xcassets:./LaunchImage.launchimage/[][][][][][][Default.png]: warning: The launch image set "LaunchImage" has 2 unassigned images./* com.apple.actool.compilation-results *//Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/AppIcon57x57@2x.png/Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/AppIcon60x60@2x.png/Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/Default.png/Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/assetcatalog_generated_info.plist2(21%IDEActivityLogMessage2@83"A 57x57 app icon is required for iPhone apps targeting releases of iOS prior to 7.0-418093798#18446744073709551615#0#-1#-23%DVTTextDocumentLocation3@77"file:///Users/gohome190/Documents/Code/GiveAndGet/GiveAndGet/Images.xcassets/0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#30"Asset Catalog Compiler Warning--2@59"The launch image set "LaunchImage" has 2 unassigned images.-418093798#18446744073709551615#0#-1#-3@77"file:///Users/gohome190/Documents/Code/GiveAndGet/GiveAndGet/Images.xcassets/0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#30"Asset Catalog Compiler Warning--0#0#1#-19%DVTDocumentLocation4@77"file:///Users/gohome190/Documents/Code/GiveAndGet/GiveAndGet/Images.xcassets/0000000000000000^1109"CompileAssetCatalog build/Debug-iphonesimulator/GiveAndGet.app GiveAndGet/Images.xcassets    cd /Users/gohome190/Documents/Code/GiveAndGet    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/actool --output-format human-readable-text --notices --warnings --export-dependency-info /Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/assetcatalog_dependencies.txt --output-partial-info-plist /Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/assetcatalog_generated_info.plist --app-icon AppIcon --platform iphonesimulator --minimum-deployment-target 6.0 --target-device iphone --compress-pngs --compile /Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app /Users/gohome190/Documents/Code/GiveAndGet/GiveAndGet/Images.xcassets36"C0A652FE-47AB-4F64-BB09-F07CB02DBB4B-
+b350CF28C-1BEA-4621-A4D7-D77B108CE164
+
+CCompileC build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/i386/GetPictureController.o /Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/GetPictureController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s418093785.565361
+e418093786.251166
+r1
+xCompileC
+xbuild/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/i386/GetPictureController.o
+x/Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/GetPictureController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/GetPictureController.m
+d/Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/GetPictureController.h
+o/Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/GetPictureController.m:51:48: warning: sending 'GetPictureController *const __strong' to parameter of incompatible type 'id<UIImagePickerControllerDelegate,UINavigationControllerDelegate>'
+o                                usingDelegate: self];
+o                                               ^~~~
+o/Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/GetPictureController.m:56:81: note: passing argument to parameter 'delegate' here
+o                                               UINavigationControllerDelegate>) delegate {
+o                                                                                ^
+o/Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/GetPictureController.m:85:52: warning: sending 'GetPictureController *const __strong' to parameter of incompatible type 'id<UIImagePickerControllerDelegate,UINavigationControllerDelegate>'
+o                                    usingDelegate: self];
+o                                                   ^~~~
+o/Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/GetPictureController.m:90:85: note: passing argument to parameter 'delegate' here
+o                                                   UINavigationControllerDelegate>) delegate {
+o                                                                                    ^
+o2 warnings generated.
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection93"Compile /Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/GetPictureController.m224"CompileC build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/i386/GetPictureController.o ParseStarterProject/GetPictureController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler01f790d99aebb841^e29140da9aebb841^-1390"/Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/GetPictureController.m:51:48: warning: sending 'GetPictureController *const __strong' to parameter of incompatible type 'id<UIImagePickerControllerDelegate,UINavigationControllerDelegate>'                                usingDelegate: self];                                               ^~~~/Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/GetPictureController.m:56:81: note: passing argument to parameter 'delegate' here                                               UINavigationControllerDelegate>) delegate {                                                                                ^/Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/GetPictureController.m:85:52: warning: sending 'GetPictureController *const __strong' to parameter of incompatible type 'id<UIImagePickerControllerDelegate,UINavigationControllerDelegate>'                                    usingDelegate: self];                                                   ^~~~/Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/GetPictureController.m:90:85: note: passing argument to parameter 'delegate' here                                                   UINavigationControllerDelegate>) delegate {                                                                                    ^2 warnings generated.2(36%IDEClangDiagnosticActivityLogMessage2@149"Sending 'GetPictureController *const __strong' to parameter of incompatible type 'id<UIImagePickerControllerDelegate,UINavigationControllerDelegate>'-418093786#18446744073709551615#0#1(2@45"Passing argument to parameter 'delegate' here-418093786#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@92"file:///Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/GetPictureController.m0000000000000000^55#80#55#80#1402#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@92"file:///Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/GetPictureController.m0000000000000000^50#47#50#47#1151#0#14"Semantic Issue1(3@92"file:///Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/GetPictureController.m0000000000000000^50#47#50#51#1151#0#-2@149"Sending 'GetPictureController *const __strong' to parameter of incompatible type 'id<UIImagePickerControllerDelegate,UINavigationControllerDelegate>'-418093786#18446744073709551615#0#1(2@45"Passing argument to parameter 'delegate' here-418093786#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@92"file:///Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/GetPictureController.m0000000000000000^89#84#89#84#2734#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@92"file:///Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/GetPictureController.m0000000000000000^84#51#84#51#2471#0#14"Semantic Issue1(3@92"file:///Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/GetPictureController.m0000000000000000^84#51#84#55#2471#0#-0#0#1#-19%DVTDocumentLocation4@92"file:///Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/GetPictureController.m0000000000000000^3602"CompileC build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/i386/GetPictureController.o ParseStarterProject/GetPictureController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/gohome190/Documents/Code/GiveAndGet    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.0 -iquote /Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/GiveAndGet-generated-files.hmap -I/Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/GiveAndGet-own-target-headers.hmap -I/Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/GiveAndGet-all-target-headers.hmap -iquote /Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/GiveAndGet-project-headers.hmap -I/Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/DerivedSources/i386 -I/Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/DerivedSources -F/Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator -F/Users/gohome190/Documents/Code/GiveAndGet -include /var/folders/h7/m5985s451mgf9_cflndjn1kr0000gn/C/com.apple.DeveloperTools/5.1-5B130a/Xcode/SharedPrecompiledHeaders/GiveAndGet-Prefix-bmqncjxldplhmrhleclgqfedyhsz/GiveAndGet-Prefix.pch -MMD -MT dependencies -MF /Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/i386/GetPictureController.d --serialize-diagnostics /Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/i386/GetPictureController.dia -c /Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/GetPictureController.m -o /Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/i386/GetPictureController.o36"0B407884-6E6C-433D-90C8-808FD2341809-
+b350CF28C-1BEA-4621-A4D7-D77B108CE164
+
+CCompileC build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/i386/ParseStarterProjectAppDelegate.o /Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/ParseStarterProjectAppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s418093786.240934
+e418093786.403741
+r1
+xCompileC
+xbuild/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/i386/ParseStarterProjectAppDelegate.o
+x/Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/ParseStarterProjectAppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/ParseStarterProjectAppDelegate.m
+d/Users/gohome190/Documents/Code/GiveAndGet/Parse.framework/Headers/Parse.h
+d/Users/gohome190/Documents/Code/GiveAndGet/Parse.framework/Headers/PFACL.h
+d/Users/gohome190/Documents/Code/GiveAndGet/Parse.framework/Headers/PFAnalytics.h
+d/Users/gohome190/Documents/Code/GiveAndGet/Parse.framework/Headers/PFAnonymousUtils.h
+d/Users/gohome190/Documents/Code/GiveAndGet/Parse.framework/Headers/PFUser.h
+d/Users/gohome190/Documents/Code/GiveAndGet/Parse.framework/Headers/PFConstants.h
+d/Users/gohome190/Documents/Code/GiveAndGet/Parse.framework/Headers/PFObject.h
+d/Users/gohome190/Documents/Code/GiveAndGet/Parse.framework/Headers/PFSubclassing.h
+d/Users/gohome190/Documents/Code/GiveAndGet/Parse.framework/Headers/PFCloud.h
+d/Users/gohome190/Documents/Code/GiveAndGet/Parse.framework/Headers/PFFile.h
+d/Users/gohome190/Documents/Code/GiveAndGet/Parse.framework/Headers/PFGeoPoint.h
+d/Users/gohome190/Documents/Code/GiveAndGet/Parse.framework/Headers/PFQuery.h
+d/Users/gohome190/Documents/Code/GiveAndGet/Parse.framework/Headers/PFRelation.h
+d/Users/gohome190/Documents/Code/GiveAndGet/Parse.framework/Headers/PFRole.h
+d/Users/gohome190/Documents/Code/GiveAndGet/Parse.framework/Headers/PFImageView.h
+d/Users/gohome190/Documents/Code/GiveAndGet/Parse.framework/Headers/PFInstallation.h
+d/Users/gohome190/Documents/Code/GiveAndGet/Parse.framework/Headers/PFLogInViewController.h
+d/Users/gohome190/Documents/Code/GiveAndGet/Parse.framework/Headers/PFLogInView.h
+d/Users/gohome190/Documents/Code/GiveAndGet/Parse.framework/Headers/PFSignUpViewController.h
+d/Users/gohome190/Documents/Code/GiveAndGet/Parse.framework/Headers/PFSignUpView.h
+d/Users/gohome190/Documents/Code/GiveAndGet/Parse.framework/Headers/PFProduct.h
+d/Users/gohome190/Documents/Code/GiveAndGet/Parse.framework/Headers/PFProductTableViewController.h
+d/Users/gohome190/Documents/Code/GiveAndGet/Parse.framework/Headers/PFQueryTableViewController.h
+d/Users/gohome190/Documents/Code/GiveAndGet/Parse.framework/Headers/PFTableViewCell.h
+d/Users/gohome190/Documents/Code/GiveAndGet/Parse.framework/Headers/PF_EGORefreshTableHeaderView.h
+d/Users/gohome190/Documents/Code/GiveAndGet/Parse.framework/Headers/PFPurchase.h
+d/Users/gohome190/Documents/Code/GiveAndGet/Parse.framework/Headers/PFPush.h
+d/Users/gohome190/Documents/Code/GiveAndGet/Parse.framework/Headers/PFTwitterUtils.h
+d/Users/gohome190/Documents/Code/GiveAndGet/Parse.framework/Headers/PF_Twitter.h
+d/Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/ParseStarterProjectAppDelegate.h
+d/Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/ParseStarterProjectViewController.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection103"Compile /Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/ParseStarterProjectAppDelegate.m244"CompileC build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/i386/ParseStarterProjectAppDelegate.o ParseStarterProject/ParseStarterProjectAppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler27de3dda9aebb841^728967da9aebb841^---0#0#1#-19%DVTDocumentLocation2@102"file:///Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/ParseStarterProjectAppDelegate.m0000000000000000^3662"CompileC build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/i386/ParseStarterProjectAppDelegate.o ParseStarterProject/ParseStarterProjectAppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/gohome190/Documents/Code/GiveAndGet    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.0 -iquote /Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/GiveAndGet-generated-files.hmap -I/Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/GiveAndGet-own-target-headers.hmap -I/Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/GiveAndGet-all-target-headers.hmap -iquote /Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/GiveAndGet-project-headers.hmap -I/Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/DerivedSources/i386 -I/Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/DerivedSources -F/Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator -F/Users/gohome190/Documents/Code/GiveAndGet -include /var/folders/h7/m5985s451mgf9_cflndjn1kr0000gn/C/com.apple.DeveloperTools/5.1-5B130a/Xcode/SharedPrecompiledHeaders/GiveAndGet-Prefix-bmqncjxldplhmrhleclgqfedyhsz/GiveAndGet-Prefix.pch -MMD -MT dependencies -MF /Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/i386/ParseStarterProjectAppDelegate.d --serialize-diagnostics /Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/i386/ParseStarterProjectAppDelegate.dia -c /Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/ParseStarterProjectAppDelegate.m -o /Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/i386/ParseStarterProjectAppDelegate.o36"252090CF-957C-4192-BBC6-15D6B963232F-
+b350CF28C-1BEA-4621-A4D7-D77B108CE164
+
+CCompileC build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/i386/ParseStarterProjectViewController.o /Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/ParseStarterProjectViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s418093786.251559
+e418093786.435404
+r1
+xCompileC
+xbuild/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/i386/ParseStarterProjectViewController.o
+x/Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/ParseStarterProjectViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/ParseStarterProjectViewController.m
+d/Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/ParseStarterProjectViewController.h
+d/Users/gohome190/Documents/Code/GiveAndGet/Parse.framework/Headers/Parse.h
+d/Users/gohome190/Documents/Code/GiveAndGet/Parse.framework/Headers/PFACL.h
+d/Users/gohome190/Documents/Code/GiveAndGet/Parse.framework/Headers/PFAnalytics.h
+d/Users/gohome190/Documents/Code/GiveAndGet/Parse.framework/Headers/PFAnonymousUtils.h
+d/Users/gohome190/Documents/Code/GiveAndGet/Parse.framework/Headers/PFUser.h
+d/Users/gohome190/Documents/Code/GiveAndGet/Parse.framework/Headers/PFConstants.h
+d/Users/gohome190/Documents/Code/GiveAndGet/Parse.framework/Headers/PFObject.h
+d/Users/gohome190/Documents/Code/GiveAndGet/Parse.framework/Headers/PFSubclassing.h
+d/Users/gohome190/Documents/Code/GiveAndGet/Parse.framework/Headers/PFCloud.h
+d/Users/gohome190/Documents/Code/GiveAndGet/Parse.framework/Headers/PFFile.h
+d/Users/gohome190/Documents/Code/GiveAndGet/Parse.framework/Headers/PFGeoPoint.h
+d/Users/gohome190/Documents/Code/GiveAndGet/Parse.framework/Headers/PFQuery.h
+d/Users/gohome190/Documents/Code/GiveAndGet/Parse.framework/Headers/PFRelation.h
+d/Users/gohome190/Documents/Code/GiveAndGet/Parse.framework/Headers/PFRole.h
+d/Users/gohome190/Documents/Code/GiveAndGet/Parse.framework/Headers/PFImageView.h
+d/Users/gohome190/Documents/Code/GiveAndGet/Parse.framework/Headers/PFInstallation.h
+d/Users/gohome190/Documents/Code/GiveAndGet/Parse.framework/Headers/PFLogInViewController.h
+d/Users/gohome190/Documents/Code/GiveAndGet/Parse.framework/Headers/PFLogInView.h
+d/Users/gohome190/Documents/Code/GiveAndGet/Parse.framework/Headers/PFSignUpViewController.h
+d/Users/gohome190/Documents/Code/GiveAndGet/Parse.framework/Headers/PFSignUpView.h
+d/Users/gohome190/Documents/Code/GiveAndGet/Parse.framework/Headers/PFProduct.h
+d/Users/gohome190/Documents/Code/GiveAndGet/Parse.framework/Headers/PFProductTableViewController.h
+d/Users/gohome190/Documents/Code/GiveAndGet/Parse.framework/Headers/PFQueryTableViewController.h
+d/Users/gohome190/Documents/Code/GiveAndGet/Parse.framework/Headers/PFTableViewCell.h
+d/Users/gohome190/Documents/Code/GiveAndGet/Parse.framework/Headers/PF_EGORefreshTableHeaderView.h
+d/Users/gohome190/Documents/Code/GiveAndGet/Parse.framework/Headers/PFPurchase.h
+d/Users/gohome190/Documents/Code/GiveAndGet/Parse.framework/Headers/PFPush.h
+d/Users/gohome190/Documents/Code/GiveAndGet/Parse.framework/Headers/PFTwitterUtils.h
+d/Users/gohome190/Documents/Code/GiveAndGet/Parse.framework/Headers/PF_Twitter.h
+o/Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/ParseStarterProjectViewController.m:49:33: warning: comparison between pointer and integer ('NSUInteger' (aka 'unsigned int') and 'void *')
+o            if ([objects count] == NULL){
+o                ~~~~~~~~~~~~~~~ ^  ~~~~
+o/Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/ParseStarterProjectViewController.m:192:15: warning: unused variable 'tempUsername' [-Wunused-variable]
+o    NSString *tempUsername;
+o              ^
+o2 warnings generated.
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection106"Compile /Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/ParseStarterProjectViewController.m250"CompileC build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/i386/ParseStarterProjectViewController.o ParseStarterProject/ParseStarterProjectViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler9d8240da9aebb841^2e766fda9aebb841^-518"/Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/ParseStarterProjectViewController.m:49:33: warning: comparison between pointer and integer ('NSUInteger' (aka 'unsigned int') and 'void *')            if ([objects count] == NULL){                ~~~~~~~~~~~~~~~ ^  ~~~~/Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/ParseStarterProjectViewController.m:192:15: warning: unused variable 'tempUsername' [-Wunused-variable]    NSString *tempUsername;              ^2 warnings generated.2(36%IDEClangDiagnosticActivityLogMessage2@87"Comparison between pointer and integer ('NSUInteger' (aka 'unsigned int') and 'void *')-418093786#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@105"file:///Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/ParseStarterProjectViewController.m0000000000000000^48#32#48#32#1401#0#14"Semantic Issue2(3@105"file:///Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/ParseStarterProjectViewController.m0000000000000000^48#16#48#31#1385#14#3@105"file:///Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/ParseStarterProjectViewController.m0000000000000000^48#35#48#39#1404#0#-2@30"Unused variable 'tempUsername'-418093786#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@105"file:///Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/ParseStarterProjectViewController.m0000000000000000^191#14#191#14#6517#0#19"Unused Entity Issue--0#0#1#-19%DVTDocumentLocation4@105"file:///Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/ParseStarterProjectViewController.m0000000000000000^3680"CompileC build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/i386/ParseStarterProjectViewController.o ParseStarterProject/ParseStarterProjectViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/gohome190/Documents/Code/GiveAndGet    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.0 -iquote /Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/GiveAndGet-generated-files.hmap -I/Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/GiveAndGet-own-target-headers.hmap -I/Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/GiveAndGet-all-target-headers.hmap -iquote /Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/GiveAndGet-project-headers.hmap -I/Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/DerivedSources/i386 -I/Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/DerivedSources -F/Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator -F/Users/gohome190/Documents/Code/GiveAndGet -include /var/folders/h7/m5985s451mgf9_cflndjn1kr0000gn/C/com.apple.DeveloperTools/5.1-5B130a/Xcode/SharedPrecompiledHeaders/GiveAndGet-Prefix-bmqncjxldplhmrhleclgqfedyhsz/GiveAndGet-Prefix.pch -MMD -MT dependencies -MF /Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/i386/ParseStarterProjectViewController.d --serialize-diagnostics /Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/i386/ParseStarterProjectViewController.dia -c /Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/ParseStarterProjectViewController.m -o /Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/i386/ParseStarterProjectViewController.o36"20CDBFFC-3F8C-45DD-95B9-9D91614602A9-
+b350CF28C-1BEA-4621-A4D7-D77B108CE164
+
+CCompileC build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/i386/main.o /Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s418093785.563703
+e418093786.239927
+r1
+xCompileC
+xbuild/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/i386/main.o
+x/Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/main.m
+d/Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/ParseStarterProjectAppDelegate.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection77"Compile /Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/main.m192"CompileC build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/i386/main.o ParseStarterProject/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compilere57d90d99aebb841^876b3dda9aebb841^---0#0#1#-19%DVTDocumentLocation2@76"file:///Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/main.m0000000000000000^3506"CompileC build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/i386/main.o ParseStarterProject/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/gohome190/Documents/Code/GiveAndGet    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.0 -iquote /Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/GiveAndGet-generated-files.hmap -I/Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/GiveAndGet-own-target-headers.hmap -I/Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/GiveAndGet-all-target-headers.hmap -iquote /Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/GiveAndGet-project-headers.hmap -I/Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/DerivedSources/i386 -I/Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/DerivedSources -F/Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator -F/Users/gohome190/Documents/Code/GiveAndGet -include /var/folders/h7/m5985s451mgf9_cflndjn1kr0000gn/C/com.apple.DeveloperTools/5.1-5B130a/Xcode/SharedPrecompiledHeaders/GiveAndGet-Prefix-bmqncjxldplhmrhleclgqfedyhsz/GiveAndGet-Prefix.pch -MMD -MT dependencies -MF /Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/i386/main.d --serialize-diagnostics /Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/i386/main.dia -c /Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/main.m -o /Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/i386/main.o36"26C93A0B-0D2E-4713-9171-77B9633F1210-
+b350CF28C-1BEA-4621-A4D7-D77B108CE164
+
+CCompileStoryboard /Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/Storyboard.storyboard
+s418093788.775768
+e418093800.030399
+r1
+xCompileStoryboard
+x/Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/Storyboard.storyboard
+o2014-04-01 21:09:56.378 Interface Builder Cocoa Touch Tool[752:303] CFPreferences: user home directory at file:///Users/gohome190/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.
+o2014-04-01 21:09:58.231 Interface Builder Cocoa Touch Tool[762:303] CFPreferences: user home directory at file:///Users/gohome190/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection59"CompileStoryboard ParseStarterProject/Storyboard.storyboard59"CompileStoryboard ParseStarterProject/Storyboard.storyboard0fb8c6dc9aebb841^f3c807e89aebb841^-464"2014-04-01 21:09:56.378 Interface Builder Cocoa Touch Tool[752:303] CFPreferences: user home directory at file:///Users/gohome190/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.2014-04-01 21:09:58.231 Interface Builder Cocoa Touch Tool[762:303] CFPreferences: user home directory at file:///Users/gohome190/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.-0#0#1#-19%DVTDocumentLocation2@91"file:///Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/Storyboard.storyboard0000000000000000^854"CompileStoryboard ParseStarterProject/Storyboard.storyboard    cd /Users/gohome190/Documents/Code/GiveAndGet    export IBSC_MINIMUM_COMPATIBILITY_VERSION=6.0    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    export XCODE_DEVELOPER_USR_PATH=/Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/ibtool --errors --warnings --notices --minimum-deployment-target 6.0 --output-format human-readable-text --compile /Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/Storyboard.storyboardc /Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/Storyboard.storyboard36"3BD4AA67-74AA-4FFB-B1CA-F38AD2D0E8F4-
+b350CF28C-1BEA-4621-A4D7-D77B108CE164
+
+CCompileXIB /Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/en.lproj/MainWindow.xib
+s418093788.808256
+e418093797.644235
+r1
+xCompileXIB
+x/Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/en.lproj/MainWindow.xib
+o2014-04-01 21:09:56.378 Interface Builder Cocoa Touch Tool[753:303] CFPreferences: user home directory at file:///Users/gohome190/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.
+o2014-04-01 21:09:57.202 Interface Builder Cocoa Touch Tool[759:303] CFPreferences: user home directory at file:///Users/gohome190/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection96"Compiling /Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/en.lproj/MainWindow.xib54"CompileXIB ParseStarterProject/en.lproj/MainWindow.xibea09cfdc9aebb841^471da5e59aebb841^-464"2014-04-01 21:09:56.378 Interface Builder Cocoa Touch Tool[753:303] CFPreferences: user home directory at file:///Users/gohome190/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.2014-04-01 21:09:57.202 Interface Builder Cocoa Touch Tool[759:303] CFPreferences: user home directory at file:///Users/gohome190/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.-0#0#1#-19%DVTDocumentLocation2@93"file:///Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/en.lproj/MainWindow.xib0000000000000000^802"CompileXIB ParseStarterProject/en.lproj/MainWindow.xib    cd /Users/gohome190/Documents/Code/GiveAndGet    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    export XCODE_DEVELOPER_USR_PATH=/Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/ibtool --errors --warnings --notices --minimum-deployment-target 6.0 --output-format human-readable-text --compile /Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/en.lproj/MainWindow.nib /Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/en.lproj/MainWindow.xib36"D8A8528B-D157-40D9-B71D-C17775762A3B-
+b350CF28C-1BEA-4621-A4D7-D77B108CE164
+
+CCompileXIB /Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/en.lproj/ParseStarterProjectViewController.xib
+s418093797.644495
+e418093798.329604
+r1
+xCompileXIB
+x/Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/en.lproj/ParseStarterProjectViewController.xib
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection119"Compiling /Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/en.lproj/ParseStarterProjectViewController.xib77"CompileXIB ParseStarterProject/en.lproj/ParseStarterProjectViewController.xibb210a5e59aebb841^746154e69aebb841^---0#0#1#-19%DVTDocumentLocation2@116"file:///Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/en.lproj/ParseStarterProjectViewController.xib0000000000000000^871"CompileXIB ParseStarterProject/en.lproj/ParseStarterProjectViewController.xib    cd /Users/gohome190/Documents/Code/GiveAndGet    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    export XCODE_DEVELOPER_USR_PATH=/Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/ibtool --errors --warnings --notices --minimum-deployment-target 6.0 --output-format human-readable-text --compile /Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/en.lproj/ParseStarterProjectViewController.nib /Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/en.lproj/ParseStarterProjectViewController.xib36"59C5DB7D-96E7-40B7-8187-1945751EAFF2-
+b350CF28C-1BEA-4621-A4D7-D77B108CE164
+
+CCopyPlistFile /Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/Entitlements.plist ParseStarterProject/Entitlements.plist
+s418093798.329851
+e418093798.352476
+r1
+xCopyPlistFile
+x/Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/Entitlements.plist
+xParseStarterProject/Entitlements.plist
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection43"Copy ParseStarterProject/Entitlements.plist114"CopyPlistFile build/Debug-iphonesimulator/GiveAndGet.app/Entitlements.plist ParseStarterProject/Entitlements.plist448754e69aebb841^28615ae69aebb841^---0#0#1#-19%DVTDocumentLocation2@88"file:///Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/Entitlements.plist0000000000000000^537"CopyPlistFile build/Debug-iphonesimulator/GiveAndGet.app/Entitlements.plist ParseStarterProject/Entitlements.plist    cd /Users/gohome190/Documents/Code/GiveAndGet    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copyPlist --convert binary1 --outdir /Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app -- ParseStarterProject/Entitlements.plist36"3BC2B36F-7AF7-468B-A5B5-7B6D638E5663-
+b350CF28C-1BEA-4621-A4D7-D77B108CE164
+
+CCopyStringsFile /Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/en.lproj/InfoPlist.strings ParseStarterProject/en.lproj/InfoPlist.strings
+s418093788.764300
+e418093788.807052
+r1
+xCopyStringsFile
+x/Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/en.lproj/InfoPlist.strings
+xParseStarterProject/en.lproj/InfoPlist.strings
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection51"Copy ParseStarterProject/en.lproj/InfoPlist.strings132"CopyStringsFile build/Debug-iphonesimulator/GiveAndGet.app/en.lproj/InfoPlist.strings ParseStarterProject/en.lproj/InfoPlist.strings10cac3dc9aebb841^f5a2cedc9aebb841^---0#0#1#-19%DVTDocumentLocation2@96"file:///Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/en.lproj/InfoPlist.strings0000000000000000^613"CopyStringsFile build/Debug-iphonesimulator/GiveAndGet.app/en.lproj/InfoPlist.strings ParseStarterProject/en.lproj/InfoPlist.strings    cd /Users/gohome190/Documents/Code/GiveAndGet    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/en.lproj -- ParseStarterProject/en.lproj/InfoPlist.strings36"3048902C-71DD-42F4-8BA5-20EE012E9CF1-
+b350CF28C-1BEA-4621-A4D7-D77B108CE164
+
+CCpResource Default.png build/Debug-iphonesimulator/GiveAndGet.app/Default.png
+s418093788.654071
+e418093788.743275
+r1
+xCpResource
+xDefault.png
+xbuild/Debug-iphonesimulator/GiveAndGet.app/Default.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection59"Copy build/Debug-iphonesimulator/GiveAndGet.app/Default.png77"CpResource Default.png build/Debug-iphonesimulator/GiveAndGet.app/Default.pngbf7fa7dc9aebb841^b473bedc9aebb841^---0#0#1#-19%DVTDocumentLocation2@104"file:///Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/Default.png003484cddcffdf42^702"CpResource Default.png build/Debug-iphonesimulator/GiveAndGet.app/Default.png    cd /Users/gohome190/Documents/Code/GiveAndGet    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/gohome190/Documents/Code/GiveAndGet/Default.png /Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app36"F1654666-B40C-40C3-AD3E-CC66C2A64CF6-
+b350CF28C-1BEA-4621-A4D7-D77B108CE164
+
+CCpResource Default~iphone.png build/Debug-iphonesimulator/GiveAndGet.app/Default~iphone.png
+s418093788.653533
+e418093788.743270
+r1
+xCpResource
+xDefault~iphone.png
+xbuild/Debug-iphonesimulator/GiveAndGet.app/Default~iphone.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection66"Copy build/Debug-iphonesimulator/GiveAndGet.app/Default~iphone.png91"CpResource Default~iphone.png build/Debug-iphonesimulator/GiveAndGet.app/Default~iphone.png8466a7dc9aebb841^d255bedc9aebb841^---0#0#1#-19%DVTDocumentLocation2@111"file:///Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/Default~iphone.png003484cddcffdf42^723"CpResource Default~iphone.png build/Debug-iphonesimulator/GiveAndGet.app/Default~iphone.png    cd /Users/gohome190/Documents/Code/GiveAndGet    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/gohome190/Documents/Code/GiveAndGet/Default~iphone.png /Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app36"667EB94C-55F6-444F-AAB6-2B62CDAEB790-
+b350CF28C-1BEA-4621-A4D7-D77B108CE164
+
+CCpResource Icon.png build/Debug-iphonesimulator/GiveAndGet.app/Icon.png
+s418093788.762130
+e418093788.763994
+r1
+xCpResource
+xIcon.png
+xbuild/Debug-iphonesimulator/GiveAndGet.app/Icon.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection56"Copy build/Debug-iphonesimulator/GiveAndGet.app/Icon.png71"CpResource Icon.png build/Debug-iphonesimulator/GiveAndGet.app/Icon.png874ec3dc9aebb841^73a0c3dc9aebb841^---0#0#1#-19%DVTDocumentLocation2@101"file:///Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/Icon.png003484cddcffdf42^693"CpResource Icon.png build/Debug-iphonesimulator/GiveAndGet.app/Icon.png    cd /Users/gohome190/Documents/Code/GiveAndGet    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/gohome190/Documents/Code/GiveAndGet/Icon.png /Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app36"10D9C63B-A3C8-4334-A6E2-01C9FFC0D401-
+b350CF28C-1BEA-4621-A4D7-D77B108CE164
+
+CCpResource Icon~iphone.png build/Debug-iphonesimulator/GiveAndGet.app/Icon~iphone.png
+s418093788.744384
+e418093788.775425
+r1
+xCpResource
+xIcon~iphone.png
+xbuild/Debug-iphonesimulator/GiveAndGet.app/Icon~iphone.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection63"Copy build/Debug-iphonesimulator/GiveAndGet.app/Icon~iphone.png85"CpResource Icon~iphone.png build/Debug-iphonesimulator/GiveAndGet.app/Icon~iphone.png7daebedc9aebb841^6a84c6dc9aebb841^---0#0#1#-19%DVTDocumentLocation2@108"file:///Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/Icon~iphone.png003484cddcffdf42^714"CpResource Icon~iphone.png build/Debug-iphonesimulator/GiveAndGet.app/Icon~iphone.png    cd /Users/gohome190/Documents/Code/GiveAndGet    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/gohome190/Documents/Code/GiveAndGet/Icon~iphone.png /Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app36"33C64E1E-4DC2-4B3B-94EB-1720BE6A051D-
+b350CF28C-1BEA-4621-A4D7-D77B108CE164
+
+CCpResource ParseStarterProject/Default-568h@2x.png build/Debug-iphonesimulator/GiveAndGet.app/Default-568h@2x.png
+s418093798.352662
+e418093798.354992
+r1
+xCpResource
+xParseStarterProject/Default-568h@2x.png
+xbuild/Debug-iphonesimulator/GiveAndGet.app/Default-568h@2x.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection67"Copy build/Debug-iphonesimulator/GiveAndGet.app/Default-568h@2x.png113"CpResource ParseStarterProject/Default-568h@2x.png build/Debug-iphonesimulator/GiveAndGet.app/Default-568h@2x.png71585ae69aebb841^6c075be69aebb841^---0#0#1#-19%DVTDocumentLocation2@112"file:///Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/Default-568h@2x.png003484cddcffdf42^766"CpResource ParseStarterProject/Default-568h@2x.png build/Debug-iphonesimulator/GiveAndGet.app/Default-568h@2x.png    cd /Users/gohome190/Documents/Code/GiveAndGet    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/Default-568h@2x.png /Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app36"15F26294-4232-4CA4-9FE8-39A5E07A6EAE-
+b350CF28C-1BEA-4621-A4D7-D77B108CE164
+
+CCpResource ParseStarterProject/Default.png build/Debug-iphonesimulator/GiveAndGet.app/Default.png
+s418093788.743649
+e418093788.761733
+r1
+xCpResource
+xParseStarterProject/Default.png
+xbuild/Debug-iphonesimulator/GiveAndGet.app/Default.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection59"Copy build/Debug-iphonesimulator/GiveAndGet.app/Default.png97"CpResource ParseStarterProject/Default.png build/Debug-iphonesimulator/GiveAndGet.app/Default.png077cbedc9aebb841^6d03c3dc9aebb841^---0#0#1#-19%DVTDocumentLocation2@104"file:///Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/Default.png0000000000000000^742"CpResource ParseStarterProject/Default.png build/Debug-iphonesimulator/GiveAndGet.app/Default.png    cd /Users/gohome190/Documents/Code/GiveAndGet    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/Default.png /Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app36"A37F138E-F1A1-4325-8656-4AE22D2E13DE-
+b350CF28C-1BEA-4621-A4D7-D77B108CE164
+
+CCpResource ParseStarterProject/Default@2x.png build/Debug-iphonesimulator/GiveAndGet.app/Default@2x.png
+s418093798.355173
+e418093798.357526
+r1
+xCpResource
+xParseStarterProject/Default@2x.png
+xbuild/Debug-iphonesimulator/GiveAndGet.app/Default@2x.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection62"Copy build/Debug-iphonesimulator/GiveAndGet.app/Default@2x.png103"CpResource ParseStarterProject/Default@2x.png build/Debug-iphonesimulator/GiveAndGet.app/Default@2x.png2aff5ae69aebb841^68ae5be69aebb841^---0#0#1#-19%DVTDocumentLocation2@107"file:///Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/Default@2x.png003484cddcffdf42^751"CpResource ParseStarterProject/Default@2x.png build/Debug-iphonesimulator/GiveAndGet.app/Default@2x.png    cd /Users/gohome190/Documents/Code/GiveAndGet    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/Default@2x.png /Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app36"E5526115-2DA0-4CA5-B8E4-DA05E30F1A79-
+b350CF28C-1BEA-4621-A4D7-D77B108CE164
+
+CGenerateDSYMFile /Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app.dSYM /Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/GiveAndGet
+s418093800.036018
+e418093800.263646
+r1
+xGenerateDSYMFile
+x/Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app.dSYM
+x/Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/GiveAndGet
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection99"Generate /Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app.dSYM118"GenerateDSYMFile build/Debug-iphonesimulator/GiveAndGet.app.dSYM build/Debug-iphonesimulator/GiveAndGet.app/GiveAndGet1b4a09e89aebb841^4a7f43e89aebb841^---0#0#1#-19%DVTDocumentLocation2@97"file:///Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app.dSYM003484cddcffdf42^655"GenerateDSYMFile build/Debug-iphonesimulator/GiveAndGet.app.dSYM build/Debug-iphonesimulator/GiveAndGet.app/GiveAndGet    cd /Users/gohome190/Documents/Code/GiveAndGet    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/GiveAndGet -o /Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app.dSYM36"1A43071A-210E-4DF1-A9DD-AF54D9D551EF-
+b350CF28C-1BEA-4621-A4D7-D77B108CE164
+
+CLd /Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/GiveAndGet normal i386
+s418093786.473490
+e418093788.652430
+r1
+xLd
+x/Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/GiveAndGet
+xnormal
+xi386
+d/Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/i386/GiveAndGet.LinkFileList
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/crt1.o
+d/Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/i386/main.o
+d/Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/i386/GetPictureController.o
+d/Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/i386/ParseStarterProjectAppDelegate.o
+d/Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/i386/ParseStarterProjectViewController.o
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/Accounts.framework/Accounts
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/Twitter.framework/Twitter
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreLocation.framework/CoreLocation
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/StoreKit.framework/StoreKit
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libz.1.1.3.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/Security.framework/Security
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/AudioToolbox.framework/AudioToolbox
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/MobileCoreServices.framework/MobileCoreServices
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/SystemConfiguration.framework/SystemConfiguration
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CFNetwork.framework/CFNetwork
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+d/Users/gohome190/Documents/Code/GiveAndGet/Parse.framework/Parse
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libobjc.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libSystem.dylib
+d/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.1/lib/darwin/libclang_rt.ios.a
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/PrivateFrameworks/UIFoundation.framework/UIFoundation
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_override.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libcache_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libcommonCrypto_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libcorecrypto_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libcompiler_rt_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libcopyfile_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libdispatch.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libdyld_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libmacho_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libnotify_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libremovefile_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_blocks.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_c.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_dnssd.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_info.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_m.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_network.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libunwind_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libxpc.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_configuration.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_asl.dylib
+d/usr/lib/libSystem.B.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/host/libdyld.dylib
+d/usr/lib/system/libcache.dylib
+d/usr/lib/system/libcommonCrypto.dylib
+d/usr/lib/system/libcompiler_rt.dylib
+d/usr/lib/system/libcopyfile.dylib
+d/usr/lib/system/libcorecrypto.dylib
+d/usr/lib/system/libkeymgr.dylib
+d/usr/lib/system/liblaunch.dylib
+d/usr/lib/system/libmacho.dylib
+d/usr/lib/system/libquarantine.dylib
+d/usr/lib/system/libremovefile.dylib
+d/usr/lib/system/libsystem_asl.dylib
+d/usr/lib/system/libsystem_blocks.dylib
+d/usr/lib/system/libsystem_c.dylib
+d/usr/lib/system/libsystem_configuration.dylib
+d/usr/lib/system/libsystem_dnssd.dylib
+d/usr/lib/system/libsystem_info.dylib
+d/usr/lib/system/libsystem_kernel.dylib
+d/usr/lib/system/libsystem_m.dylib
+d/usr/lib/system/libsystem_malloc.dylib
+d/usr/lib/system/libsystem_notify.dylib
+d/usr/lib/system/libsystem_platform.dylib
+d/usr/lib/system/libsystem_pthread.dylib
+d/usr/lib/system/libsystem_sandbox.dylib
+d/usr/lib/system/libunc.dylib
+d/usr/lib/system/libunwind.dylib
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection101"Link /Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/GiveAndGet68"Ld build/Debug-iphonesimulator/GiveAndGet.app/GiveAndGet normal i386685b79da9aebb841^5b07a7dc9aebb841^---0#0#1#--1682"Ld build/Debug-iphonesimulator/GiveAndGet.app/GiveAndGet normal i386    cd /Users/gohome190/Documents/Code/GiveAndGet    export IPHONEOS_DEPLOYMENT_TARGET=6.0    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -L/Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator -F/Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator -F/Users/gohome190/Documents/Code/GiveAndGet -filelist /Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/i386/GiveAndGet.LinkFileList -Xlinker -objc_abi_version -Xlinker 2 -fobjc-arc -fobjc-link-runtime -Xlinker -no_implicit_dylibs -mios-simulator-version-min=6.0 -framework Accounts -framework Twitter -framework CoreLocation -framework StoreKit -framework CoreGraphics -framework QuartzCore -lz.1.1.3 -framework Security -framework AudioToolbox -framework MobileCoreServices -framework SystemConfiguration -framework CFNetwork -framework UIKit -framework Foundation -framework Parse -Xlinker -dependency_info -Xlinker /Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/i386/GiveAndGet_dependency_info.dat -o /Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/GiveAndGet36"DE5C5788-CD02-49F7-8013-2A11422018E4-
+b350CF28C-1BEA-4621-A4D7-D77B108CE164
+
+CProcessInfoPlistFile /Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/Info.plist /Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/GiveAndGet-Info.plist
+s418093800.031172
+e418093800.035307
+r1
+xProcessInfoPlistFile
+x/Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/Info.plist
+x/Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/GiveAndGet-Info.plist
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection92"Process /Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/GiveAndGet-Info.plist116"ProcessInfoPlistFile build/Debug-iphonesimulator/GiveAndGet.app/Info.plist ParseStarterProject/GiveAndGet-Info.plist8c1208e89aebb841^b70b09e89aebb841^---0#0#1#-19%DVTDocumentLocation2@91"file:///Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/GiveAndGet-Info.plist0000000000000000^906"ProcessInfoPlistFile build/Debug-iphonesimulator/GiveAndGet.app/Info.plist ParseStarterProject/GiveAndGet-Info.plist    cd /Users/gohome190/Documents/Code/GiveAndGet    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility /Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/GiveAndGet-Info.plist -genpkginfo /Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -additionalcontentfile /Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/assetcatalog_generated_info.plist -o /Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/Info.plist36"AF54313E-FFF4-4487-A256-4109B1A24ABB-
+b350CF28C-1BEA-4621-A4D7-D77B108CE164
+
+CProcessPCH /Users/gohome190/Library/Developer/Xcode/DerivedData/GiveAndGet-dmajkcxxqhamoegaciqrnhifzcnd/Index/PrecompiledHeaders/GiveAndGet-Prefix-adwoqgcjzscmolhfwadboyultwxo_ast/GiveAndGet-Prefix.pch.pch ParseStarterProject/GiveAndGet-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CProcessPCH /var/folders/h7/m5985s451mgf9_cflndjn1kr0000gn/C/com.apple.DeveloperTools/5.1-5B130a/Xcode/SharedPrecompiledHeaders/GiveAndGet-Prefix-bmqncjxldplhmrhleclgqfedyhsz/GiveAndGet-Prefix.pch.pch ParseStarterProject/GiveAndGet-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s418093784.165311
+e418093785.561400
+r1
+xProcessPCH
+x/var/folders/h7/m5985s451mgf9_cflndjn1kr0000gn/C/com.apple.DeveloperTools/5.1-5B130a/Xcode/SharedPrecompiledHeaders/GiveAndGet-Prefix-bmqncjxldplhmrhleclgqfedyhsz/GiveAndGet-Prefix.pch.pch
+xParseStarterProject/GiveAndGet-Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/GiveAndGet-Prefix.pch
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection52"Precompile ParseStarterProject/GiveAndGet-Prefix.pch309"ProcessPCH /var/folders/h7/m5985s451mgf9_cflndjn1kr0000gn/C/com.apple.DeveloperTools/5.1-5B130a/Xcode/SharedPrecompiledHeaders/GiveAndGet-Prefix-bmqncjxldplhmrhleclgqfedyhsz/GiveAndGet-Prefix.pch.pch ParseStarterProject/GiveAndGet-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler2a8e2bd89aebb841^b7b78fd99aebb841^---0#0#1#-19%DVTDocumentLocation2@91"file:///Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/GiveAndGet-Prefix.pch0000000000000000^3618"ProcessPCH /var/folders/h7/m5985s451mgf9_cflndjn1kr0000gn/C/com.apple.DeveloperTools/5.1-5B130a/Xcode/SharedPrecompiledHeaders/GiveAndGet-Prefix-bmqncjxldplhmrhleclgqfedyhsz/GiveAndGet-Prefix.pch.pch ParseStarterProject/GiveAndGet-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/gohome190/Documents/Code/GiveAndGet    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.0 -iquote /Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/GiveAndGet-generated-files.hmap -I/Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/GiveAndGet-own-target-headers.hmap -I/Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/GiveAndGet-all-target-headers.hmap -iquote /Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/GiveAndGet-project-headers.hmap -I/Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/DerivedSources/i386 -I/Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/DerivedSources -F/Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator -F/Users/gohome190/Documents/Code/GiveAndGet --serialize-diagnostics /var/folders/h7/m5985s451mgf9_cflndjn1kr0000gn/C/com.apple.DeveloperTools/5.1-5B130a/Xcode/SharedPrecompiledHeaders/GiveAndGet-Prefix-bmqncjxldplhmrhleclgqfedyhsz/GiveAndGet-Prefix.pch.dia -MMD -MT dependencies -MF /var/folders/h7/m5985s451mgf9_cflndjn1kr0000gn/C/com.apple.DeveloperTools/5.1-5B130a/Xcode/SharedPrecompiledHeaders/GiveAndGet-Prefix-bmqncjxldplhmrhleclgqfedyhsz/GiveAndGet-Prefix.pch.d -c /Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/GiveAndGet-Prefix.pch -o /var/folders/h7/m5985s451mgf9_cflndjn1kr0000gn/C/com.apple.DeveloperTools/5.1-5B130a/Xcode/SharedPrecompiledHeaders/GiveAndGet-Prefix-bmqncjxldplhmrhleclgqfedyhsz/GiveAndGet-Prefix.pch.pch36"14875F9C-648F-472B-B2E2-7A546365A99D-
+b350CF28C-1BEA-4621-A4D7-D77B108CE164
+
+CTouch /Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app
+s418093800.264885
+e418093800.300245
+r1
+xTouch
+x/Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection91"Touch /Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app48"Touch build/Debug-iphonesimulator/GiveAndGet.app68e843e89aebb841^d3de4ce89aebb841^---0#0#1#--402"Touch build/Debug-iphonesimulator/GiveAndGet.app    cd /Users/gohome190/Documents/Code/GiveAndGet    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app36"001D4BBB-3E91-4797-81B8-88DD154C41B2-
+b350CF28C-1BEA-4621-A4D7-D77B108CE164
+

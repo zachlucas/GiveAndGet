@@ -187,9 +187,10 @@ NSString *twitterUsername = @"";
     self.view = _mainView;
 }
 
-- (NSString*)getTwitterAccountInformation
+NSString *tempUN = @"";
+
+- (void)getTwitterAccountInformation
 {
-    NSString *tempUsername;
     ACAccountStore *accountStore = [[ACAccountStore alloc] init];
     ACAccountType *accountType = [accountStore accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierTwitter];
     
@@ -202,18 +203,16 @@ NSString *twitterUsername = @"";
                 NSLog(@"un:%@",twitterAccount.username);
                 NSLog(@"%@",twitterAccount.accountType);
                 nameToUseWhenSendingMessage = twitterAccount.username;
-                //_sendingAs.text = [NSString stringWithFormat:@"Sending as: %@",nameToUseWhenSendingMessage];
-                __block tempUsername = twitterAccount.username;
+                tempUN = twitterAccount.username;
             }
         }
     }];
-    
-    return tempUsername;
+    _sendingAs.text = [NSString stringWithFormat:@"Sending as: %@", tempUN];
+
 }
 - (IBAction)getTwitterHandle:(id)sender {
     [self getTwitterAccountInformation];
     NSLog(@"second un: %@",twitterUsername);
-    _sendingAs.text = [NSString stringWithFormat:@"Sending as: %@",twitterUsername];
 }
 
 
