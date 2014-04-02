@@ -74,6 +74,8 @@ NSString *twitterUsername = @"";
                 
                // NSString *objectId = [objects[randomIndex] objectId];
                 
+                [self sendMessage];
+                
                 [query getObjectInBackgroundWithId:[objects[randomIndex] objectId] block:^(PFObject *gameScore, NSError *error) {
                     
                     // Now let's update it with some new data. In this case, only cheatMode and score
@@ -81,10 +83,13 @@ NSString *twitterUsername = @"";
                     
                     gameScore[@"seen"] = @"yes";
                     [gameScore saveInBackground];
-                    
+                    // TODO:  Fix this!!!
+                    if (error){
+                        [gameScore saveInBackground];
+                    }
                 }];
                 
-                [self sendMessage];
+                
             }
         } else {
             // Log details of the failure
@@ -120,7 +125,13 @@ NSString *twitterUsername = @"";
             testObject[@"name"] = @"Anonymous";
         }
         else{
-            testObject[@"name"] = nameToUseWhenSendingMessage;
+            if (tempUN.length == 0){
+                NSLog(@"tempUN zeroooo");
+                testObject[@"name"] = nameToUseWhenSendingMessage;
+            }
+            else{
+                testObject[@"name"] = tempUN;
+            }
         }
         testObject[@"seen"] = @"no";
         testObject[@"message"] = self.messageText.text;
@@ -207,8 +218,13 @@ NSString *tempUN = @"";
             }
         }
     }];
-    _sendingAs.text = [NSString stringWithFormat:@"Sending as: %@", tempUN];
-
+    if (tempUN.length == 0){
+        _sendingAs.text = @"Sending as: AnonTweeter";
+        tempUN = @"AnonTweeter";
+    }
+    else{
+        _sendingAs.text = [NSString stringWithFormat:@"Sending as: %@", tempUN];
+    }
 }
 - (IBAction)getTwitterHandle:(id)sender {
     [self getTwitterAccountInformation];
