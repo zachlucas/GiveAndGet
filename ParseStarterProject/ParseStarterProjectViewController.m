@@ -76,16 +76,16 @@ NSString *twitterUsername = @"";
                 
                 [self sendMessage];
                 
-                [query getObjectInBackgroundWithId:[objects[randomIndex] objectId] block:^(PFObject *gameScore, NSError *error) {
+                [query getObjectInBackgroundWithId:[objects[randomIndex] objectId] block:^(PFObject *changeToSeen, NSError *error) {
                     
                     // Now let's update it with some new data. In this case, only cheatMode and score
                     // will get sent to the cloud. playerName hasn't changed.
                     
-                    gameScore[@"seen"] = @"yes";
-                    [gameScore saveInBackground];
+                    changeToSeen[@"seen"] = @"yes";
+                    [changeToSeen saveInBackground];
                     // TODO:  Fix this!!!
                     if (error){
-                        [gameScore saveInBackground];
+                        [changeToSeen saveInBackground];
                     }
                 }];
                 
@@ -218,13 +218,20 @@ NSString *tempUN = @"";
             }
         }
     }];
-    if (tempUN.length == 0){
-        _sendingAs.text = @"Sending as: AnonTweeter";
-        tempUN = @"AnonTweeter";
-    }
-    else{
-        _sendingAs.text = [NSString stringWithFormat:@"Sending as: %@", tempUN];
-    }
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 1 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+        if (tempUN.length == 0){
+            _sendingAs.text = @"Sending as: @AnonTweeter";
+            tempUN = @"@AnonTweeter";
+            nameToUseWhenSendingMessage = tempUN;
+        }
+        else{
+            _sendingAs.text = [NSString stringWithFormat:@"Sending as: @%@", tempUN];
+            nameToUseWhenSendingMessage = [NSString stringWithFormat:@"@%@",tempUN];
+            tempUN = nameToUseWhenSendingMessage;
+        }
+    });
+   
 }
 - (IBAction)getTwitterHandle:(id)sender {
     [self getTwitterAccountInformation];

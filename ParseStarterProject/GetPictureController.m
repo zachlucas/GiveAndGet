@@ -7,6 +7,8 @@
 //
 
 #import "GetPictureController.h"
+#import <MobileCoreServices/UTCoreTypes.h>
+
 
 @interface GetPictureController ()
 
@@ -83,6 +85,7 @@
 - (IBAction) showCameraUI {
     [self startCameraControllerFromViewController: self
                                     usingDelegate: self];
+    
 }
 
 - (BOOL) startCameraControllerFromViewController: (UIViewController*) controller
@@ -94,7 +97,6 @@
         || (delegate == nil)
         || (controller == nil))
         return NO;
-    
     
     UIImagePickerController *cameraUI = [[UIImagePickerController alloc] init];
     cameraUI.sourceType = UIImagePickerControllerSourceTypeCamera;
@@ -113,6 +115,61 @@
     
     [controller presentViewController:cameraUI animated:YES completion:nil];
     return YES;
+}
+
+// For responding to the user tapping Cancel.
+- (void) imagePickerControllerDidCancel: (UIImagePickerController *) picker {
+    
+    [[picker parentViewController] dismissViewControllerAnimated:YES completion:nil];
+    
+
+}
+
+// For responding to the user accepting a newly-captured picture or movie
+- (void) imagePickerController: (UIImagePickerController *) picker
+ didFinishPickingMediaWithInfo: (NSDictionary *) info {
+    
+    NSString *mediaType = [info objectForKey: UIImagePickerControllerMediaType];
+    UIImage *originalImage, *editedImage, *imageToSave;
+    
+    // Handle a still image capture
+    if (CFStringCompare ((CFStringRef) mediaType, kUTTypeImage, 0)
+        == kCFCompareEqualTo) {
+        
+        editedImage = (UIImage *) [info objectForKey:
+                                   UIImagePickerControllerEditedImage];
+        originalImage = (UIImage *) [info objectForKey:
+                                     UIImagePickerControllerOriginalImage];
+        
+        if (editedImage) {
+            imageToSave = editedImage;
+        } else {
+            imageToSave = originalImage;
+        }
+        
+        // Save the new image (original or edited) to the Camera Roll
+        //UIImageWriteToSavedPhotosAlbum (imageToSave, nil, nil , nil);
+        
+        _displayPicView.contentMode = UIViewContentModeScaleAspectFit;
+        _displayPicView.image = imageToSave;
+    }
+    
+    // Handle a movie capture
+    if (CFStringCompare ((CFStringRef) mediaType, kUTTypeMovie, 0)
+        == kCFCompareEqualTo) {
+        
+        NSString *moviePath = [[info objectForKey:
+                                UIImagePickerControllerMediaURL] path];
+        
+        if (UIVideoAtPathIsCompatibleWithSavedPhotosAlbum (moviePath)) {
+            UISaveVideoAtPathToSavedPhotosAlbum (
+                                                 moviePath, nil, nil, nil);
+        }
+    }
+    NSLog(@"tryin to quit u2");
+    //[[picker parentViewController] dismissViewControllerAnimated:YES completion:nil];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 

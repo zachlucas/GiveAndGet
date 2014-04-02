@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface GetPictureController : UIViewController
+@interface GetPictureController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@property (weak, nonatomic) IBOutlet UIImageView *displayPicView;
 
 @end

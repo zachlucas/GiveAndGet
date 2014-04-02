@@ -245,7 +245,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vER-ey-CGh">
-                                <rect key="frame" x="11" y="289" width="298" height="30"/>
+                                <rect key="frame" x="11" y="276" width="298" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.92549026010000002" green="0.7607843876" blue="0.83137261870000001" alpha="1" colorSpace="deviceRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -257,7 +257,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A7w-fw-NzL">
-                                <rect key="frame" x="11" y="327" width="298" height="47"/>
+                                <rect key="frame" x="11" y="314" width="298" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.92549026010000002" green="0.7607843876" blue="0.83137261870000001" alpha="1" colorSpace="deviceRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -284,6 +284,10 @@
                                     <segue destination="BEB-6h-n3s" kind="unwind" unwindAction="goBackToTheMainScreen:" id="XVI-9J-fIX"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HAD-s9-HS1">
+                                <rect key="frame" x="40" y="376" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.70805261755039495" green="0.56350121482322901" blue="0.85572350539999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -298,6 +302,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="displayPicView" destination="HAD-s9-HS1" id="Ac8-p8-xPd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7gz-hu-N5x" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="BEB-6h-n3s" userLabel="Exit" sceneMemberID="exit"/>
