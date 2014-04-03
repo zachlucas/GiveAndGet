@@ -152,7 +152,49 @@
         //UIImageWriteToSavedPhotosAlbum (imageToSave, nil, nil , nil);
         
         _displayPicView.contentMode = UIViewContentModeScaleAspectFit;
-        _displayPicView.image = imageToSave;
+        //_displayPicView.image = imageToSave;
+        
+        //NSData *imageData = UIImagePNGRepresentation(imageToSave);
+        NSData *imageData = UIImageJPEGRepresentation(imageToSave, 0.0f);
+        
+        NSLog(@"This is the image size (in bytes): %d",[imageData length]);
+        
+        PFFile *imageFile = [PFFile fileWithName:@"image.png" data:imageData];
+        
+        PFObject *userPhoto = [PFObject objectWithClassName:@"Photo"];
+        userPhoto[@"name"] = @"Zach";
+        userPhoto[@"imageFile"] = imageFile;
+        userPhoto[@"seen"] = @"no";
+        [userPhoto saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            _successMessage.text = @"Sent! Here's what you sent someone:";
+            
+            
+            PFQuery *query = [PFQuery queryWithClassName:@"Photo"];
+            [query whereKey:@"seen" equalTo:@"no"];
+            
+            [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+                if (!error){
+                    NSLog(@"getting an image");
+                    
+                    NSLog(@"found %d images",[objects count]);
+                    
+                    _displayPicView.image = [objects[0] objectForKey:@"imageFile"];
+                }
+            }];
+            
+            /*PFFile *userImageFile;
+            [userImageFile getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
+                if (!error) {
+                    UIImage *image = [UIImage imageWithData:imageData];
+                    _displayPicView.image = image;
+                }
+            }];*/
+            
+            
+        }];
+        
+        
+        
     }
     
     // Handle a movie capture
@@ -172,7 +214,5 @@
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }
-
-
 
 @end

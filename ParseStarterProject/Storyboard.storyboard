@@ -285,9 +285,16 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HAD-s9-HS1">
-                                <rect key="frame" x="40" y="325" width="240" height="179"/>
+                                <rect key="frame" x="50" y="345" width="221" height="159"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eaT-BG-Ahu">
+                                <rect key="frame" x="17" y="318" width="287" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.70805261755039495" green="0.56350121482322901" blue="0.85572350539999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -304,12 +311,13 @@
                     </navigationItem>
                     <connections>
                         <outlet property="displayPicView" destination="HAD-s9-HS1" id="Ac8-p8-xPd"/>
+                        <outlet property="successMessage" destination="eaT-BG-Ahu" id="DK5-Ud-f6i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7gz-hu-N5x" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="BEB-6h-n3s" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1530" y="121"/>
+            <point key="canvasLocation" x="1549" y="121"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ghh-WK-Kjc">
