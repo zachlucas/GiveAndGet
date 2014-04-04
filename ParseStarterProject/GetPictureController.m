@@ -29,6 +29,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
+    NSLog(@"username that has been received: %@",_usernameToSendWithPic);
 }
 
 - (void)didReceiveMemoryWarning
@@ -130,6 +132,8 @@
 - (void) imagePickerController: (UIImagePickerController *) picker
  didFinishPickingMediaWithInfo: (NSDictionary *) info {
     
+    [_imageIndicator startAnimating];
+    
     NSString *mediaType = [info objectForKey: UIImagePickerControllerMediaType];
     UIImage *originalImage, *editedImage, *imageToSave;
     
@@ -149,51 +153,35 @@
         }
         
         // Save the new image (original or edited) to the Camera Roll
-        //UIImageWriteToSavedPhotosAlbum (imageToSave, nil, nil , nil);
-        
         _displayPicView.contentMode = UIViewContentModeScaleAspectFit;
-        //_displayPicView.image = imageToSave;
         
+        // Compressing the image:
         //NSData *imageData = UIImagePNGRepresentation(imageToSave);
         NSData *imageData = UIImageJPEGRepresentation(imageToSave, 0.0f);
         
-        NSLog(@"This is the image size (in bytes): %d",[imageData length]);
+        NSLog(@"This is the image size (in bytes): %lu",(unsigned long)[imageData length]);
         
         PFFile *imageFile = [PFFile fileWithName:@"image.png" data:imageData];
         
         PFObject *userPhoto = [PFObject objectWithClassName:@"Photo"];
-        userPhoto[@"name"] = @"Zach";
+        
+        // Setting the user's name:
+        if (_usernameToSendWithPic.length == 0){
+            userPhoto[@"name"] = @"Anonymous";
+        }
+        else{
+            userPhoto[@"name"] = _usernameToSendWithPic;
+        }
+        
+        // Setting the other attributes:
         userPhoto[@"imageFile"] = imageFile;
         userPhoto[@"seen"] = @"no";
+        // Sending the image:
         [userPhoto saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             _successMessage.text = @"Sent! Here's what you sent someone:";
-            
-            
-            PFQuery *query = [PFQuery queryWithClassName:@"Photo"];
-            [query whereKey:@"seen" equalTo:@"no"];
-            
-            [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-                if (!error){
-                    NSLog(@"getting an image");
-                    
-                    NSLog(@"found %d images",[objects count]);
-                    
-                    _displayPicView.image = [objects[0] objectForKey:@"imageFile"];
-                }
-            }];
-            
-            /*PFFile *userImageFile;
-            [userImageFile getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
-                if (!error) {
-                    UIImage *image = [UIImage imageWithData:imageData];
-                    _displayPicView.image = image;
-                }
-            }];*/
-            
-            
+            _displayPicView.image = imageToSave;
+            [_imageIndicator stopAnimating];
         }];
-        
-        
         
     }
     
@@ -209,9 +197,8 @@
                                                  moviePath, nil, nil, nil);
         }
     }
-    NSLog(@"tryin to quit u2");
-    //[[picker parentViewController] dismissViewControllerAnimated:YES completion:nil];
-    
+
+    // dismisses the View controller:
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

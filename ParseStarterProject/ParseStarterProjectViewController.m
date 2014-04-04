@@ -1,10 +1,12 @@
 #import "ParseStarterProjectViewController.h"
 #import <Parse/Parse.h>
+#import "GetPictureController.h"
 
 @implementation ParseStarterProjectViewController
 
 NSString *nameToUseWhenSendingMessage = @"";
 NSString *twitterUsername = @"";
+NSString *tempUN = @"";
 
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
@@ -33,10 +35,23 @@ NSString *twitterUsername = @"";
     //nothing goes here
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+    
+    if ([[segue identifier] isEqualToString:@"mainScreenToPictureScreen"]){
+        UINavigationController *destination = [segue destinationViewController];
+        
+        GetPictureController *picController = (GetPictureController*)[destination topViewController];
+        
+        picController.usernameToSendWithPic = nameToUseWhenSendingMessage;
+        
+        //segue.destinationViewController
+    }
+}
 
 - (IBAction)mainButton:(id)sender {
-    
-
     
     PFQuery *query = [PFQuery queryWithClassName:@"Message"];
     [query whereKey:@"seen" equalTo:@"no"];
@@ -197,8 +212,6 @@ NSString *twitterUsername = @"";
     NSLog(@"trying to go back");
     self.view = _mainView;
 }
-
-NSString *tempUN = @"";
 
 - (void)getTwitterAccountInformation
 {

@@ -14,4 +14,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *displayPicView;
 @property (strong, nonatomic) IBOutlet UILabel *successMessage;
 
+@property (strong, nonatomic) NSString *usernameToSendWithPic;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *imageIndicator;
+
 @end
