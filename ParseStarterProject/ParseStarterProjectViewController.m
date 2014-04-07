@@ -23,6 +23,8 @@ NSString *tempUN = @"";
     _messageText.returnKeyType = UIReturnKeySend;
     
     [super viewDidLoad];
+    
+    self.mainTextView.delegate = self;
 }
 
 
@@ -33,6 +35,25 @@ NSString *tempUN = @"";
 
 - (IBAction)goBackToTheMainScreen:(UIStoryboardSegue *)segue {
     //nothing goes here
+}
+
+- (void)textViewDidBeginEditing:(UITextView *)mainTextView {
+    if ([_mainTextView.text isEqualToString:@"be nice!"]){
+        _mainTextView.text = @"";
+        _mainTextView.textColor = [UIColor blackColor];
+    }
+}
+
+- (BOOL)textView:(UITextView *)mainTextView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
+{
+    if (_mainTextView.text.length < 141) {
+        _charCounter.text = [NSString stringWithFormat:@"(%d/140)",_mainTextView.text.length];
+    }
+    else{
+        _charCounter.textColor = [UIColor redColor];
+        _charCounter.text = [NSString stringWithFormat:@"(%d/140)",_mainTextView.text.length];
+    }
+    return true;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -83,8 +104,8 @@ NSString *tempUN = @"";
                 _sentHeader.text = @"Sent!  Here's your response:";
                 _mainLabel.text = [objects[randomIndex] objectForKey:@"message"];
                 _sentBy.text = [@"Sent by: " stringByAppendingString:[objects[randomIndex] objectForKey:@"name"]];
-                _mainLabel.backgroundColor = [self colorWithHexString:@"dc99b8"];
-                _sentBy.backgroundColor = [self colorWithHexString:@"dc99b8"];
+                _mainLabel.backgroundColor = [self colorWithHexString:@"ca9ae1"];
+                _sentBy.backgroundColor = [self colorWithHexString:@"ca9ae1"];
                 _mainLabel.textColor = [UIColor whiteColor];
                 
                // NSString *objectId = [objects[randomIndex] objectId];
@@ -123,7 +144,7 @@ NSString *tempUN = @"";
 
 - (void) sendMessage{
     
-    if (_messageText.text.length < 5){
+    if (_mainTextView.text.length < 5){
         UIAlertView *alert = [[UIAlertView alloc]initWithTitle: @"Too short"
                                                        message: @"Your message must be at least 5 characters!"
                                                       delegate: self
@@ -149,12 +170,12 @@ NSString *tempUN = @"";
             }
         }
         testObject[@"seen"] = @"no";
-        testObject[@"message"] = self.messageText.text;
+        testObject[@"message"] = self.mainTextView.text;
         [testObject saveInBackground];
 
-        NSLog(@"Data Sending: %@",self.messageText.text);
+        NSLog(@"Data Sending: %@",self.mainTextView.text);
     }
-    self.messageText.text = @"";
+    self.mainTextView.text = @"";
     [self.view endEditing:YES];
 }
 
