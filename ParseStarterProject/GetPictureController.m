@@ -30,7 +30,23 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
-    NSLog(@"username that has been received: %@",_usernameToSendWithPic);
+    /*
+    // Getting an image:
+    PFQuery *query = [PFQuery queryWithClassName:@"Photo"];
+    [query getObjectInBackgroundWithId:@"TqfX0R51sh" block:^(PFObject *textdu, NSError *error) {
+             // do your thing with text
+             if (!error) {
+                 PFFile *imageFile = [textdu objectForKey:@"imageFile"];
+                 [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+                     if (!error) {
+                         UIImage *image = [UIImage imageWithData:data];
+                         _displayPicView.image = image;
+                     }
+                 }];
+             }
+         }];
+    */
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -178,8 +194,59 @@
         userPhoto[@"seen"] = @"no";
         // Sending the image:
         [userPhoto saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-            _successMessage.text = @"Sent! Here's what you sent someone:";
-            _displayPicView.image = imageToSave;
+            _successMessage.text = @"Sent! Here's your response:";
+            //_displayPicView.image = imageToSave;
+            
+            PFQuery *query = [PFQuery queryWithClassName:@"Photo"];
+            [query whereKey:@"seen" equalTo:@"no"];
+            [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+                if (!error) {
+                    NSLog(@"size:%lu",(unsigned long)[objects count]);
+                    NSLog(@"%@",[[objects objectAtIndex:0] objectId]);
+                    
+                    [query getObjectInBackgroundWithId:[[objects objectAtIndex:0] objectId] block:^(PFObject *textdu, NSError *error) {
+                        if (!error) {
+                            PFFile *imageFile = [textdu objectForKey:@"imageFile"];
+                            [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+                                if (!error) {
+                                    UIImage *image = [UIImage imageWithData:data];
+                                    _displayPicView.image = image;
+                                    
+                                    
+                                    [query getObjectInBackgroundWithId:[[objects objectAtIndex:0] objectId] block:^(PFObject *changeToSeen, NSError *error) {
+                                        
+                                        // Now let's update it with some new data. In this case, only cheatMode and score
+                                        // will get sent to the cloud. playerName hasn't changed.
+                                        
+                                        changeToSeen[@"seen"] = @"yes";
+                                        [changeToSeen saveInBackground];
+                                        // TODO:  Fix this!!!
+                                        if (error){
+                                            [changeToSeen saveInBackground];
+                                        }
+                                    }];
+                                    
+                                }
+                            }];
+                        }
+                    }];
+                }
+            }];
+            
+            /*
+            [query getObjectInBackgroundWithId:@"TqfX0R51sh" block:^(PFObject *textdu, NSError *error) {
+                // do your thing with text
+                if (!error) {
+                    PFFile *imageFile = [textdu objectForKey:@"imageFile"];
+                    [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+                        if (!error) {
+                            UIImage *image = [UIImage imageWithData:data];
+                            _displayPicView.image = image;
+                        }
+                    }];
+                }
+            }];
+            */
             [_imageIndicator stopAnimating];
         }];
         

@@ -13,5 +13,6 @@
 @property (strong, nonatomic) IBOutlet UIView *mainView;
 @property (strong, nonatomic) IBOutlet UILabel *sendingAs;
 @property (strong, nonatomic) IBOutlet UITextView *mainTextView;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *responseIndicator;
 
 @end

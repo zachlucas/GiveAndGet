@@ -147,6 +147,10 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="send"/>
                             </textView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="ZBS-yV-e0n">
+                                <rect key="frame" x="150" y="138" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.9672154017857143" green="0.73735469570145795" blue="0.88622282849530798" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -181,6 +185,7 @@
                         <outlet property="charCounter" destination="5j6-6n-am4" id="uBp-yR-d1L"/>
                         <outlet property="mainLabel" destination="UYQ-Tq-8Q5" id="LAR-XI-pNe"/>
                         <outlet property="mainTextView" destination="hXq-pK-PYa" id="s1W-R2-WsZ"/>
+                        <outlet property="responseIndicator" destination="ZBS-yV-e0n" id="ur5-d5-0cd"/>
                         <outlet property="sendingAs" destination="1w7-gT-IJe" id="xug-Om-8hG"/>
                         <outlet property="sentBy" destination="UqQ-Iu-R6r" id="ZRr-yO-uDo"/>
                         <outlet property="sentHeader" destination="du7-Ap-92d" id="M9u-15-Xhg"/>
@@ -282,7 +287,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HAD-s9-HS1">
-                                <rect key="frame" x="50" y="325" width="221" height="179"/>
+                                <rect key="frame" x="50" y="345" width="221" height="159"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eaT-BG-Ahu">

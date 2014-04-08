@@ -72,7 +72,11 @@ NSString *tempUN = @"";
     }
 }
 
+NSString *objectID;
+
 - (IBAction)mainButton:(id)sender {
+    
+    [_responseIndicator startAnimating];
     
     PFQuery *query = [PFQuery queryWithClassName:@"Message"];
     [query whereKey:@"seen" equalTo:@"no"];
@@ -110,8 +114,10 @@ NSString *tempUN = @"";
                 
                // NSString *objectId = [objects[randomIndex] objectId];
                 
-                [self sendMessage];
+                objectID = [objects[randomIndex] objectId];
                 
+                [self sendMessage];
+                [_responseIndicator stopAnimating];
                 [query getObjectInBackgroundWithId:[objects[randomIndex] objectId] block:^(PFObject *changeToSeen, NSError *error) {
                     
                     // Now let's update it with some new data. In this case, only cheatMode and score
@@ -171,7 +177,7 @@ NSString *tempUN = @"";
         }
         testObject[@"seen"] = @"no";
         testObject[@"message"] = self.mainTextView.text;
-        [testObject saveInBackground];
+        [testObject save];
 
         NSLog(@"Data Sending: %@",self.mainTextView.text);
     }
