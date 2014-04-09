@@ -42,7 +42,7 @@ NSString *tempUN = @"";
 
 - (void)textViewDidBeginEditing:(UITextView *)mainTextView {
     // Allows for placeholder in TextView:
-    if ([_mainTextView.text isEqualToString:@"be nice!"] || [_mainTextView.text isEqualToString:@"send another!"]){
+    if ([_mainTextView.text isEqualToString:@"be nice!"] || [_mainTextView.text isEqualToString:@"send another!"] || [_mainTextView.text isEqualToString:@"send anot her!"]){
         _mainTextView.text = @"";
         _mainTextView.textColor = [UIColor blackColor];
     }
@@ -52,7 +52,7 @@ NSString *tempUN = @"";
 {
     // Checks text length:
     if (_mainTextView.text.length < 141) {
-        _charCounter.textColor = [UIColor grayColor];
+        _charCounter.textColor = [self colorWithHexString:@"d8d8d8"];
         _charCounter.text = [NSString stringWithFormat:@"(%d/140)",_mainTextView.text.length];
     }
     else{
@@ -121,7 +121,7 @@ NSString *objectID;
                     _sentHeader.text = @"Sent!  Here's your response:";
                     _mainLabel.text = @"Test message!";
                     _sentBy.text = @"Sent by: Zach";
-                    _mainLabel.backgroundColor = [self colorWithHexString:@"dc99b8"];
+                    _mainLabel.backgroundColor = [self colorWithHexString:@"e890a3"];
                     _mainLabel.textColor = [UIColor whiteColor];
                     
                     [self sendMessage];
@@ -137,8 +137,8 @@ NSString *objectID;
                     _sentHeader.text = @"Sent!  Here's your response:";
                     _mainLabel.text = [objects[randomIndex] objectForKey:@"message"];
                     _sentBy.text = [@"Sent by: " stringByAppendingString:[objects[randomIndex] objectForKey:@"name"]];
-                    _mainLabel.backgroundColor = [self colorWithHexString:@"ca9ae1"];
-                    _sentBy.backgroundColor = [self colorWithHexString:@"ca9ae1"];
+                    _mainLabel.backgroundColor = [self colorWithHexString:@"e890a3"];
+                    _sentBy.backgroundColor = [self colorWithHexString:@"e890a3"];
                     _mainLabel.textColor = [UIColor whiteColor];
                     
                    // NSString *objectId = [objects[randomIndex] objectId];

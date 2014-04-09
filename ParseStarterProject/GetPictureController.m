@@ -202,9 +202,9 @@
             [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
                 if (!error) {
                     NSLog(@"size:%lu",(unsigned long)[objects count]);
-                    NSLog(@"%@",[[objects objectAtIndex:0] objectId]);
+                    NSLog(@"%@",[[objects objectAtIndex:[objects count]-1] objectId]);
                     
-                    [query getObjectInBackgroundWithId:[[objects objectAtIndex:0] objectId] block:^(PFObject *textdu, NSError *error) {
+                    [query getObjectInBackgroundWithId:[[objects objectAtIndex:[objects count]-1] objectId] block:^(PFObject *textdu, NSError *error) {
                         if (!error) {
                             PFFile *imageFile = [textdu objectForKey:@"imageFile"];
                             [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
@@ -213,7 +213,7 @@
                                     _displayPicView.image = image;
                                     
                                     
-                                    [query getObjectInBackgroundWithId:[[objects objectAtIndex:0] objectId] block:^(PFObject *changeToSeen, NSError *error) {
+                                    [query getObjectInBackgroundWithId:[[objects objectAtIndex:[objects count]-1] objectId] block:^(PFObject *changeToSeen, NSError *error) {
                                         
                                         // Now let's update it with some new data. In this case, only cheatMode and score
                                         // will get sent to the cloud. playerName hasn't changed.
@@ -225,6 +225,7 @@
                                             [changeToSeen saveInBackground];
                                         }
                                     }];
+                                    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
                                     
                                 }
                             }];
@@ -233,23 +234,9 @@
                 }
             }];
             
-            /*
-            [query getObjectInBackgroundWithId:@"TqfX0R51sh" block:^(PFObject *textdu, NSError *error) {
-                // do your thing with text
-                if (!error) {
-                    PFFile *imageFile = [textdu objectForKey:@"imageFile"];
-                    [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
-                        if (!error) {
-                            UIImage *image = [UIImage imageWithData:data];
-                            _displayPicView.image = image;
-                        }
-                    }];
-                }
-            }];
-            */
             [_imageIndicator stopAnimating];
         }];
-        
+
     }
     
     // Handle a movie capture
