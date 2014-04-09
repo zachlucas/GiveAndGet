@@ -6,6 +6,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *sentBy;
 @property (strong, nonatomic) IBOutlet UILabel *sentHeader;
 @property (strong, nonatomic) IBOutlet UILabel *charCounter;
+@property (strong, nonatomic) IBOutlet UILabel *mainHeader;
 
 @property(nonatomic) UIReturnKeyType returnKeyType;
 

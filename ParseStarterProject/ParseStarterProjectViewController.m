@@ -1,6 +1,7 @@
 #import "ParseStarterProjectViewController.h"
 #import <Parse/Parse.h>
 #import "GetPictureController.h"
+#import <AudioToolbox/AudioServices.h>
 
 @implementation ParseStarterProjectViewController
 
@@ -20,10 +21,12 @@ NSString *tempUN = @"";
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
+    // TODO: Make send button work
     _messageText.returnKeyType = UIReturnKeySend;
     
     [super viewDidLoad];
     
+    // Enables control of the main TextView
     self.mainTextView.delegate = self;
 }
 
@@ -38,6 +41,7 @@ NSString *tempUN = @"";
 }
 
 - (void)textViewDidBeginEditing:(UITextView *)mainTextView {
+    // Allows for placeholder in TextView:
     if ([_mainTextView.text isEqualToString:@"be nice!"]){
         _mainTextView.text = @"";
         _mainTextView.textColor = [UIColor blackColor];
@@ -46,7 +50,9 @@ NSString *tempUN = @"";
 
 - (BOOL)textView:(UITextView *)mainTextView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
 {
+    // Checks text length:
     if (_mainTextView.text.length < 141) {
+        _charCounter.textColor = [UIColor grayColor];
         _charCounter.text = [NSString stringWithFormat:@"(%d/140)",_mainTextView.text.length];
     }
     else{
@@ -75,17 +81,17 @@ NSString *tempUN = @"";
 NSString *objectID;
 
 - (IBAction)mainButton:(id)sender {
-    
     [_responseIndicator startAnimating];
     
+    // finding messages that haven't been seen:
     PFQuery *query = [PFQuery queryWithClassName:@"Message"];
     [query whereKey:@"seen" equalTo:@"no"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             // The find succeeded.
-            //NSLog(@"Successfully retrieved %d messages.", objects.count);
             // Do something with the found objects
             
+            // If there are no unseen objects:
             if ([objects count] == NULL){
                 NSLog(@"No unseen messages to get...");
                 
@@ -142,14 +148,9 @@ NSString *objectID;
     
 
 }
-- (IBAction)keyPressed:(id)sender {
-    if (_messageText.text.length < 51) {
-        _charCounter.text = [NSString stringWithFormat:@"(%d/50)",_messageText.text.length];
-    }
-}
 
 - (void) sendMessage{
-    
+    // If message is too short:
     if (_mainTextView.text.length < 5){
         UIAlertView *alert = [[UIAlertView alloc]initWithTitle: @"Too short"
                                                        message: @"Your message must be at least 5 characters!"
@@ -160,7 +161,17 @@ NSString *objectID;
         
         [alert show];
     }
-    
+    // If message is too long:
+    else if(_mainTextView.text.length > 140){
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle: @"Too Long"
+                                                       message: @"Your message can't be longer than a tweet, silly."
+                                                      delegate: self
+                                             cancelButtonTitle:@"Cancel"
+                                             otherButtonTitles:@"OK",nil];
+        
+        
+        [alert show];
+    }
     else{
         PFObject *testObject = [PFObject objectWithClassName:@"Message"];
         if ([nameToUseWhenSendingMessage isEqualToString:@""]){
@@ -181,6 +192,7 @@ NSString *objectID;
 
         NSLog(@"Data Sending: %@",self.mainTextView.text);
     }
+    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
     self.mainTextView.text = @"";
     [self.view endEditing:YES];
 }
@@ -226,17 +238,10 @@ NSString *objectID;
     [self.view endEditing:YES];
 }
 
--(BOOL)textFieldShouldReturn:(UITextField *)messageText
-{
-    NSLog(@"FDSF");
-    [self mainButton:(@"3")];
-    return YES;
-}
 - (IBAction)picClicked:(id)sender {
     [self presentViewController:_picSender animated:YES completion:nil];
 }
 - (IBAction)backToMain:(id)sender {
-    NSLog(@"trying to go back");
     self.view = _mainView;
 }
 
