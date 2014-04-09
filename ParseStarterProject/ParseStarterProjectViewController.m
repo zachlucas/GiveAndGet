@@ -42,7 +42,7 @@ NSString *tempUN = @"";
 
 - (void)textViewDidBeginEditing:(UITextView *)mainTextView {
     // Allows for placeholder in TextView:
-    if ([_mainTextView.text isEqualToString:@"be nice!"]){
+    if ([_mainTextView.text isEqualToString:@"be nice!"] || [_mainTextView.text isEqualToString:@"send another!"]){
         _mainTextView.text = @"";
         _mainTextView.textColor = [UIColor blackColor];
     }
@@ -81,75 +81,6 @@ NSString *tempUN = @"";
 NSString *objectID;
 
 - (IBAction)mainButton:(id)sender {
-    [_responseIndicator startAnimating];
-    
-    // finding messages that haven't been seen:
-    PFQuery *query = [PFQuery queryWithClassName:@"Message"];
-    [query whereKey:@"seen" equalTo:@"no"];
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (!error) {
-            // The find succeeded.
-            // Do something with the found objects
-            
-            // If there are no unseen objects:
-            if ([objects count] == NULL){
-                NSLog(@"No unseen messages to get...");
-                
-                _sentHeader.text = @"Sent!  Here's your response:";
-                _mainLabel.text = @"Test message!";
-                _sentBy.text = @"Sent by: Zach";
-                _mainLabel.backgroundColor = [self colorWithHexString:@"dc99b8"];
-                _mainLabel.textColor = [UIColor whiteColor];
-                
-                [self sendMessage];
-                
-            }
-            else{
-                // Getting a random message:
-                NSUInteger randomIndex = arc4random() % [objects count];
-                
-                NSLog(@"Random message: %@",[objects[randomIndex] objectForKey:@"message"]);
-                NSLog(@"Random id: %@",[objects[randomIndex] objectId]);
-                
-                _sentHeader.text = @"Sent!  Here's your response:";
-                _mainLabel.text = [objects[randomIndex] objectForKey:@"message"];
-                _sentBy.text = [@"Sent by: " stringByAppendingString:[objects[randomIndex] objectForKey:@"name"]];
-                _mainLabel.backgroundColor = [self colorWithHexString:@"ca9ae1"];
-                _sentBy.backgroundColor = [self colorWithHexString:@"ca9ae1"];
-                _mainLabel.textColor = [UIColor whiteColor];
-                
-               // NSString *objectId = [objects[randomIndex] objectId];
-                
-                objectID = [objects[randomIndex] objectId];
-                
-                [self sendMessage];
-                [_responseIndicator stopAnimating];
-                [query getObjectInBackgroundWithId:[objects[randomIndex] objectId] block:^(PFObject *changeToSeen, NSError *error) {
-                    
-                    // Now let's update it with some new data. In this case, only cheatMode and score
-                    // will get sent to the cloud. playerName hasn't changed.
-                    
-                    changeToSeen[@"seen"] = @"yes";
-                    [changeToSeen saveInBackground];
-                    // TODO:  Fix this!!!
-                    if (error){
-                        [changeToSeen saveInBackground];
-                    }
-                }];
-                
-                
-            }
-        } else {
-            // Log details of the failure
-            NSLog(@"Error: %@ %@", error, [error userInfo]);
-        }
-    }];
-    
-    
-
-}
-
-- (void) sendMessage{
     // If message is too short:
     if (_mainTextView.text.length < 5){
         UIAlertView *alert = [[UIAlertView alloc]initWithTitle: @"Too short"
@@ -172,28 +103,98 @@ NSString *objectID;
         
         [alert show];
     }
+    // the message is juuust right!
     else{
-        PFObject *testObject = [PFObject objectWithClassName:@"Message"];
-        if ([nameToUseWhenSendingMessage isEqualToString:@""]){
-            testObject[@"name"] = @"Anonymous";
+        [_responseIndicator startAnimating];
+        // finding messages that haven't been seen:
+        PFQuery *query = [PFQuery queryWithClassName:@"Message"];
+        [query whereKey:@"seen" equalTo:@"no"];
+        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            if (!error) {
+                // The find succeeded.
+                // Do something with the found objects
+                
+                // If there are no unseen objects:
+                if ([objects count] == NULL){
+                    NSLog(@"No unseen messages to get...");
+                    
+                    _sentHeader.text = @"Sent!  Here's your response:";
+                    _mainLabel.text = @"Test message!";
+                    _sentBy.text = @"Sent by: Zach";
+                    _mainLabel.backgroundColor = [self colorWithHexString:@"dc99b8"];
+                    _mainLabel.textColor = [UIColor whiteColor];
+                    
+                    [self sendMessage];
+                    
+                }
+                else{
+                    // Getting a random message:
+                    NSUInteger randomIndex = arc4random() % [objects count];
+                    
+                    NSLog(@"Random message: %@",[objects[randomIndex] objectForKey:@"message"]);
+                    NSLog(@"Random id: %@",[objects[randomIndex] objectId]);
+                    
+                    _sentHeader.text = @"Sent!  Here's your response:";
+                    _mainLabel.text = [objects[randomIndex] objectForKey:@"message"];
+                    _sentBy.text = [@"Sent by: " stringByAppendingString:[objects[randomIndex] objectForKey:@"name"]];
+                    _mainLabel.backgroundColor = [self colorWithHexString:@"ca9ae1"];
+                    _sentBy.backgroundColor = [self colorWithHexString:@"ca9ae1"];
+                    _mainLabel.textColor = [UIColor whiteColor];
+                    
+                   // NSString *objectId = [objects[randomIndex] objectId];
+                    
+                    objectID = [objects[randomIndex] objectId];
+                    
+                    [self sendMessage];
+                    [_responseIndicator stopAnimating];
+                    [query getObjectInBackgroundWithId:[objects[randomIndex] objectId] block:^(PFObject *changeToSeen, NSError *error) {
+                        
+                        // Now let's update it with some new data. In this case, only cheatMode and score
+                        // will get sent to the cloud. playerName hasn't changed.
+                        
+                        changeToSeen[@"seen"] = @"yes";
+                        [changeToSeen saveInBackground];
+                        // TODO:  Fix this!!!
+                        if (error){
+                            [changeToSeen saveInBackground];
+                        }
+                    }];
+                    
+                    
+                }
+            } else {
+                // Log details of the failure
+                NSLog(@"Error: %@ %@", error, [error userInfo]);
+            }
+        }];
+        
+    }
+
+}
+
+- (void) sendMessage{
+    PFObject *testObject = [PFObject objectWithClassName:@"Message"];
+    if ([nameToUseWhenSendingMessage isEqualToString:@""]){
+        testObject[@"name"] = @"Anonymous";
+    }
+    else{
+        if (tempUN.length == 0){
+            NSLog(@"tempUN zeroooo");
+            testObject[@"name"] = nameToUseWhenSendingMessage;
         }
         else{
-            if (tempUN.length == 0){
-                NSLog(@"tempUN zeroooo");
-                testObject[@"name"] = nameToUseWhenSendingMessage;
-            }
-            else{
-                testObject[@"name"] = tempUN;
-            }
+            testObject[@"name"] = tempUN;
         }
-        testObject[@"seen"] = @"no";
-        testObject[@"message"] = self.mainTextView.text;
-        [testObject save];
-
-        NSLog(@"Data Sending: %@",self.mainTextView.text);
     }
+    testObject[@"seen"] = @"no";
+    testObject[@"message"] = self.mainTextView.text;
+    [testObject save];
+
+    NSLog(@"Data Sending: %@",self.mainTextView.text);
+    
     AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
-    self.mainTextView.text = @"";
+    _mainTextView.text = @"send another!";
+    _mainTextView.textColor = [UIColor grayColor];
     [self.view endEditing:YES];
 }
 
@@ -256,8 +257,9 @@ NSString *objectID;
             
             if ([accountsArray count] > 0) {
                 ACAccount *twitterAccount = [accountsArray objectAtIndex:0];
-                NSLog(@"un:%@",twitterAccount.username);
-                NSLog(@"%@",twitterAccount.accountType);
+                NSLog(@"Twitter username: %@",twitterAccount.username);
+                NSLog(@"Account type: %@",twitterAccount.accountType);
+                NSLog(@"Full name: %@",twitterAccount.userFullName);
                 nameToUseWhenSendingMessage = twitterAccount.username;
                 tempUN = twitterAccount.username;
             }
