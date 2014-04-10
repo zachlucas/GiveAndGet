@@ -10,9 +10,15 @@
 #import <Parse/Parse.h>
 
 
-@interface GetPictureController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface GetPictureController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIGestureRecognizerDelegate>{
+    
+    UITapGestureRecognizer *tap;
+    BOOL isFullScreen;
+    CGRect prevFrame;
+}
 @property (weak, nonatomic) IBOutlet UIImageView *displayPicView;
 @property (strong, nonatomic) IBOutlet UILabel *successMessage;
+@property (nonatomic, strong) UIImageView *imageView;
 
 @property (strong, nonatomic) NSString *usernameToSendWithPic;
 @property (strong, nonatomic) IBOutlet UIActivityIndicatorView *imageIndicator;

@@ -8,7 +8,7 @@
 
 #import "GetPictureController.h"
 #import <MobileCoreServices/UTCoreTypes.h>
-
+#import <QuartzCore/QuartzCore.h>
 
 @interface GetPictureController ()
 
@@ -30,22 +30,23 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
-    /*
-    // Getting an image:
-    PFQuery *query = [PFQuery queryWithClassName:@"Photo"];
-    [query getObjectInBackgroundWithId:@"TqfX0R51sh" block:^(PFObject *textdu, NSError *error) {
-             // do your thing with text
-             if (!error) {
-                 PFFile *imageFile = [textdu objectForKey:@"imageFile"];
-                 [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
-                     if (!error) {
-                         UIImage *image = [UIImage imageWithData:data];
-                         _displayPicView.image = image;
-                     }
-                 }];
-             }
-         }];
-    */
+    isFullScreen = FALSE;
+    // method exists...??
+    tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imgToFullScreen)];
+    tap.delegate = self;
+    
+    _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(95, 345, 110, 160)];
+    _imageView.contentMode = UIViewContentModeScaleAspectFill;
+    [_imageView setClipsToBounds:YES];
+    _imageView.userInteractionEnabled = YES;
+    _imageView.image = [UIImage imageNamed:@"Muppetshow-2.png"];
+    
+    UITapGestureRecognizer *tapper = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imgToFullScreen:)];
+    tapper.numberOfTapsRequired = 1;
+    
+    [_imageView addGestureRecognizer:tapper];
+    
+    [self.view addSubview:_imageView];
     
 }
 
@@ -169,7 +170,7 @@
         }
         
         // Save the new image (original or edited) to the Camera Roll
-        _displayPicView.contentMode = UIViewContentModeScaleAspectFit;
+        _imageView.contentMode = UIViewContentModeScaleAspectFit;
         
         // Compressing the image:
         //NSData *imageData = UIImagePNGRepresentation(imageToSave);
@@ -195,7 +196,7 @@
         // Sending the image:
         [userPhoto saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             _successMessage.text = @"Sent! Here's your response:";
-            //_displayPicView.image = imageToSave;
+            //_imageView.image = imageToSave;
             
             PFQuery *query = [PFQuery queryWithClassName:@"Photo"];
             [query whereKey:@"seen" equalTo:@"no"];
@@ -210,7 +211,7 @@
                             [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
                                 if (!error) {
                                     UIImage *image = [UIImage imageWithData:data];
-                                    _displayPicView.image = image;
+                                    _imageView.image = image;
                                     
                                     
                                     [query getObjectInBackgroundWithId:[[objects objectAtIndex:[objects count]-1] objectId] block:^(PFObject *changeToSeen, NSError *error) {
@@ -226,6 +227,11 @@
                                         }
                                     }];
                                     AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+                                    _imageView.layer.masksToBounds = NO;
+                                    _imageView.layer.shadowOffset = CGSizeMake(0, 0);
+                                    _imageView.layer.shadowRadius = 4;
+                                    _imageView.layer.shadowOpacity = 0.4;
+                                    _imageView.layer.shadowPath = [UIBezierPath bezierPathWithRect:_imageView.bounds].CGPath;
                                     
                                 }
                             }];
@@ -233,6 +239,7 @@
                     }];
                 }
             }];
+
             
             [_imageIndicator stopAnimating];
         }];
@@ -254,6 +261,41 @@
 
     // dismisses the View controller:
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+/*
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch;
+{
+    BOOL shouldReceiveTouch = YES;
+    
+    if (gestureRecognizer == tap) {
+        shouldReceiveTouch = (touch.view == _imageView);
+    }
+    
+    return shouldReceiveTouch;
+}*/
+
+-(void)imgToFullScreen:(UITapGestureRecognizer*)sender {
+    if (!isFullScreen) {
+        [UIView animateWithDuration:0.5 delay:0 options:0 animations:^{
+            //save previous frame
+            prevFrame = _imageView.frame;
+            [_imageView setFrame:[[UIScreen mainScreen] bounds]];
+        }completion:^(BOOL finished){
+            isFullScreen = TRUE;
+        }];
+        _imageView.layer.shadowOpacity = 0;
+        return;
+    }
+    else{
+        [UIView animateWithDuration:0.5 delay:0 options:0 animations:^{
+            [_imageView setFrame:prevFrame];
+        }completion:^(BOOL finished){
+            isFullScreen = FALSE;
+        }];
+        _imageView.layer.shadowOpacity = 0.4;
+        return;
+    }
 }
 
 @end

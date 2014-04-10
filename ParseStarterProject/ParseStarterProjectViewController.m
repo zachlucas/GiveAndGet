@@ -136,12 +136,21 @@ NSString *objectID;
                     
                     _sentHeader.text = @"Sent!  Here's your response:";
                     _mainLabel.text = [objects[randomIndex] objectForKey:@"message"];
-                    _sentBy.text = [@"Sent by: " stringByAppendingString:[objects[randomIndex] objectForKey:@"name"]];
+                    //NSString *tempCreatedOn = [@" at: " stringByAppendingString:[objects[randomIndex] objectForKey:@"createdAt"]];
+                    //_sentBy.text = [tempSentBy stringByAppendingString:tempCreatedOn];
+                    
+                    // Getting who message was sent by:
+                    NSString *tempSentBy = [@"Sent by: " stringByAppendingString:[objects[randomIndex] objectForKey:@"name"]];
+
+                    // Getting and formatting the date:
+                    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+                    [formatter setDateFormat:@"dd/mm/yyyy"];
+                    NSString *stringFromDate = [@" on: " stringByAppendingString:[formatter stringFromDate:[objects[randomIndex] createdAt]]];
+                    
+                    _sentBy.text = [tempSentBy stringByAppendingString:stringFromDate];
                     _mainLabel.backgroundColor = [self colorWithHexString:@"e890a3"];
                     _sentBy.backgroundColor = [self colorWithHexString:@"e890a3"];
                     _mainLabel.textColor = [UIColor whiteColor];
-                    
-                   // NSString *objectId = [objects[randomIndex] objectId];
                     
                     objectID = [objects[randomIndex] objectId];
                     
@@ -285,7 +294,24 @@ NSString *objectID;
     NSLog(@"second un: %@",twitterUsername);
 }
 
+- (IBAction)customHandle:(id)sender {
+    
+    UIAlertView *av = [[UIAlertView alloc]initWithTitle:@"Custom Handle" message:@"Enter your custom handle:" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
 
+    av.alertViewStyle = UIAlertViewStylePlainTextInput;
+    
+    
+    [av show];
+}
 
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 1) {
+        NSString *handle = [alertView textFieldAtIndex:0].text;
+        [_customHandleButton setTitle:[@"Using: " stringByAppendingString:handle] forState:UIControlStateNormal];
+        _sendingAs.text = [@"Sending as: " stringByAppendingString:handle];
+        nameToUseWhenSendingMessage = handle;
+        tempUN = handle;
+    }
+}
 
 @end
