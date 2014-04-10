@@ -29,23 +29,23 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-
+    
     isFullScreen = FALSE;
     // method exists...??
     tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imgToFullScreen)];
     tap.delegate = self;
     
+    // Getting the imageview ready:
     _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(95, 345, 110, 160)];
     _imageView.contentMode = UIViewContentModeScaleAspectFill;
     [_imageView setClipsToBounds:YES];
     _imageView.userInteractionEnabled = YES;
     _imageView.image = [UIImage imageNamed:@"Muppetshow-2.png"];
     
+    // For fullscreening the image:
     UITapGestureRecognizer *tapper = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imgToFullScreen:)];
     tapper.numberOfTapsRequired = 1;
-    
     [_imageView addGestureRecognizer:tapper];
-    
     [self.view addSubview:_imageView];
     
 }
@@ -57,15 +57,15 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+ {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 - (IBAction) showSavedMediaBrowser {
     [self startMediaBrowserFromViewController: self
@@ -141,14 +141,13 @@
     
     //[[picker parentViewController] dismissViewControllerAnimated:YES completion:nil];
     [self dismissViewControllerAnimated:YES completion:nil];
-
+    
 }
 
 
 // For responding to the user accepting a newly-captured picture or movie
 - (void) imagePickerController: (UIImagePickerController *) picker
  didFinishPickingMediaWithInfo: (NSDictionary *) info {
-    
     [_imageIndicator startAnimating];
     
     NSString *mediaType = [info objectForKey: UIImagePickerControllerMediaType];
@@ -173,9 +172,8 @@
         _imageView.contentMode = UIViewContentModeScaleAspectFit;
         
         // Compressing the image:
-        //NSData *imageData = UIImagePNGRepresentation(imageToSave);
+        // TODO: Compress it even SMALLER:
         NSData *imageData = UIImageJPEGRepresentation(imageToSave, 0.0f);
-        
         NSLog(@"This is the image size (in bytes): %lu",(unsigned long)[imageData length]);
         
         PFFile *imageFile = [PFFile fileWithName:@"image.png" data:imageData];
@@ -193,23 +191,23 @@
         // Setting the other attributes:
         userPhoto[@"imageFile"] = imageFile;
         userPhoto[@"seen"] = @"no";
-        // Sending the image:
-        [userPhoto saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-            _successMessage.text = @"Sent! Here's your response:";
-            //_imageView.image = imageToSave;
-            
-            PFQuery *query = [PFQuery queryWithClassName:@"Photo"];
-            [query whereKey:@"seen" equalTo:@"no"];
-            [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-                if (!error) {
-                    NSLog(@"size:%lu",(unsigned long)[objects count]);
-                    NSLog(@"%@",[[objects objectAtIndex:[objects count]-1] objectId]);
-                    
+        
+        // Finding a photo that hasn't been seen
+        PFQuery *query = [PFQuery queryWithClassName:@"Photo"];
+        [query whereKey:@"seen" equalTo:@"no"];
+        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            if (!error) {
+                // Sending the image:
+                [userPhoto saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                    _successMessage.text = @"Sent! Here's your response:";
+
+                    // getting the image object
                     [query getObjectInBackgroundWithId:[[objects objectAtIndex:[objects count]-1] objectId] block:^(PFObject *textdu, NSError *error) {
                         if (!error) {
                             PFFile *imageFile = [textdu objectForKey:@"imageFile"];
                             [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
                                 if (!error) {
+                                    // Showing the image
                                     UIImage *image = [UIImage imageWithData:data];
                                     _imageView.image = image;
                                     
@@ -221,29 +219,35 @@
                                         
                                         changeToSeen[@"seen"] = @"yes";
                                         [changeToSeen saveInBackground];
-                                        // TODO:  Fix this!!!
+
+                                        // Saves the image to the Parse cloud
                                         if (error){
                                             [changeToSeen saveInBackground];
                                         }
                                     }];
+                                    
+                                    // Vibrates
                                     AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+                                    // Formatting the image:
                                     _imageView.layer.masksToBounds = NO;
                                     _imageView.layer.shadowOffset = CGSizeMake(0, 0);
                                     _imageView.layer.shadowRadius = 4;
                                     _imageView.layer.shadowOpacity = 0.4;
                                     _imageView.layer.shadowPath = [UIBezierPath bezierPathWithRect:_imageView.bounds].CGPath;
                                     
+                                    [_imageIndicator stopAnimating];
+                                    
                                 }
                             }];
                         }
                     }];
                 }
-            }];
-
-            
-            [_imageIndicator stopAnimating];
+                 ];
+                
+                
+            }
         }];
-
+        
     }
     
     // Handle a movie capture
@@ -258,22 +262,10 @@
                                                  moviePath, nil, nil, nil);
         }
     }
-
+    
     // dismisses the View controller:
     [self dismissViewControllerAnimated:YES completion:nil];
 }
-/*
-
-- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch;
-{
-    BOOL shouldReceiveTouch = YES;
-    
-    if (gestureRecognizer == tap) {
-        shouldReceiveTouch = (touch.view == _imageView);
-    }
-    
-    return shouldReceiveTouch;
-}*/
 
 -(void)imgToFullScreen:(UITapGestureRecognizer*)sender {
     if (!isFullScreen) {
