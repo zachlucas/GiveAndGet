@@ -36,11 +36,11 @@
     tap.delegate = self;
     
     // Getting the imageview ready:
-    _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(95, 345, 110, 160)];
+    _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(95, 315, 120, 170)];
     _imageView.contentMode = UIViewContentModeScaleAspectFill;
     [_imageView setClipsToBounds:YES];
     _imageView.userInteractionEnabled = YES;
-    _imageView.image = [UIImage imageNamed:@"Muppetshow-2.png"];
+    //_imageView.image = [UIImage imageNamed:@"Muppetshow-2.png"];
     
     // For fullscreening the image:
     UITapGestureRecognizer *tapper = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imgToFullScreen:)];
@@ -290,6 +290,16 @@
         _imageView.layer.shadowOpacity = 0.4;
         return;
     }
+}
+- (IBAction)logoClicked:(id)sender {
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle: @"Hello"
+                                                   message: @"This silly little app was written by Zach Lucas!"
+                                                  delegate: self
+                                         cancelButtonTitle:@"Okey Dokey"
+                                         otherButtonTitles:nil,nil];
+    
+    
+    [alert show];
 }
 
 @end

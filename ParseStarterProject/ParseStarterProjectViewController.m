@@ -20,10 +20,7 @@ NSString *tempUN = @"";
 #pragma mark - UIViewController
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad {
-    // TODO: Make send button work
-    _messageText.returnKeyType = UIReturnKeySend;
-    
+- (void)viewDidLoad {    
     [super viewDidLoad];
     
     // Enables control of the main TextView
@@ -144,12 +141,14 @@ NSString *objectID;
 
                     // Getting and formatting the date:
                     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-                    [formatter setDateFormat:@"dd/mm/yyyy"];
+                    [formatter setDateFormat:@"MM/dd/yyyy"];
                     NSString *stringFromDate = [@" on: " stringByAppendingString:[formatter stringFromDate:[objects[randomIndex] createdAt]]];
                     
                     _sentBy.text = [tempSentBy stringByAppendingString:stringFromDate];
-                    _mainLabel.backgroundColor = [self colorWithHexString:@"e890a3"];
-                    _sentBy.backgroundColor = [self colorWithHexString:@"e890a3"];
+                    //_mainLabel.backgroundColor = [self colorWithHexString:@"e890a3"];
+                    //_sentBy.backgroundColor = [self colorWithHexString:@"e890a3"];
+                    _mainLabel.layer.borderColor = [self colorWithHexString:@"e890a3"].CGColor;
+                    _mainLabel.layer.borderWidth = 3.0;
                     _mainLabel.textColor = [UIColor whiteColor];
                     
                     objectID = [objects[randomIndex] objectId];
@@ -316,6 +315,16 @@ NSString *objectID;
         nameToUseWhenSendingMessage = handle;
         tempUN = handle;
     }
+}
+- (IBAction)logoClicked:(id)sender {
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle: @"Hello"
+                                                   message: @"This silly little app was written by Zach Lucas!"
+                                                  delegate: self
+                                         cancelButtonTitle:@"Okey Dokey"
+                                         otherButtonTitles:nil,nil];
+    
+    
+    [alert show];
 }
 
 @end
