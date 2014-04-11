@@ -22,5 +22,9 @@
 
 @property (strong, nonatomic) NSString *usernameToSendWithPic;
 @property (strong, nonatomic) IBOutlet UIActivityIndicatorView *imageIndicator;
+@property (strong, nonatomic) IBOutlet UILabel *giveAPic;
+@property (strong, nonatomic) IBOutlet UILabel *andLabel;
+@property (strong, nonatomic) IBOutlet UILabel *getAPic;
+@property (strong, nonatomic) IBOutlet UIButton *doneButton;
 
 @end

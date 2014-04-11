@@ -23,10 +23,15 @@ NSString *tempUN = @"";
 - (void)viewDidLoad {    
     [super viewDidLoad];
     
+    [self setNeedsStatusBarAppearanceUpdate];
+    
     // Enables control of the main TextView
     self.mainTextView.delegate = self;
 }
 
+-(UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
+}
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Return YES for supported orientations

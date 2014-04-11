@@ -275,6 +275,14 @@
             //save previous frame
             prevFrame = _imageView.frame;
             [_imageView setFrame:[[UIScreen mainScreen] bounds]];
+            self.view.backgroundColor = [UIColor blackColor];
+            _giveAPic.textColor = [UIColor blackColor];
+            _getAPic.textColor = [UIColor blackColor];
+            _andLabel.textColor = [UIColor blackColor];
+            _doneButton.backgroundColor = [UIColor blackColor];
+            [_doneButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+            [_doneButton setTitleShadowColor:[UIColor blackColor] forState:UIControlStateNormal];
+
         }completion:^(BOOL finished){
             isFullScreen = TRUE;
         }];
@@ -284,6 +292,14 @@
     else{
         [UIView animateWithDuration:0.5 delay:0 options:0 animations:^{
             [_imageView setFrame:prevFrame];
+            self.view.backgroundColor = [self colorWithHexString:@"d78698"];
+            _giveAPic.textColor = [UIColor whiteColor];
+            _andLabel.textColor = [UIColor whiteColor];
+            _getAPic.textColor = [UIColor whiteColor];
+            _doneButton.backgroundColor = [self colorWithHexString:@"566380"];
+            [_doneButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+            [_doneButton setTitleShadowColor:[UIColor grayColor] forState:UIControlStateNormal];
+
         }completion:^(BOOL finished){
             isFullScreen = FALSE;
         }];
@@ -300,6 +316,41 @@
     
     
     [alert show];
+}
+-(UIColor*)colorWithHexString:(NSString*)hex
+{
+    NSString *cString = [[hex stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] uppercaseString];
+    
+    // String should be 6 or 8 characters
+    if ([cString length] < 6) return [UIColor grayColor];
+    
+    // strip 0X if it appears
+    if ([cString hasPrefix:@"0X"]) cString = [cString substringFromIndex:2];
+    
+    if ([cString length] != 6) return  [UIColor grayColor];
+    
+    // Separate into r, g, b substrings
+    NSRange range;
+    range.location = 0;
+    range.length = 2;
+    NSString *rString = [cString substringWithRange:range];
+    
+    range.location = 2;
+    NSString *gString = [cString substringWithRange:range];
+    
+    range.location = 4;
+    NSString *bString = [cString substringWithRange:range];
+    
+    // Scan values
+    unsigned int r, g, b;
+    [[NSScanner scannerWithString:rString] scanHexInt:&r];
+    [[NSScanner scannerWithString:gString] scanHexInt:&g];
+    [[NSScanner scannerWithString:bString] scanHexInt:&b];
+    
+    return [UIColor colorWithRed:((float) r / 255.0f)
+                           green:((float) g / 255.0f)
+                            blue:((float) b / 255.0f)
+                           alpha:1.0f];
 }
 
 @end

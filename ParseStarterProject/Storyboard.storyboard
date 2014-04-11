@@ -161,6 +161,7 @@
                         <constraints>
                             <constraint firstItem="O7n-ZT-fg8" firstAttribute="width" secondItem="8T2-we-om1" secondAttribute="width" id="2Av-cV-0oH"/>
                             <constraint firstItem="CFa-OK-oyY" firstAttribute="leading" secondItem="KzD-1u-hhm" secondAttribute="leading" id="CSO-b0-8GP" userLabel="Horizontal Space - (-6) - Label - Give &amp; Get - View"/>
+                            <constraint firstItem="8T2-we-om1" firstAttribute="top" secondItem="O7n-ZT-fg8" secondAttribute="bottom" constant="8" id="FjO-vO-l23"/>
                             <constraint firstItem="hrP-r6-vob" firstAttribute="height" secondItem="8T2-we-om1" secondAttribute="height" id="M6Y-Hx-aoS"/>
                             <constraint firstItem="O7n-ZT-fg8" firstAttribute="top" secondItem="0bp-Rd-7Bj" secondAttribute="bottom" constant="4" id="NLl-y5-qSp"/>
                             <constraint firstItem="hrP-r6-vob" firstAttribute="top" secondItem="8T2-we-om1" secondAttribute="bottom" constant="8" id="NO0-3E-K1h"/>
@@ -175,6 +176,7 @@
                             <constraint firstItem="Qn0-ls-I1L" firstAttribute="top" secondItem="hrP-r6-vob" secondAttribute="bottom" constant="15" id="eMd-7n-WT2"/>
                             <constraint firstAttribute="trailing" secondItem="i4K-9k-ssm" secondAttribute="trailing" constant="5" id="fDS-Um-7Iv"/>
                             <constraint firstItem="O7n-ZT-fg8" firstAttribute="centerX" secondItem="0bp-Rd-7Bj" secondAttribute="centerX" id="gKK-qb-LcV"/>
+                            <constraint firstItem="hrP-r6-vob" firstAttribute="top" secondItem="8T2-we-om1" secondAttribute="bottom" constant="8" id="gOJ-zH-UHh"/>
                             <constraint firstAttribute="centerX" secondItem="hrP-r6-vob" secondAttribute="centerX" id="hR1-fQ-sRU"/>
                             <constraint firstItem="hrP-r6-vob" firstAttribute="centerX" secondItem="8T2-we-om1" secondAttribute="centerX" id="phB-Mj-5Uk"/>
                             <constraint firstAttribute="centerX" secondItem="UYQ-Tq-8Q5" secondAttribute="centerX" id="xqF-aZ-rqw"/>
@@ -247,7 +249,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vER-ey-CGh">
-                                <rect key="frame" x="17" y="221" width="58" height="58"/>
+                                <rect key="frame" x="14" y="221" width="58" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.49078155674683183" green="0.56476804150086546" blue="0.7412109375" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" image="camera-icon-hi.png">
@@ -259,7 +261,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A7w-fw-NzL">
-                                <rect key="frame" x="75" y="221" width="229" height="58"/>
+                                <rect key="frame" x="78" y="221" width="229" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.41639432232501228" green="0.47916675490087146" blue="0.62886639030612246" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -326,6 +328,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="andLabel" destination="HIT-aL-JzO" id="1UF-P5-5p8"/>
+                        <outlet property="doneButton" destination="0Zh-04-fYw" id="dtA-97-1sN"/>
+                        <outlet property="getAPic" destination="zdm-2N-vbw" id="BQf-T8-UXz"/>
+                        <outlet property="giveAPic" destination="6nE-Nq-8gA" id="CEf-tK-utG"/>
                         <outlet property="imageIndicator" destination="rvM-I9-XNy" id="FhN-PH-2Tw"/>
                         <outlet property="successMessage" destination="eaT-BG-Ahu" id="DK5-Ud-f6i"/>
                     </connections>
@@ -340,6 +346,7 @@
         <scene sceneID="Ghh-WK-Kjc">
             <objects>
                 <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="oqp-ef-AlV" sceneMemberID="viewController">
+                    <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="87n-bY-QHg">
                         <autoresizingMask key="autoresizingMask"/>
