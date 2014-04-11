@@ -35,6 +35,8 @@
     tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imgToFullScreen)];
     tap.delegate = self;
     
+    [self setNeedsStatusBarAppearanceUpdate];
+    
     // Getting the imageview ready:
     _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(95, 315, 120, 170)];
     _imageView.contentMode = UIViewContentModeScaleAspectFill;
@@ -48,6 +50,10 @@
     [_imageView addGestureRecognizer:tapper];
     [self.view addSubview:_imageView];
     
+}
+
+-(UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
 }
 
 - (void)didReceiveMemoryWarning

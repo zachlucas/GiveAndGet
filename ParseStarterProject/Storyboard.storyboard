@@ -249,7 +249,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vER-ey-CGh">
-                                <rect key="frame" x="14" y="221" width="58" height="58"/>
+                                <rect key="frame" x="0.0" y="221" width="59" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.49078155674683183" green="0.56476804150086546" blue="0.7412109375" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" image="camera-icon-hi.png">
@@ -261,7 +261,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A7w-fw-NzL">
-                                <rect key="frame" x="78" y="221" width="229" height="58"/>
+                                <rect key="frame" x="59" y="221" width="262" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.41639432232501228" green="0.47916675490087146" blue="0.62886639030612246" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -273,14 +273,10 @@
                                     <action selector="showSavedMediaBrowser" destination="juf-tN-yrL" eventType="touchUpInside" id="gai-zI-WmP"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Zh-04-fYw">
-                                <rect key="frame" x="101" y="512" width="118" height="47"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Zh-04-fYw">
+                                <rect key="frame" x="66" y="512" width="189" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.33522421784947354" green="0.38576006448459266" blue="0.5062779017857143" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="47" id="jM2-nR-YT8"/>
-                                    <constraint firstAttribute="width" constant="118" id="vHJ-C9-2rc"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
                                 <state key="normal" title="★ DONE ★">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -315,10 +311,6 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.85092474490000003" green="0.5225852433" blue="0.59715658829999996" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="centerX" secondItem="0Zh-04-fYw" secondAttribute="centerX" constant="-0.5" id="AFl-TK-AxK"/>
-                            <constraint firstItem="Waw-zU-ojy" firstAttribute="top" secondItem="0Zh-04-fYw" secondAttribute="bottom" constant="9" id="qaq-7g-ClS"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="EHm-AC-rVC">
                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="2fN-Lv-Pu6">
