@@ -217,12 +217,14 @@
                                         // Now let's update it with some new data. In this case, only cheatMode and score
                                         // will get sent to the cloud. playerName hasn't changed.
                                         
-                                        changeToSeen[@"seen"] = @"yes";
-                                        [changeToSeen saveInBackground];
-
+                                        //changeToSeen[@"seen"] = @"yes";
+                                        //[changeToSeen saveInBackground];
+                                        [changeToSeen deleteInBackground];
+                                        
                                         // Saves the image to the Parse cloud
                                         if (error){
-                                            [changeToSeen saveInBackground];
+                                            NSLog(@"Can't delete image");
+                                            //[changeToSeen saveInBackground];
                                         }
                                     }];
                                     

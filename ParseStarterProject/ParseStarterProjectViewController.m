@@ -161,11 +161,15 @@ NSString *objectID;
                         // Now let's update it with some new data. In this case, only cheatMode and score
                         // will get sent to the cloud. playerName hasn't changed.
                         
-                        changeToSeen[@"seen"] = @"yes";
-                        [changeToSeen saveInBackground];
+                        //deleting object
+                        [changeToSeen deleteInBackground];
+                        
+                        //changeToSeen[@"seen"] = @"yes";
+                        //[changeToSeen saveInBackground];
                         // TODO:  Fix this!!!
                         if (error){
-                            [changeToSeen saveInBackground];
+                            //[changeToSeen saveInBackground];
+                            NSLog(@"couldnt delete");
                         }
                     }];
                     
