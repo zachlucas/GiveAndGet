@@ -133,11 +133,11 @@ NSString *objectID;
                     // Getting a random message:
                     NSUInteger randomIndex = arc4random() % [objects count];
                     
-                    NSLog(@"Random message: %@",[objects[randomIndex] objectForKey:@"message"]);
-                    NSLog(@"Random id: %@",[objects[randomIndex] objectId]);
+                    NSLog(@"Random message: %@",[objects[0] objectForKey:@"message"]);
+                    NSLog(@"Random id: %@",[objects[0] objectId]);
                     
                     _sentHeader.text = @"Sent!  Here's your response:";
-                    _mainLabel.text = [objects[randomIndex] objectForKey:@"message"];
+                    _mainLabel.text = [objects[0] objectForKey:@"message"];
                     //NSString *tempCreatedOn = [@" at: " stringByAppendingString:[objects[randomIndex] objectForKey:@"createdAt"]];
                     //_sentBy.text = [tempSentBy stringByAppendingString:tempCreatedOn];
                     
@@ -156,17 +156,19 @@ NSString *objectID;
                     _mainLabel.layer.borderWidth = 3.0;
                     _mainLabel.textColor = [UIColor whiteColor];
                     
-                    objectID = [objects[randomIndex] objectId];
+                    objectID = [objects[0] objectId];
+                    
+                    [objects[0] delete];
                     
                     [self sendMessage];
                     [_responseIndicator stopAnimating];
-                    [query getObjectInBackgroundWithId:[objects[randomIndex] objectId] block:^(PFObject *changeToSeen, NSError *error) {
+                    /*[query getObjectInBackgroundWithId:[objects[randomIndex] objectId] block:^(PFObject *changeToSeen, NSError *error) {
                         
                         // Now let's update it with some new data. In this case, only cheatMode and score
                         // will get sent to the cloud. playerName hasn't changed.
                         
                         //deleting object
-                        [changeToSeen deleteInBackground];
+                        [changeToSeen delete];
                         
                         //changeToSeen[@"seen"] = @"yes";
                         //[changeToSeen saveInBackground];
@@ -175,7 +177,11 @@ NSString *objectID;
                             //[changeToSeen saveInBackground];
                             NSLog(@"couldnt delete");
                         }
-                    }];
+                    }];*/
+                    
+                    NSLog(@"Trying to delete %@", [objects[randomIndex] objectId]);
+                    
+                    //[[query getObjectWithId:[objects[randomIndex] objectId]] delete];
                     
                     
                 }
@@ -265,6 +271,8 @@ NSString *objectID;
 
 - (void)getTwitterAccountInformation
 {
+    [_customHandleButton setTitle:@"Use a Custom Handle" forState:UIControlStateNormal];
+    
     ACAccountStore *accountStore = [[ACAccountStore alloc] init];
     ACAccountType *accountType = [accountStore accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierTwitter];
     
