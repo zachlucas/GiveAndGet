@@ -204,6 +204,8 @@
         [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
             if (!error) {
                 // Sending the image:
+                [userPhoto.ACL setPublicWriteAccess:YES];
+                
                 [userPhoto saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                     _successMessage.text = @"Sent! Here's your response:";
 

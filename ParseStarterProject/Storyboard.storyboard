@@ -182,6 +182,10 @@
                                 <color key="textColor" red="0.84596221299999996" green="0.84596221299999996" blue="0.84596221299999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="jKL-Gs-JcD">
+                                <rect key="frame" x="142" y="165" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.49411767719999999" green="0.56078433989999998" blue="0.69411766529999996" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
@@ -226,7 +230,7 @@
                         <outlet property="mainHeader" destination="CFa-OK-oyY" id="Z2A-sQ-au6"/>
                         <outlet property="mainLabel" destination="UYQ-Tq-8Q5" id="LAR-XI-pNe"/>
                         <outlet property="mainTextView" destination="hXq-pK-PYa" id="s1W-R2-WsZ"/>
-                        <outlet property="responseIndicator" destination="ZBS-yV-e0n" id="ur5-d5-0cd"/>
+                        <outlet property="responseIndicator" destination="jKL-Gs-JcD" id="i4d-nT-bFZ"/>
                         <outlet property="sendingAs" destination="1w7-gT-IJe" id="xug-Om-8hG"/>
                         <outlet property="sentBy" destination="UqQ-Iu-R6r" id="ZRr-yO-uDo"/>
                     </connections>
@@ -309,7 +313,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Zh-04-fYw">
-                                <rect key="frame" x="80" y="523" width="160" height="36"/>
+                                <rect key="frame" x="80" y="524" width="160" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.33522421784947354" green="0.38576006448459266" blue="0.5062779017857143" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -354,7 +358,7 @@
                             <constraint firstAttribute="bottom" secondItem="65L-PM-MQC" secondAttribute="bottom" constant="-6" id="6AO-2R-oC9"/>
                             <constraint firstItem="0Zh-04-fYw" firstAttribute="leading" secondItem="zF1-xn-XGM" secondAttribute="leading" constant="80" id="h3F-3f-azf"/>
                             <constraint firstItem="65L-PM-MQC" firstAttribute="leading" secondItem="zF1-xn-XGM" secondAttribute="leading" constant="295" id="ojX-Lc-CbJ"/>
-                            <constraint firstItem="Waw-zU-ojy" firstAttribute="top" secondItem="0Zh-04-fYw" secondAttribute="bottom" constant="9" id="xxE-jX-PMo"/>
+                            <constraint firstItem="Waw-zU-ojy" firstAttribute="top" secondItem="0Zh-04-fYw" secondAttribute="bottom" constant="8" id="xxE-jX-PMo"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="EHm-AC-rVC">

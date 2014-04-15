@@ -105,6 +105,10 @@ NSString *objectID;
         
         [alert show];
     }
+    // if message is placeholder text:
+    else if ([_mainTextView.text isEqualToString:@"send another!"] || [_mainTextView.text isEqualToString:@"be nice!"]){
+        
+    }
     // the message is juuust right!
     else{
         [_responseIndicator startAnimating];
@@ -211,6 +215,7 @@ NSString *objectID;
     }
     testObject[@"seen"] = @"no";
     testObject[@"message"] = self.mainTextView.text;
+    [testObject.ACL setPublicWriteAccess:YES];
     [testObject save];
 
     NSLog(@"Data Sending: %@",self.mainTextView.text);
