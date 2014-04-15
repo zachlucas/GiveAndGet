@@ -26,5 +26,10 @@
 @property (strong, nonatomic) IBOutlet UILabel *andLabel;
 @property (strong, nonatomic) IBOutlet UILabel *getAPic;
 @property (strong, nonatomic) IBOutlet UIButton *doneButton;
+@property (strong, nonatomic) IBOutlet UIButton *downloadPicture;
+@property (strong, nonatomic) IBOutlet UIButton *shareButton;
+@property (strong, nonatomic) IBOutlet UIButton *logoButton;
+@property (strong, nonatomic) IBOutlet UIButton *cameraButton;
+@property (strong, nonatomic) IBOutlet UIButton *useExistingButton;
 
 @end

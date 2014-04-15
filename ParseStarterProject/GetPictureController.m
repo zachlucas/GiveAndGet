@@ -16,6 +16,8 @@
 
 @implementation GetPictureController
 
+bool isPicThere = NO;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -45,6 +47,8 @@
     //_imageView.image = [UIImage imageNamed:@"Muppetshow-2.png"];
     
     // For fullscreening the image:
+    _downloadPicture.hidden = YES;
+    _shareButton.hidden = YES;
     UITapGestureRecognizer *tapper = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imgToFullScreen:)];
     tapper.numberOfTapsRequired = 1;
     [_imageView addGestureRecognizer:tapper];
@@ -218,6 +222,7 @@
                                     // Showing the image
                                     UIImage *image = [UIImage imageWithData:data];
                                     _imageView.image = image;
+                                    isPicThere = YES;
                                     
                                     
                                     [query getObjectInBackgroundWithId:[[objects objectAtIndex:[objects count]-1] objectId] block:^(PFObject *changeToSeen, NSError *error) {
@@ -278,43 +283,88 @@
 }
 
 -(void)imgToFullScreen:(UITapGestureRecognizer*)sender {
-    if (!isFullScreen) {
-        [UIView animateWithDuration:0.5 delay:0 options:0 animations:^{
-            //save previous frame
-            prevFrame = _imageView.frame;
-            [_imageView setFrame:[[UIScreen mainScreen] bounds]];
-            self.view.backgroundColor = [UIColor blackColor];
-            _giveAPic.textColor = [UIColor blackColor];
-            _getAPic.textColor = [UIColor blackColor];
-            _andLabel.textColor = [UIColor blackColor];
-            _doneButton.backgroundColor = [UIColor blackColor];
-            [_doneButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-            [_doneButton setTitleShadowColor:[UIColor blackColor] forState:UIControlStateNormal];
+    if (isPicThere){
+        if (!isFullScreen) {
+            [UIView animateWithDuration:0.5 delay:0 options:0 animations:^{
+                //save previous frame
+                prevFrame = _imageView.frame;
+                CGRect screenRect = [[UIScreen mainScreen] bounds];
+                CGFloat screenWidth = screenRect.size.width;
+                CGFloat screenHeight = screenRect.size.height;
+                //[_imageView setFrame:[[UIScreen mainScreen] bounds]];
+                [_imageView setFrame:CGRectMake(0, 0, screenWidth, screenHeight-100)];
+                self.view.backgroundColor = [UIColor blackColor];
+                _giveAPic.textColor = [UIColor blackColor];
+                _getAPic.textColor = [UIColor blackColor];
+                _andLabel.textColor = [UIColor blackColor];
+                _doneButton.backgroundColor = [UIColor blackColor];
+                [_doneButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+                [_doneButton setTitleShadowColor:[UIColor blackColor] forState:UIControlStateNormal];
 
-        }completion:^(BOOL finished){
-            isFullScreen = TRUE;
-        }];
-        _imageView.layer.shadowOpacity = 0;
-        return;
-    }
-    else{
-        [UIView animateWithDuration:0.5 delay:0 options:0 animations:^{
-            [_imageView setFrame:prevFrame];
-            self.view.backgroundColor = [self colorWithHexString:@"d78698"];
-            _giveAPic.textColor = [UIColor whiteColor];
-            _andLabel.textColor = [UIColor whiteColor];
-            _getAPic.textColor = [UIColor whiteColor];
-            _doneButton.backgroundColor = [self colorWithHexString:@"566380"];
-            [_doneButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-            [_doneButton setTitleShadowColor:[UIColor grayColor] forState:UIControlStateNormal];
+            }completion:^(BOOL finished){
+                isFullScreen = TRUE;
+            }];
+            _imageView.layer.shadowOpacity = 0;
+            _downloadPicture.hidden = NO;
+            _shareButton.hidden = NO;
+            _logoButton.hidden = YES;
+            _cameraButton.hidden = YES;
+            _useExistingButton.hidden = YES;
+            return;
+        }
+        else{
+            [UIView animateWithDuration:0.5 delay:0 options:0 animations:^{
+                [_imageView setFrame:prevFrame];
+                self.view.backgroundColor = [self colorWithHexString:@"d78698"];
+                _giveAPic.textColor = [UIColor whiteColor];
+                _andLabel.textColor = [UIColor whiteColor];
+                _getAPic.textColor = [UIColor whiteColor];
+                _doneButton.backgroundColor = [self colorWithHexString:@"566380"];
+                [_doneButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+                [_doneButton setTitleShadowColor:[UIColor grayColor] forState:UIControlStateNormal];
 
-        }completion:^(BOOL finished){
-            isFullScreen = FALSE;
-        }];
-        _imageView.layer.shadowOpacity = 0.4;
-        return;
+            }completion:^(BOOL finished){
+                isFullScreen = FALSE;
+            }];
+            _imageView.layer.shadowOpacity = 0.4;
+            _downloadPicture.hidden = YES;
+            _shareButton.hidden = YES;
+            _logoButton.hidden = NO;
+            _cameraButton.hidden = NO;
+            _useExistingButton.hidden = NO;
+            return;
+        }
     }
 }
+- (IBAction)downloadPictureClicked:(id)sender {
+    NSLog(@"downloading pic");
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle: @"Camera Roll"
+                                                   message: @"Image saved to Camera Roll"
+                                                  delegate: self
+                                         cancelButtonTitle:@"Okay"
+                                         otherButtonTitles:nil,nil];
+    
+    
+    
+    UIImageWriteToSavedPhotosAlbum(_imageView.image, nil, nil, nil);
+    
+    [alert show];
+}
+- (IBAction)shareButtonClicked:(id)sender {
+    NSLog(@"Sharing image");
+    
+    NSString *text = @"Look at this SILLY image!";
+    
+    UIImage *image = _imageView.image;
+    
+    UIActivityViewController *controller =
+    [[UIActivityViewController alloc]
+     initWithActivityItems:@[text, image]
+     applicationActivities:nil];
+    
+    [self presentViewController:controller animated:YES completion:nil];
+}
+
 - (IBAction)logoClicked:(id)sender {
     UIAlertView *alert = [[UIAlertView alloc]initWithTitle: @"Hello"
                                                    message: @"This silly little app was written by Zach Lucas!"

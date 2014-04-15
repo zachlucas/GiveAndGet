@@ -313,11 +313,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Zh-04-fYw">
-                                <rect key="frame" x="80" y="524" width="160" height="36"/>
+                                <rect key="frame" x="80" y="516" width="160" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.33522421784947354" green="0.38576006448459266" blue="0.5062779017857143" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="47" id="CNN-ed-9jc"/>
+                                    <constraint firstAttribute="height" constant="44" id="CNN-ed-9jc"/>
                                     <constraint firstAttribute="width" constant="160" id="Mu5-LR-5dX"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -352,12 +352,44 @@
                                     <action selector="logoClicked:" destination="juf-tN-yrL" eventType="touchUpInside" id="Zvn-m7-GF4"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ncz-Nb-K6l">
+                                <rect key="frame" x="7" y="516" width="42" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="OqE-rh-feQ"/>
+                                    <constraint firstAttribute="width" constant="42" id="pzB-Y9-7w5"/>
+                                </constraints>
+                                <state key="normal" image="Basic-Download-icon.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="downloadPictureClicked:" destination="juf-tN-yrL" eventType="touchUpInside" id="laB-go-7NO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dk-Ob-08b">
+                                <rect key="frame" x="270" y="518" width="41" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="LJK-hY-Q9C"/>
+                                    <constraint firstAttribute="width" constant="41" id="moe-QZ-Hzg"/>
+                                </constraints>
+                                <state key="normal" image="shareIcon.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareButtonClicked:" destination="juf-tN-yrL" eventType="touchUpInside" id="jYs-b5-TAU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.85092474490000003" green="0.5225852433" blue="0.59715658829999996" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="2dk-Ob-08b" firstAttribute="leading" secondItem="zF1-xn-XGM" secondAttribute="leading" constant="270" id="0Zq-4p-7RK"/>
                             <constraint firstAttribute="bottom" secondItem="65L-PM-MQC" secondAttribute="bottom" constant="-6" id="6AO-2R-oC9"/>
+                            <constraint firstItem="ncz-Nb-K6l" firstAttribute="leading" secondItem="zF1-xn-XGM" secondAttribute="leading" constant="7" id="UVD-kc-2dW"/>
+                            <constraint firstItem="Waw-zU-ojy" firstAttribute="top" secondItem="2dk-Ob-08b" secondAttribute="bottom" constant="10" id="aXm-u8-Bfx"/>
                             <constraint firstItem="0Zh-04-fYw" firstAttribute="leading" secondItem="zF1-xn-XGM" secondAttribute="leading" constant="80" id="h3F-3f-azf"/>
                             <constraint firstItem="65L-PM-MQC" firstAttribute="leading" secondItem="zF1-xn-XGM" secondAttribute="leading" constant="295" id="ojX-Lc-CbJ"/>
+                            <constraint firstItem="Waw-zU-ojy" firstAttribute="top" secondItem="ncz-Nb-K6l" secondAttribute="bottom" constant="10" id="t6J-hf-yMG"/>
                             <constraint firstItem="Waw-zU-ojy" firstAttribute="top" secondItem="0Zh-04-fYw" secondAttribute="bottom" constant="8" id="xxE-jX-PMo"/>
                         </constraints>
                     </view>
@@ -370,11 +402,16 @@
                     </navigationItem>
                     <connections>
                         <outlet property="andLabel" destination="HIT-aL-JzO" id="1UF-P5-5p8"/>
+                        <outlet property="cameraButton" destination="vER-ey-CGh" id="cRu-HQ-YDg"/>
                         <outlet property="doneButton" destination="0Zh-04-fYw" id="dtA-97-1sN"/>
+                        <outlet property="downloadPicture" destination="ncz-Nb-K6l" id="SwB-0W-8eu"/>
                         <outlet property="getAPic" destination="zdm-2N-vbw" id="BQf-T8-UXz"/>
                         <outlet property="giveAPic" destination="6nE-Nq-8gA" id="CEf-tK-utG"/>
                         <outlet property="imageIndicator" destination="rvM-I9-XNy" id="FhN-PH-2Tw"/>
+                        <outlet property="logoButton" destination="65L-PM-MQC" id="khZ-2M-rN6"/>
+                        <outlet property="shareButton" destination="2dk-Ob-08b" id="8MM-85-O76"/>
                         <outlet property="successMessage" destination="eaT-BG-Ahu" id="DK5-Ud-f6i"/>
+                        <outlet property="useExistingButton" destination="A7w-fw-NzL" id="EG7-GE-53D"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7gz-hu-N5x" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -402,7 +439,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Basic-Download-icon.png" width="256" height="256"/>
         <image name="camera-icon-hi.png" width="600" height="600"/>
+        <image name="shareIcon.png" width="128" height="128"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

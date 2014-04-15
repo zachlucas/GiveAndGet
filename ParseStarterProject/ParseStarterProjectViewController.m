@@ -146,7 +146,7 @@ NSString *objectID;
                     //_sentBy.text = [tempSentBy stringByAppendingString:tempCreatedOn];
                     
                     // Getting who message was sent by:
-                    NSString *tempSentBy = [@"Sent by: " stringByAppendingString:[objects[randomIndex] objectForKey:@"name"]];
+                    NSString *tempSentBy = [@"Sent by: " stringByAppendingString:[objects[0] objectForKey:@"name"]];
 
                     // Getting and formatting the date:
                     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
@@ -166,27 +166,10 @@ NSString *objectID;
                     
                     [self sendMessage];
                     [_responseIndicator stopAnimating];
-                    /*[query getObjectInBackgroundWithId:[objects[randomIndex] objectId] block:^(PFObject *changeToSeen, NSError *error) {
-                        
-                        // Now let's update it with some new data. In this case, only cheatMode and score
-                        // will get sent to the cloud. playerName hasn't changed.
-                        
-                        //deleting object
-                        [changeToSeen delete];
-                        
-                        //changeToSeen[@"seen"] = @"yes";
-                        //[changeToSeen saveInBackground];
-                        // TODO:  Fix this!!!
-                        if (error){
-                            //[changeToSeen saveInBackground];
-                            NSLog(@"couldnt delete");
-                        }
-                    }];*/
+                    
                     
                     NSLog(@"Trying to delete %@", [objects[randomIndex] objectId]);
-                    
-                    //[[query getObjectWithId:[objects[randomIndex] objectId]] delete];
-                    
+                                        
                     
                 }
             } else {
