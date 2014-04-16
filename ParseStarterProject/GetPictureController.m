@@ -31,6 +31,8 @@ bool isPicThere = NO;
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
+    _doneButton.layer.cornerRadius = 5.0;
     
     isFullScreen = FALSE;
     // method exists...??
@@ -40,7 +42,7 @@ bool isPicThere = NO;
     [self setNeedsStatusBarAppearanceUpdate];
     
     // Getting the imageview ready:
-    _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(95, 315, 120, 170)];
+    _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(100, 315, 120, 170)];
     _imageView.contentMode = UIViewContentModeScaleAspectFill;
     [_imageView setClipsToBounds:YES];
     _imageView.userInteractionEnabled = YES;
@@ -211,7 +213,17 @@ bool isPicThere = NO;
                 [userPhoto.ACL setPublicWriteAccess:YES];
                 
                 [userPhoto saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-                    _successMessage.text = @"Sent! Here's your response:";
+                    // For text below picture:
+                    NSString *author = [[objects objectAtIndex:[objects count]-1] objectForKey:@"name"];
+                    NSString *sentBy = [@"Sent by: " stringByAppendingString:author];
+                    //NSString *timeSent = [[objects objectAtIndex:[objects count]-1] objectForKey:@"createdAt"];
+                    // Getting and formatting the date:
+                    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+                    [formatter setDateFormat:@"MM/dd/yyyy"];
+                    NSString *stringFromDate = [@" on: " stringByAppendingString:[formatter stringFromDate:[[objects objectAtIndex:[objects count]-1] createdAt]]];
+                    
+                    NSString *totalText = [sentBy stringByAppendingString:stringFromDate];
+                    _successMessage.text = totalText;
 
                     // getting the image object
                     [query getObjectInBackgroundWithId:[[objects objectAtIndex:[objects count]-1] objectId] block:^(PFObject *textdu, NSError *error) {
@@ -221,7 +233,25 @@ bool isPicThere = NO;
                                 if (!error) {
                                     // Showing the image
                                     UIImage *image = [UIImage imageWithData:data];
-                                    _imageView.image = image;
+                                    // Begin a new image that will be the new image with the rounded corners
+                                    // (here with the size of an UIImageView)
+                                    UIGraphicsBeginImageContextWithOptions(_imageView.bounds.size, NO, 0.0);
+                                    
+                                    // Add a clip before drawing anything, in the shape of an rounded rect
+                                    [[UIBezierPath bezierPathWithRoundedRect:_imageView.bounds
+                                                                cornerRadius:5.0] addClip];
+                                    // Draw your image
+                                    [image drawInRect:_imageView.bounds];
+                                    
+                                    // Get the image, here setting the UIImageView image
+                                    _imageView.image = UIGraphicsGetImageFromCurrentImageContext();
+                                    
+                                    // Lets forget about that we were drawing
+                                    UIGraphicsEndImageContext();
+                                    
+                                    
+                                    
+                                    //_imageView.image = image;
                                     isPicThere = YES;
                                     
                                     
@@ -249,6 +279,7 @@ bool isPicThere = NO;
                                     _imageView.layer.shadowRadius = 4;
                                     _imageView.layer.shadowOpacity = 0.4;
                                     _imageView.layer.shadowPath = [UIBezierPath bezierPathWithRect:_imageView.bounds].CGPath;
+                                    _imageView.layer.cornerRadius = 9.0;
                                     
                                     [_imageIndicator stopAnimating];
                                     
@@ -292,7 +323,7 @@ bool isPicThere = NO;
                 CGFloat screenWidth = screenRect.size.width;
                 CGFloat screenHeight = screenRect.size.height;
                 //[_imageView setFrame:[[UIScreen mainScreen] bounds]];
-                [_imageView setFrame:CGRectMake(0, 0, screenWidth, screenHeight-100)];
+                [_imageView setFrame:CGRectMake(0, 20, screenWidth, screenHeight-100)];
                 self.view.backgroundColor = [UIColor blackColor];
                 _giveAPic.textColor = [UIColor blackColor];
                 _getAPic.textColor = [UIColor blackColor];
@@ -310,6 +341,7 @@ bool isPicThere = NO;
             _logoButton.hidden = YES;
             _cameraButton.hidden = YES;
             _useExistingButton.hidden = YES;
+            _successMessage.hidden = YES;
             return;
         }
         else{
@@ -332,6 +364,7 @@ bool isPicThere = NO;
             _logoButton.hidden = NO;
             _cameraButton.hidden = NO;
             _useExistingButton.hidden = NO;
+            _successMessage.hidden = NO;
             return;
         }
     }
@@ -353,7 +386,7 @@ bool isPicThere = NO;
 - (IBAction)shareButtonClicked:(id)sender {
     NSLog(@"Sharing image");
     
-    NSString *text = @"Look at this SILLY image!";
+    NSString *text = @"Look at this SILLY image! #GiveAndGet bit.ly/1r0Gbn0";
     
     UIImage *image = _imageView.image;
     

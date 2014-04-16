@@ -319,7 +319,7 @@ NSString *objectID;
 }
 - (IBAction)logoClicked:(id)sender {
     UIAlertView *alert = [[UIAlertView alloc]initWithTitle: @"Hello"
-                                                   message: @"This silly little app was written by Zach Lucas!"
+                                                   message: @"This silly little app was written by Zach Lucas (@ZacharyLucas)"
                                                   delegate: self
                                          cancelButtonTitle:@"Okey Dokey"
                                          otherButtonTitles:nil,nil];
