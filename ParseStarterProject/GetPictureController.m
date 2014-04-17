@@ -207,6 +207,7 @@ bool isPicThere = NO;
         // Finding a photo that hasn't been seen
         PFQuery *query = [PFQuery queryWithClassName:@"Photo"];
         [query whereKey:@"seen" equalTo:@"no"];
+        [query orderByDescending:@"createdAt"];
         [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
             if (!error) {
                 // Sending the image:
@@ -281,8 +282,8 @@ bool isPicThere = NO;
                                     _imageView.layer.shadowPath = [UIBezierPath bezierPathWithRect:_imageView.bounds].CGPath;
                                     _imageView.layer.cornerRadius = 9.0;
                                     
-                                    [self imgToFullScreen:nil];
-                                    
+                                    //[self imgToFullScreen:nil];
+                                    [self performSelector:@selector(imgToFullScreen:) withObject:nil afterDelay:.5];
                                     [_imageIndicator stopAnimating];
                                     
                                 }

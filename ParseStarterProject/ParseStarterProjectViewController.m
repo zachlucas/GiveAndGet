@@ -25,6 +25,21 @@ NSString *tempUN = @"";
     
     [self setNeedsStatusBarAppearanceUpdate];
     
+    // Checking if the app has been run before
+    NSString *flag = [[NSUserDefaults standardUserDefaults] stringForKey:@"has_been_run"];
+    if (!flag) {
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle: @"Welcome To G&G!"
+                                                       message: @"It's simple. You send a text or a picture message, and you get a random one in return. No texts or pictures are seen twice, as soon as they are seen they are removed from the almighty cloud!"
+                                                      delegate: self
+                                             cancelButtonTitle:@"Sounds good!"
+                                             otherButtonTitles:nil,nil];
+        
+        
+        [alert show];
+    }
+    [[NSUserDefaults standardUserDefaults] setObject:@"yes" forKey:@"has_been_run"];
+    
+    
     // Enables control of the main TextView
     self.mainTextView.delegate = self;
 }
@@ -55,11 +70,11 @@ NSString *tempUN = @"";
     // Checks text length:
     if (_mainTextView.text.length < 141) {
         _charCounter.textColor = [self colorWithHexString:@"d8d8d8"];
-        _charCounter.text = [NSString stringWithFormat:@"(%d/140)",_mainTextView.text.length];
+        _charCounter.text = [NSString stringWithFormat:@"(%lu/140)",(unsigned long)_mainTextView.text.length];
     }
     else{
         _charCounter.textColor = [UIColor redColor];
-        _charCounter.text = [NSString stringWithFormat:@"(%d/140)",_mainTextView.text.length];
+        _charCounter.text = [NSString stringWithFormat:@"(%lu/140)",(unsigned long)_mainTextView.text.length];
     }
     return true;
 }
@@ -115,6 +130,7 @@ NSString *objectID;
         // finding messages that haven't been seen:
         PFQuery *query = [PFQuery queryWithClassName:@"Message"];
         [query whereKey:@"seen" equalTo:@"no"];
+        [query orderByAscending:@"createdAt"];
         [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
             if (!error) {
                 // The find succeeded.
@@ -142,8 +158,6 @@ NSString *objectID;
                     
                     _sentHeader.text = @"Sent!  Here's your response:";
                     _mainLabel.text = [objects[0] objectForKey:@"message"];
-                    //NSString *tempCreatedOn = [@" at: " stringByAppendingString:[objects[randomIndex] objectForKey:@"createdAt"]];
-                    //_sentBy.text = [tempSentBy stringByAppendingString:tempCreatedOn];
                     
                     // Getting who message was sent by:
                     NSString *tempSentBy = [@"Sent by: " stringByAppendingString:[objects[0] objectForKey:@"name"]];
