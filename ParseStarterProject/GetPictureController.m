@@ -235,7 +235,7 @@ bool isPicThere = NO;
                                     UIImage *image = [UIImage imageWithData:data];
                                     // Begin a new image that will be the new image with the rounded corners
                                     // (here with the size of an UIImageView)
-                                    UIGraphicsBeginImageContextWithOptions(_imageView.bounds.size, NO, 0.0);
+                                    UIGraphicsBeginImageContextWithOptions(_imageView.bounds.size, NO, 4.0);
                                     
                                     // Add a clip before drawing anything, in the shape of an rounded rect
                                     [[UIBezierPath bezierPathWithRoundedRect:_imageView.bounds
@@ -280,6 +280,8 @@ bool isPicThere = NO;
                                     _imageView.layer.shadowOpacity = 0.4;
                                     _imageView.layer.shadowPath = [UIBezierPath bezierPathWithRect:_imageView.bounds].CGPath;
                                     _imageView.layer.cornerRadius = 9.0;
+                                    
+                                    [self imgToFullScreen:nil];
                                     
                                     [_imageIndicator stopAnimating];
                                     
@@ -341,7 +343,7 @@ bool isPicThere = NO;
             _logoButton.hidden = YES;
             _cameraButton.hidden = YES;
             _useExistingButton.hidden = YES;
-            _successMessage.hidden = YES;
+            //_successMessage.hidden = YES;
             return;
         }
         else{
@@ -364,7 +366,7 @@ bool isPicThere = NO;
             _logoButton.hidden = NO;
             _cameraButton.hidden = NO;
             _useExistingButton.hidden = NO;
-            _successMessage.hidden = NO;
+            //_successMessage.hidden = NO;
             return;
         }
     }
