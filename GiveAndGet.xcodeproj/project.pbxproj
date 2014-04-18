@@ -37,6 +37,7 @@
 		98C49AAF18FDE4100070644C /* iOSskiing.png in Resources */ = {isa = PBXBuildFile; fileRef = 98C49AAD18FDE4100070644C /* iOSskiing.png */; };
 		98C49AB018FDE4100070644C /* iOSmotorcycle.png in Resources */ = {isa = PBXBuildFile; fileRef = 98C49AAE18FDE4100070644C /* iOSmotorcycle.png */; };
 		98C49AB218FED4A10070644C /* download.png in Resources */ = {isa = PBXBuildFile; fileRef = 98C49AB118FED4A10070644C /* download.png */; };
+		98C49AB419019AB20070644C /* blurredRainbow.png in Resources */ = {isa = PBXBuildFile; fileRef = 98C49AB319019AB20070644C /* blurredRainbow.png */; };
 		98C5AF6218E46F98009A45AB /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 98C5AF6118E46ED1009A45AB /* Default.png */; };
 		98C5AF6418E47144009A45AB /* Default~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 98C5AF6318E470EE009A45AB /* Default~iphone.png */; };
 		98C6CF0A18EA1B29008A6AAA /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98C6CF0918EA1B28008A6AAA /* Storyboard.storyboard */; };
@@ -98,6 +99,7 @@
 		98C49AAD18FDE4100070644C /* iOSskiing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iOSskiing.png; sourceTree = "<group>"; };
 		98C49AAE18FDE4100070644C /* iOSmotorcycle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iOSmotorcycle.png; sourceTree = "<group>"; };
 		98C49AB118FED4A10070644C /* download.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = download.png; sourceTree = "<group>"; };
+		98C49AB319019AB20070644C /* blurredRainbow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blurredRainbow.png; sourceTree = "<group>"; };
 		98C5AF6118E46ED1009A45AB /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		98C5AF6318E470EE009A45AB /* Default~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default~iphone.png"; sourceTree = "<group>"; };
 		98C6CF0918EA1B28008A6AAA /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Storyboard.storyboard; path = ParseStarterProject/Storyboard.storyboard; sourceTree = SOURCE_ROOT; };
@@ -146,6 +148,7 @@
 				98C49AB118FED4A10070644C /* download.png */,
 				98C49AAB18FDDE990070644C /* shareIcon.png */,
 				98C49AA918FDBD100070644C /* camera-icon-hi.png */,
+				98C49AB319019AB20070644C /* blurredRainbow.png */,
 				98C49AAD18FDE4100070644C /* iOSskiing.png */,
 				98C49AAE18FDE4100070644C /* iOSmotorcycle.png */,
 				98B6560318EF3BBA00D33B20 /* Camera@2x.png */,
@@ -308,6 +311,7 @@
 				98F7EBD218E3550B00EBA94C /* Icon~iphone.png in Resources */,
 				98C6CF0E18EB3CD9008A6AAA /* Images.xcassets in Resources */,
 				98F7EBD318E3550B00EBA94C /* Icon.png in Resources */,
+				98C49AB419019AB20070644C /* blurredRainbow.png in Resources */,
 				98B6560418EF3BBA00D33B20 /* Camera@2x.png in Resources */,
 				09ABC07C13A1D52D009C3FCF /* InfoPlist.strings in Resources */,
 				98C6CF0A18EA1B29008A6AAA /* Storyboard.storyboard in Resources */,

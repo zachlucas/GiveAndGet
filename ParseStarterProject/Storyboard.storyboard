@@ -47,8 +47,8 @@
                                     <action selector="mainButton:" destination="Pof-WN-BuM" eventType="touchUpInside" id="Ckv-Ep-wUV"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="★ response ★" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="307" translatesAutoresizingMaskIntoConstraints="NO" id="UYQ-Tq-8Q5">
-                                <rect key="frame" x="7" y="79" width="307" height="110"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="★ response ★" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="307" translatesAutoresizingMaskIntoConstraints="NO" id="UYQ-Tq-8Q5">
+                                <rect key="frame" x="7" y="79" width="307" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="307" id="bAl-sR-S95"/>
@@ -75,8 +75,8 @@
                                     <segue destination="GZ2-nn-lWT" kind="modal" identifier="mainScreenToPictureScreen" id="Nfu-He-G1K"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UqQ-Iu-R6r">
-                                <rect key="frame" x="44" y="179" width="234" height="17"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UqQ-Iu-R6r">
+                                <rect key="frame" x="44" y="90" width="234" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.49411767719999999" green="0.56078433989999998" blue="0.69411766529999996" alpha="1" colorSpace="deviceRGB"/>
                                 <constraints>
@@ -132,8 +132,8 @@
                                     <action selector="customHandle:" destination="Pof-WN-BuM" eventType="touchUpInside" id="gdl-OF-ktj"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sending as: Anonymous" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1w7-gT-IJe">
-                                <rect key="frame" x="8" y="216" width="187" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Sending as: Anonymous" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1w7-gT-IJe">
+                                <rect key="frame" x="8" y="127" width="187" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="5tY-KR-7gO"/>
@@ -143,8 +143,8 @@
                                 <color key="textColor" red="0.84596221301020402" green="0.84596221301020402" blue="0.84596221301020402" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" text="be nice!" translatesAutoresizingMaskIntoConstraints="NO" id="hXq-pK-PYa">
-                                <rect key="frame" x="8" y="237" width="255" height="93"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" misplaced="YES" text="be nice!" translatesAutoresizingMaskIntoConstraints="NO" id="hXq-pK-PYa">
+                                <rect key="frame" x="8" y="148" width="255" height="94"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -227,6 +227,7 @@
                     <connections>
                         <outlet property="charCounter" destination="69s-ra-mZX" id="FOe-Ku-AgS"/>
                         <outlet property="customHandleButton" destination="8T2-we-om1" id="QU6-Oq-caY"/>
+                        <outlet property="giveButton" destination="i4K-9k-ssm" id="V1z-7y-cp0"/>
                         <outlet property="mainHeader" destination="CFa-OK-oyY" id="Z2A-sQ-au6"/>
                         <outlet property="mainLabel" destination="UYQ-Tq-8Q5" id="LAR-XI-pNe"/>
                         <outlet property="mainTextView" destination="hXq-pK-PYa" id="s1W-R2-WsZ"/>

@@ -46,7 +46,6 @@ bool isPicThere = NO;
     _imageView.contentMode = UIViewContentModeScaleAspectFill;
     [_imageView setClipsToBounds:YES];
     _imageView.userInteractionEnabled = YES;
-    //_imageView.image = [UIImage imageNamed:@"Muppetshow-2.png"];
     
     // For fullscreening the image:
     _downloadPicture.hidden = YES;
@@ -350,7 +349,7 @@ bool isPicThere = NO;
         else{
             [UIView animateWithDuration:0.5 delay:0 options:0 animations:^{
                 [_imageView setFrame:prevFrame];
-                self.view.backgroundColor = [self colorWithHexString:@"d78698"];
+                self.view.backgroundColor = [self colorWithHexString:@"ec9695"];
                 _giveAPic.textColor = [UIColor whiteColor];
                 _andLabel.textColor = [UIColor whiteColor];
                 _getAPic.textColor = [UIColor whiteColor];
@@ -367,7 +366,6 @@ bool isPicThere = NO;
             _logoButton.hidden = NO;
             _cameraButton.hidden = NO;
             _useExistingButton.hidden = NO;
-            //_successMessage.hidden = NO;
             return;
         }
     }

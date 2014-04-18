@@ -24,7 +24,9 @@ NSString *tempUN = @"";
     [super viewDidLoad];
     
     [self setNeedsStatusBarAppearanceUpdate];
-    
+    // Potential blurred background?
+    //self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"blurredRainbow.png"]];
+
     // Checking if the app has been run before
     NSString *flag = [[NSUserDefaults standardUserDefaults] stringForKey:@"has_been_run"];
     if (!flag) {
@@ -39,6 +41,8 @@ NSString *tempUN = @"";
     }
     [[NSUserDefaults standardUserDefaults] setObject:@"yes" forKey:@"has_been_run"];
     
+    _giveButton.alpha = 0.5;
+    _giveButton.userInteractionEnabled = NO;
     
     // Enables control of the main TextView
     self.mainTextView.delegate = self;
@@ -76,6 +80,16 @@ NSString *tempUN = @"";
         _charCounter.textColor = [UIColor redColor];
         _charCounter.text = [NSString stringWithFormat:@"(%lu/140)",(unsigned long)_mainTextView.text.length];
     }
+    
+    if (_mainTextView.text.length > 4 && _mainTextView.text.length < 141) {
+        _giveButton.alpha = 1;
+        _giveButton.userInteractionEnabled = YES;
+    }
+    else{
+        _giveButton.alpha = 0.5;
+        _giveButton.userInteractionEnabled = NO;
+    }
+    
     return true;
 }
 
