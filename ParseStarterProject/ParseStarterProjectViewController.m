@@ -12,7 +12,7 @@ NSString *tempUN = @"";
 NSString *locationToSend = @"";
 CLLocationManager *locationManager;
 CLPlacemark *placemark;
-NSString *coordinatesToSend = @"";
+NSString *postalCodeToSend = @"";
 
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
@@ -48,7 +48,7 @@ NSString *coordinatesToSend = @"";
     
     _giveButton.alpha = 0.5;
     _giveButton.userInteractionEnabled = NO;
-    
+    _locationReceivedButton.layer.hidden = YES;
     // Enables control of the main TextView
     self.mainTextView.delegate = self;
 }
@@ -176,6 +176,14 @@ NSString *coordinatesToSend = @"";
                     
                     _sentHeader.text = @"Sent!  Here's your response:";
                     _mainLabel.text = [objects[0] objectForKey:@"message"];
+                    _locationReceived.text = [objects[0] objectForKey:@"location"];
+                    if (_locationReceived.text.length > 0) {
+                        _locationReceivedButton.layer.hidden = NO;
+                    }
+                    else{
+                        _locationReceivedButton.layer.hidden = YES;
+                    }
+                    
                     
                     // Getting who message was sent by:
                     NSString *tempSentBy = [@"Sent by: " stringByAppendingString:[objects[0] objectForKey:@"name"]];
@@ -233,9 +241,11 @@ NSString *coordinatesToSend = @"";
     
     if (locationToSend.length > 0) {
         testObject[@"location"] = locationToSend;
+        testObject[@"postalCode"] = postalCodeToSend;
     }
     else{
         testObject[@"location"] = @"";
+        testObject[@"postalCode"] = @"";
     }
     
     [testObject.ACL setPublicWriteAccess:YES];
@@ -395,9 +405,9 @@ NSString *coordinatesToSend = @"";
                 NSLog(@"looking for locality:");
                 placemark = [placemarks lastObject];
                 locationToSend = placemark.locality;
-                coordinatesToSend = (NSString*)placemark.location;
+                postalCodeToSend = placemark.postalCode;
                 _locationLabel.text = locationToSend;
-                NSLog(@"The coordinates: %@",coordinatesToSend);
+                NSLog(@"The coordinates: %@",postalCodeToSend);
             } else {
                 NSLog(@"%@", error.debugDescription);
             }

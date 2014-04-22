@@ -203,16 +203,41 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="psJ-jb-RKX">
+                                <rect key="frame" x="205" y="160" width="90" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Fc0-dg-unW"/>
+                                    <constraint firstAttribute="width" constant="90" id="ZXo-U0-tS5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.84596221299999996" green="0.84596221299999996" blue="0.84596221299999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6US-NX-Meg">
+                                <rect key="frame" x="296" y="162" width="9" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="mbX-nS-e44"/>
+                                    <constraint firstAttribute="width" constant="9" id="zpU-qG-0jx"/>
+                                </constraints>
+                                <state key="normal" image="locationIconReceived.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.49411767719999999" green="0.56078433989999998" blue="0.69411766529999996" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
                             <constraint firstItem="O7n-ZT-fg8" firstAttribute="width" secondItem="8T2-we-om1" secondAttribute="width" id="2Av-cV-0oH"/>
+                            <constraint firstItem="UqQ-Iu-R6r" firstAttribute="top" secondItem="psJ-jb-RKX" secondAttribute="bottom" constant="-2" id="2Io-1Q-tcV"/>
                             <constraint firstItem="hXq-pK-PYa" firstAttribute="top" secondItem="1w7-gT-IJe" secondAttribute="bottom" id="3h4-gl-n7t"/>
                             <constraint firstAttribute="bottom" secondItem="lgY-Ql-BUx" secondAttribute="bottom" constant="-5" id="4pC-TZ-bi5"/>
                             <constraint firstItem="UYQ-Tq-8Q5" firstAttribute="top" secondItem="CFa-OK-oyY" secondAttribute="bottom" constant="1" id="84w-gA-f4G"/>
                             <constraint firstItem="69s-ra-mZX" firstAttribute="leading" secondItem="KzD-1u-hhm" secondAttribute="leading" constant="8" id="8Rm-cn-Nc7"/>
+                            <constraint firstItem="6US-NX-Meg" firstAttribute="leading" secondItem="psJ-jb-RKX" secondAttribute="trailing" constant="1" id="B52-LZ-Soq"/>
                             <constraint firstItem="CFa-OK-oyY" firstAttribute="leading" secondItem="KzD-1u-hhm" secondAttribute="leading" id="CSO-b0-8GP" userLabel="Horizontal Space - (-6) - Label - Give &amp; Get - View"/>
                             <constraint firstItem="8T2-we-om1" firstAttribute="top" secondItem="O7n-ZT-fg8" secondAttribute="bottom" constant="8" id="FjO-vO-l23"/>
+                            <constraint firstItem="psJ-jb-RKX" firstAttribute="leading" secondItem="UYQ-Tq-8Q5" secondAttribute="trailing" constant="-109" id="GkD-Hr-XVw"/>
                             <constraint firstItem="hXq-pK-PYa" firstAttribute="bottom" secondItem="i4K-9k-ssm" secondAttribute="bottom" id="JDP-Gt-egp"/>
                             <constraint firstItem="hrP-r6-vob" firstAttribute="height" secondItem="8T2-we-om1" secondAttribute="height" id="M6Y-Hx-aoS"/>
                             <constraint firstItem="O7n-ZT-fg8" firstAttribute="top" secondItem="0bp-Rd-7Bj" secondAttribute="bottom" constant="4" id="NLl-y5-qSp"/>
@@ -234,6 +259,7 @@
                             <constraint firstItem="hrP-r6-vob" firstAttribute="top" secondItem="8T2-we-om1" secondAttribute="bottom" constant="8" id="gOJ-zH-UHh"/>
                             <constraint firstItem="69s-ra-mZX" firstAttribute="top" secondItem="hXq-pK-PYa" secondAttribute="bottom" constant="1" id="gpo-Cg-HYy"/>
                             <constraint firstAttribute="centerX" secondItem="hrP-r6-vob" secondAttribute="centerX" id="hR1-fQ-sRU"/>
+                            <constraint firstItem="UqQ-Iu-R6r" firstAttribute="top" secondItem="6US-NX-Meg" secondAttribute="bottom" constant="2" id="iUq-Fh-ljU"/>
                             <constraint firstItem="hXq-pK-PYa" firstAttribute="leading" secondItem="KzD-1u-hhm" secondAttribute="leading" constant="8" id="iXx-Bi-66r"/>
                             <constraint firstItem="hrP-r6-vob" firstAttribute="centerX" secondItem="8T2-we-om1" secondAttribute="centerX" id="phB-Mj-5Uk"/>
                             <constraint firstAttribute="centerX" secondItem="UYQ-Tq-8Q5" secondAttribute="centerX" id="xqF-aZ-rqw"/>
@@ -246,6 +272,8 @@
                         <outlet property="customHandleButton" destination="8T2-we-om1" id="QU6-Oq-caY"/>
                         <outlet property="giveButton" destination="i4K-9k-ssm" id="V1z-7y-cp0"/>
                         <outlet property="locationLabel" destination="ZO2-5P-GMB" id="Yjm-TR-8pZ"/>
+                        <outlet property="locationReceived" destination="psJ-jb-RKX" id="QNn-yz-5cE"/>
+                        <outlet property="locationReceivedButton" destination="6US-NX-Meg" id="01Q-Ut-VRf"/>
                         <outlet property="mainHeader" destination="CFa-OK-oyY" id="Z2A-sQ-au6"/>
                         <outlet property="mainLabel" destination="UYQ-Tq-8Q5" id="LAR-XI-pNe"/>
                         <outlet property="mainTextView" destination="hXq-pK-PYa" id="s1W-R2-WsZ"/>
@@ -452,6 +480,7 @@
         <image name="camera-icon-hi.png" width="600" height="600"/>
         <image name="download.png" width="128" height="128"/>
         <image name="locationIcon.png" width="168" height="300"/>
+        <image name="locationIconReceived.png" width="168" height="300"/>
         <image name="shareIcon.png" width="128" height="128"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

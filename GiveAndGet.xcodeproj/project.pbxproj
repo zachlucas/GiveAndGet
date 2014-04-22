@@ -47,6 +47,7 @@
 		98C6CF1418EB5444008A6AAA /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6372FF521613CC3C002132AF /* Accounts.framework */; };
 		98CB50B51906E264001903AF /* locationIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 98CB50B41906E264001903AF /* locationIcon.png */; };
 		98CB50B91906E3AD001903AF /* locationIconSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 98CB50B81906E3AD001903AF /* locationIconSelected.png */; };
+		98CB50BB19071E4B001903AF /* locationIconReceived.png in Resources */ = {isa = PBXBuildFile; fileRef = 98CB50BA19071E4B001903AF /* locationIconReceived.png */; };
 		98F7EBD218E3550B00EBA94C /* Icon~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 98F7EBD118E3544E00EBA94C /* Icon~iphone.png */; };
 		98F7EBD318E3550B00EBA94C /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 98F7EBD018E353F100EBA94C /* Icon.png */; };
 		C4C51B571613CE0800959FDC /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C4C51B541613CE0800959FDC /* Default.png */; };
@@ -112,6 +113,7 @@
 		98C6CF1218EB543B008A6AAA /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		98CB50B41906E264001903AF /* locationIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = locationIcon.png; sourceTree = "<group>"; };
 		98CB50B81906E3AD001903AF /* locationIconSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = locationIconSelected.png; sourceTree = "<group>"; };
+		98CB50BA19071E4B001903AF /* locationIconReceived.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = locationIconReceived.png; sourceTree = "<group>"; };
 		98F7EBD018E353F100EBA94C /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		98F7EBD118E3544E00EBA94C /* Icon~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon~iphone.png"; sourceTree = "<group>"; };
 		C4C51B541613CE0800959FDC /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				98C49AA918FDBD100070644C /* camera-icon-hi.png */,
 				98C49AB319019AB20070644C /* blurredRainbow.png */,
 				98CB50B41906E264001903AF /* locationIcon.png */,
+				98CB50BA19071E4B001903AF /* locationIconReceived.png */,
 				98CB50B81906E3AD001903AF /* locationIconSelected.png */,
 				98C49AAD18FDE4100070644C /* iOSskiing.png */,
 				98C49AAE18FDE4100070644C /* iOSmotorcycle.png */,
@@ -313,6 +316,7 @@
 				98C49AAC18FDDE990070644C /* shareIcon.png in Resources */,
 				98C5AF6418E47144009A45AB /* Default~iphone.png in Resources */,
 				98C5AF6218E46F98009A45AB /* Default.png in Resources */,
+				98CB50BB19071E4B001903AF /* locationIconReceived.png in Resources */,
 				98CB50B51906E264001903AF /* locationIcon.png in Resources */,
 				98C49AAA18FDBD100070644C /* camera-icon-hi.png in Resources */,
 				98F7EBD218E3550B00EBA94C /* Icon~iphone.png in Resources */,

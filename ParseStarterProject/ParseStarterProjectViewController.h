@@ -18,5 +18,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *customHandleButton;
 @property (strong, nonatomic) IBOutlet UIButton *giveButton;
 @property (strong, nonatomic) IBOutlet UILabel *locationLabel;
+@property (strong, nonatomic) IBOutlet UILabel *locationReceived;
+@property (strong, nonatomic) IBOutlet UIButton *locationReceivedButton;
 
 @end
