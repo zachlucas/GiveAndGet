@@ -5,9 +5,14 @@
 
 @implementation ParseStarterProjectViewController
 
+NSString *objectID;
 NSString *nameToUseWhenSendingMessage = @"";
 NSString *twitterUsername = @"";
 NSString *tempUN = @"";
+NSString *locationToSend = @"";
+CLLocationManager *locationManager;
+CLPlacemark *placemark;
+NSString *coordinatesToSend = @"";
 
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
@@ -109,7 +114,6 @@ NSString *tempUN = @"";
     }
 }
 
-NSString *objectID;
 
 - (IBAction)mainButton:(id)sender {
     // If message is too short:
@@ -226,6 +230,14 @@ NSString *objectID;
     }
     testObject[@"seen"] = @"no";
     testObject[@"message"] = self.mainTextView.text;
+    
+    if (locationToSend.length > 0) {
+        testObject[@"location"] = locationToSend;
+    }
+    else{
+        testObject[@"location"] = @"";
+    }
+    
     [testObject.ACL setPublicWriteAccess:YES];
     [testObject save];
 
@@ -354,6 +366,44 @@ NSString *objectID;
     
     
     [alert show];
+}
+
+
+
+- (IBAction)locationClicked:(id)sender {
+    if ([sender isSelected]) {
+        [sender setImage:[UIImage imageNamed:@"locationIcon.png"] forState:UIControlStateNormal];
+        [sender setSelected:NO];
+        locationToSend = @"";
+        _locationLabel.text = @"";
+    } else {
+        [sender setImage:[UIImage imageNamed:@"locationIconSelected.png"] forState:UIControlStateNormal];
+        [sender setSelected:YES];
+        NSLog(@"finding location...");
+        locationManager = [[CLLocationManager alloc] init];
+        locationManager.delegate = self;
+        locationManager.distanceFilter = 1000;
+        locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers; // 3 km
+        [locationManager startUpdatingLocation];
+        
+        CLLocation *currentLocation = locationManager.location;
+        CLGeocoder*geocoder;
+        geocoder = [[CLGeocoder alloc] init];
+        [geocoder reverseGeocodeLocation:currentLocation completionHandler:^(NSArray *placemarks, NSError *error) {
+            NSLog(@"Found placemarks: %@, error: %@", placemarks, error);
+            if (error == nil && [placemarks count] > 0) {
+                NSLog(@"looking for locality:");
+                placemark = [placemarks lastObject];
+                locationToSend = placemark.locality;
+                coordinatesToSend = (NSString*)placemark.location;
+                _locationLabel.text = locationToSend;
+                NSLog(@"The coordinates: %@",coordinatesToSend);
+            } else {
+                NSLog(@"%@", error.debugDescription);
+            }
+        } ];
+    }
+    
 }
 
 @end

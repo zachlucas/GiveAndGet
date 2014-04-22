@@ -17,5 +17,6 @@
 @property (strong, nonatomic) IBOutlet UIActivityIndicatorView *responseIndicator;
 @property (strong, nonatomic) IBOutlet UIButton *customHandleButton;
 @property (strong, nonatomic) IBOutlet UIButton *giveButton;
+@property (strong, nonatomic) IBOutlet UILabel *locationLabel;
 
 @end
