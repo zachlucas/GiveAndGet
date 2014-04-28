@@ -326,13 +326,13 @@ bool isPicThere = NO;
                 CGFloat screenHeight = screenRect.size.height;
                 //[_imageView setFrame:[[UIScreen mainScreen] bounds]];
                 [_imageView setFrame:CGRectMake(0, 20, screenWidth, screenHeight-100)];
-                self.view.backgroundColor = [UIColor blackColor];
-                _giveAPic.textColor = [UIColor blackColor];
-                _getAPic.textColor = [UIColor blackColor];
-                _andLabel.textColor = [UIColor blackColor];
-                _doneButton.backgroundColor = [UIColor blackColor];
-                [_doneButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-                [_doneButton setTitleShadowColor:[UIColor blackColor] forState:UIControlStateNormal];
+                self.view.backgroundColor = [UIColor darkGrayColor];
+                _giveAPic.textColor = [UIColor darkGrayColor];
+                _getAPic.textColor = [UIColor darkGrayColor];
+                _andLabel.textColor = [UIColor darkGrayColor];
+                _doneButton.backgroundColor = [UIColor darkGrayColor];
+                [_doneButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+                [_doneButton setTitleShadowColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
 
             }completion:^(BOOL finished){
                 isFullScreen = TRUE;

@@ -52,11 +52,13 @@ NSString *colorToAnimate = @"a2b7e0";
     _giveButton.alpha = 0.5;
     _giveButton.userInteractionEnabled = NO;
     _locationReceivedButton.layer.hidden = YES;
-    [UIView animateWithDuration:3.0 animations:^{
-
+    
+    
+    [UIView animateWithDuration:3.0 delay:0 options:UIViewAnimationOptionAllowUserInteraction animations:^{
         _useTwitterHandleButton.backgroundColor = [self colorWithHexString:@"b47281"];
         _givePicButton.backgroundColor = [self colorWithHexString:@"fd9eb2"];
-    }];
+        
+    }completion:NULL];
     [NSTimer scheduledTimerWithTimeInterval:3 target:self
                                    selector:@selector(MethodB:) userInfo:nil repeats:YES];
     // Enables control of the main TextView
@@ -65,32 +67,22 @@ NSString *colorToAnimate = @"a2b7e0";
 
 - (void)MethodB:(NSTimer*)timer {
     if (animate == NO){
-        [UIView animateWithDuration:3.0 animations:^{
-            //self.view.backgroundColor = [self colorWithHexString:colorToAnimate];
-           // _sentBy.backgroundColor = [self colorWithHexString:@"fd817e"];
-            //_giveButton.backgroundColor = [self colorWithHexString:colorToAnimate];
+
+        [UIView animateWithDuration:3.0 delay:0 options:UIViewAnimationOptionAllowUserInteraction animations:^{
             _useTwitterHandleButton.backgroundColor = [self colorWithHexString:@"b47281"];
             _givePicButton.backgroundColor = [self colorWithHexString:@"fd9eb2"];
-        }];
-        [UIView animateWithDuration:3.0 animations:^{
-            //_sentBy.layer.backgroundColor = [self colorWithHexString:colorToAnimate].CGColor;
-        } completion:NULL];
+            
+        }completion:NULL];
         animate = YES;
     }
     else{
-        [UIView animateWithDuration:3.0 animations:^{
-            //self.view.backgroundColor = [self colorWithHexString:@"6c7ca0"];
-            //_sentBy.backgroundColor = [self colorWithHexString:@"6c7ca0"];
-            //_giveButton.backgroundColor = [self colorWithHexString:@"6c7ca0"];
+        [UIView animateWithDuration:3.0 delay:0 options:UIViewAnimationOptionAllowUserInteraction animations:^{
             _useTwitterHandleButton.backgroundColor = [self colorWithHexString:@"fd9eb2"];
             _givePicButton.backgroundColor = [self colorWithHexString:@"b47281"];
-        }];
-        [UIView animateWithDuration:3.0 animations:^{
-            //_sentBy.layer.backgroundColor = [self colorWithHexString:@"6c7ca0"].CGColor;
-        } completion:NULL];
+            
+        }completion:NULL];
         animate = NO;
     }
-    //NSLog(@"doing");
 }
 
 -(UIStatusBarStyle)preferredStatusBarStyle{
