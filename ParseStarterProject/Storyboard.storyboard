@@ -72,13 +72,12 @@
                                     <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="GZ2-nn-lWT" kind="modal" identifier="mainScreenToPictureScreen" id="Nfu-He-G1K"/>
+                                    <segue destination="GZ2-nn-lWT" kind="modal" id="qgN-aD-DuD"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UqQ-Iu-R6r">
                                 <rect key="frame" x="44" y="179" width="234" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.49411767719999999" green="0.56078433989999998" blue="0.69411766529999996" alpha="1" colorSpace="deviceRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="17" id="Jbn-fA-9Dq"/>
                                     <constraint firstAttribute="width" constant="234" id="tlQ-sg-J44"/>
@@ -101,11 +100,11 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <state key="normal" title="Use Your Twitter Handle">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="getTwitterHandle:" destination="Pof-WN-BuM" eventType="touchUpInside" id="2mB-1U-nWT"/>
+                                    <action selector="getTwitterHandle:" destination="Pof-WN-BuM" eventType="touchUpInside" id="90x-5G-dMc"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't wanna be anonymous?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0bp-Rd-7Bj">
@@ -271,6 +270,7 @@
                         <outlet property="charCounter" destination="69s-ra-mZX" id="FOe-Ku-AgS"/>
                         <outlet property="customHandleButton" destination="8T2-we-om1" id="QU6-Oq-caY"/>
                         <outlet property="giveButton" destination="i4K-9k-ssm" id="V1z-7y-cp0"/>
+                        <outlet property="givePicButton" destination="hrP-r6-vob" id="dw4-88-I64"/>
                         <outlet property="locationLabel" destination="ZO2-5P-GMB" id="Yjm-TR-8pZ"/>
                         <outlet property="locationReceived" destination="psJ-jb-RKX" id="QNn-yz-5cE"/>
                         <outlet property="locationReceivedButton" destination="6US-NX-Meg" id="01Q-Ut-VRf"/>
@@ -280,6 +280,7 @@
                         <outlet property="responseIndicator" destination="jKL-Gs-JcD" id="i4d-nT-bFZ"/>
                         <outlet property="sendingAs" destination="1w7-gT-IJe" id="xug-Om-8hG"/>
                         <outlet property="sentBy" destination="UqQ-Iu-R6r" id="ZRr-yO-uDo"/>
+                        <outlet property="useTwitterHandleButton" destination="O7n-ZT-fg8" id="5m2-ok-zt8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IL4-hS-3IH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -335,7 +336,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A7w-fw-NzL">
                                 <rect key="frame" x="76" y="221" width="226" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.41639432232501228" green="0.47916675490087146" blue="0.62886639030612246" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.4904472827911377" green="0.55670303106307983" blue="0.69048953056335449" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="24"/>
                                 <state key="normal" title="Use Existing Picture">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -421,7 +422,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.94616948341836737" green="0.59135592713647966" blue="0.59135592713647966" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="0.50281507489999999" blue="0.48186886620000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="2dk-Ob-08b" firstAttribute="leading" secondItem="zF1-xn-XGM" secondAttribute="leading" constant="272" id="0Zq-4p-7RK"/>
                             <constraint firstAttribute="bottom" secondItem="65L-PM-MQC" secondAttribute="bottom" constant="-6" id="6AO-2R-oC9"/>
