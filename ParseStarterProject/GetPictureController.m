@@ -19,7 +19,7 @@
 bool isPicThere = NO;
 NSString *locationToSendPic = @"";
 CLLocationManager *locationManager;
-CLP lacemark *placemarkPic;
+CLPlacemark *placemarkPic;
 NSString *postalCodeToSendPic = @"";
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
