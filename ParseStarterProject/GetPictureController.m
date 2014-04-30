@@ -17,6 +17,10 @@
 @implementation GetPictureController
 
 bool isPicThere = NO;
+NSString *locationToSendPic = @"";
+CLLocationManager *locationManager;
+CLP lacemark *placemarkPic;
+NSString *postalCodeToSendPic = @"";
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -53,6 +57,33 @@ bool isPicThere = NO;
     UITapGestureRecognizer *tapper = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imgToFullScreen:)];
     tapper.numberOfTapsRequired = 1;
     [_imageView addGestureRecognizer:tapper];
+    
+    // Location information:
+    NSLog(@"finding location...");
+    locationManager = [[CLLocationManager alloc] init];
+    locationManager.delegate = self;
+    locationManager.distanceFilter = 1000;
+    locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers; // 3 km
+    [locationManager startUpdatingLocation];
+    
+    CLLocation *currentLocation = locationManager.location;
+    CLGeocoder*geocoder;
+    geocoder = [[CLGeocoder alloc] init];
+    [geocoder reverseGeocodeLocation:currentLocation completionHandler:^(NSArray *placemarkPics, NSError *error) {
+        NSLog(@"Found placemarkPics: %@, error: %@", placemarkPics, error);
+        if (error == nil && [placemarkPics count] > 0) {
+            NSLog(@"looking for locality:");
+            placemarkPic = [placemarkPics lastObject];
+            locationToSendPic = placemarkPic.locality;
+            postalCodeToSendPic = placemarkPic.postalCode;
+            NSLog(@"The coordinates: %@",postalCodeToSendPic);
+        } else {
+            NSLog(@"%@", error.debugDescription);
+        }
+    } ];
+    
+    
+    
     [self.view addSubview:_imageView];
     
 }
@@ -202,6 +233,8 @@ bool isPicThere = NO;
         // Setting the other attributes:
         userPhoto[@"imageFile"] = imageFile;
         userPhoto[@"seen"] = @"no";
+        userPhoto[@"postalCode"] = postalCodeToSendPic;
+        userPhoto[@"location"] = locationToSendPic;
         
         // Finding a photo that hasn't been seen
         PFQuery *query = [PFQuery queryWithClassName:@"Photo"];

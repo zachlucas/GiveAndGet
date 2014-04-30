@@ -81,6 +81,7 @@
    </AnalyzeAction>
    <ArchiveAction
       buildConfiguration = "Debug"
+      customArchiveName = "GiveAndGet"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>
