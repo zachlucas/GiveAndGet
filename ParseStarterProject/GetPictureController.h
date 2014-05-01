@@ -1,4 +1,4 @@
-//
+
 //  GetPictureController.h
 //  GiveAndGet
 //
@@ -31,5 +31,6 @@
 @property (strong, nonatomic) IBOutlet UIButton *logoButton;
 @property (strong, nonatomic) IBOutlet UIButton *cameraButton;
 @property (strong, nonatomic) IBOutlet UIButton *useExistingButton;
+@property (strong, nonatomic) IBOutlet UIButton *otherGetPicButton;
 
 @end

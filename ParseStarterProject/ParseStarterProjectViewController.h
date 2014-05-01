@@ -22,5 +22,6 @@
 @property (strong, nonatomic) IBOutlet UIButton *locationReceivedButton;
 @property (strong, nonatomic) IBOutlet UIButton *givePicButton;
 @property (strong, nonatomic) IBOutlet UIButton *useTwitterHandleButton;
+@property (strong, nonatomic) IBOutlet UIButton *giveTextButton;
 
 @end

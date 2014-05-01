@@ -36,12 +36,18 @@ NSString *postalCodeToSendPic = @"";
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
-    _doneButton.layer.cornerRadius = 5.0;
+    //_doneButton.layer.cornerRadius = 5.0;
     
     isFullScreen = FALSE;
     // method exists...??
     tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imgToFullScreen)];
     tap.delegate = self;
+    
+    [[_otherGetPicButton layer] setBorderWidth:1.0f];
+    [[_otherGetPicButton layer] setBorderColor:[UIColor whiteColor].CGColor];
+    [[_doneButton layer] setBorderWidth:1.0f];
+    [[_doneButton layer] setBorderColor:[UIColor whiteColor].CGColor];
+    
     
     [self setNeedsStatusBarAppearanceUpdate];
     
@@ -59,30 +65,33 @@ NSString *postalCodeToSendPic = @"";
     [_imageView addGestureRecognizer:tapper];
     
     // Location information:
-    NSLog(@"finding location...");
-    locationManager = [[CLLocationManager alloc] init];
-    locationManager.delegate = self;
-    locationManager.distanceFilter = 1000;
-    locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers; // 3 km
-    [locationManager startUpdatingLocation];
+    if (locationToSendPic.length == 0){
+        NSLog(@"finding location...");
+        locationManager = [[CLLocationManager alloc] init];
+        locationManager.delegate = self;
+        locationManager.distanceFilter = 1000;
+        locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers; // 3 km
+        [locationManager startUpdatingLocation];
+        
+        CLLocation *currentLocation = locationManager.location;
+        CLGeocoder*geocoder;
+        geocoder = [[CLGeocoder alloc] init];
+        [geocoder reverseGeocodeLocation:currentLocation completionHandler:^(NSArray *placemarkPics, NSError *error) {
+            NSLog(@"Found placemarkPics: %@, error: %@", placemarkPics, error);
+            if (error == nil && [placemarkPics count] > 0) {
+                NSLog(@"looking for locality:");
+                placemarkPic = [placemarkPics lastObject];
+                locationToSendPic = placemarkPic.locality;
+                postalCodeToSendPic = placemarkPic.postalCode;
+                NSLog(@"The coordinates: %@",postalCodeToSendPic);
+            } else {
+                NSLog(@"%@", error.debugDescription);
+            }
+        } ];
+        
+    }
     
-    CLLocation *currentLocation = locationManager.location;
-    CLGeocoder*geocoder;
-    geocoder = [[CLGeocoder alloc] init];
-    [geocoder reverseGeocodeLocation:currentLocation completionHandler:^(NSArray *placemarkPics, NSError *error) {
-        NSLog(@"Found placemarkPics: %@, error: %@", placemarkPics, error);
-        if (error == nil && [placemarkPics count] > 0) {
-            NSLog(@"looking for locality:");
-            placemarkPic = [placemarkPics lastObject];
-            locationToSendPic = placemarkPic.locality;
-            postalCodeToSendPic = placemarkPic.postalCode;
-            NSLog(@"The coordinates: %@",postalCodeToSendPic);
-        } else {
-            NSLog(@"%@", error.debugDescription);
-        }
-    } ];
-    
-    
+    [locationManager stopUpdatingLocation];
     
     [self.view addSubview:_imageView];
     
@@ -184,6 +193,9 @@ NSString *postalCodeToSendPic = @"";
     //[[picker parentViewController] dismissViewControllerAnimated:YES completion:nil];
     [self dismissViewControllerAnimated:YES completion:nil];
     
+}
+- (IBAction)goBackToText:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 

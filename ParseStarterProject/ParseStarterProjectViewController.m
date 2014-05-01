@@ -52,11 +52,14 @@ NSString *colorToAnimate = @"a2b7e0";
     _giveButton.alpha = 0.5;
     _giveButton.userInteractionEnabled = NO;
     _locationReceivedButton.layer.hidden = YES;
-    
+    [[_givePicButton layer] setBorderWidth:1.0f];
+    [[_givePicButton layer] setBorderColor:[UIColor whiteColor].CGColor];
+    [[_giveTextButton layer] setBorderWidth:1.0f];
+    [[_giveTextButton layer] setBorderColor:[UIColor whiteColor].CGColor];
     
     [UIView animateWithDuration:3.0 delay:0 options:UIViewAnimationOptionAllowUserInteraction animations:^{
         _useTwitterHandleButton.backgroundColor = [self colorWithHexString:@"b47281"];
-        _givePicButton.backgroundColor = [self colorWithHexString:@"fd9eb2"];
+        _giveTextButton.backgroundColor = [self colorWithHexString:@"fd9eb2"];
         
     }completion:NULL];
     [NSTimer scheduledTimerWithTimeInterval:3 target:self
@@ -70,7 +73,7 @@ NSString *colorToAnimate = @"a2b7e0";
 
         [UIView animateWithDuration:3.0 delay:0 options:UIViewAnimationOptionAllowUserInteraction animations:^{
             _useTwitterHandleButton.backgroundColor = [self colorWithHexString:@"b47281"];
-            _givePicButton.backgroundColor = [self colorWithHexString:@"fd9eb2"];
+            _giveTextButton.backgroundColor = [self colorWithHexString:@"fd9eb2"];
             
         }completion:NULL];
         animate = YES;
@@ -78,7 +81,7 @@ NSString *colorToAnimate = @"a2b7e0";
     else{
         [UIView animateWithDuration:3.0 delay:0 options:UIViewAnimationOptionAllowUserInteraction animations:^{
             _useTwitterHandleButton.backgroundColor = [self colorWithHexString:@"fd9eb2"];
-            _givePicButton.backgroundColor = [self colorWithHexString:@"b47281"];
+            _giveTextButton.backgroundColor = [self colorWithHexString:@"b47281"];
             
         }completion:NULL];
         animate = NO;
