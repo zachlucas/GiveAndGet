@@ -39,7 +39,7 @@ NSString *colorToAnimate = @"a2b7e0";
     NSString *flag = [[NSUserDefaults standardUserDefaults] stringForKey:@"has_been_run"];
     if (!flag) {
         UIAlertView *alert = [[UIAlertView alloc]initWithTitle: @"Welcome To G&G!"
-                                                       message: @"It's simple. You send a text or a picture message, and you get a random one in return. No texts or pictures are seen twice, as soon as they are seen they are removed from the almighty cloud!"
+                                                       message: @"It's simple. You send a text or a picture message, and you get a random one in return. No texts or pictures are seen twice, as soon as they are seen they are removed from the almighty cloud! Enjoy ^_^"
                                                       delegate: self
                                              cancelButtonTitle:@"Sounds good!"
                                              otherButtonTitles:nil,nil];
@@ -290,6 +290,8 @@ NSString *colorToAnimate = @"a2b7e0";
     
     AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
     _mainTextView.text = @"send another!";
+    _giveButton.alpha = 0.5;
+    _giveButton.userInteractionEnabled = NO;
     _mainTextView.textColor = [UIColor grayColor];
     [self.view endEditing:YES];
 }
