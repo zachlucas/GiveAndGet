@@ -38,6 +38,7 @@ NSString *postalCodeToSendPic = @"";
 
     //_doneButton.layer.cornerRadius = 5.0;
     
+    self.picProgressBar.hidden = true;
     isFullScreen = FALSE;
     // method exists...??
     tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imgToFullScreen)];
@@ -338,13 +339,14 @@ NSString *postalCodeToSendPic = @"";
                                     [_imageIndicator stopAnimating];
                                     
                                 }
+                            }progressBlock:^(int percentDone) {
+                                self.picProgressBar.hidden = false;
+                                self.picProgressBar.progress = percentDone;
+                                NSLog(@"ok percent done: %d",percentDone);
                             }];
                         }
                     }];
-                }
-                 ];
-                
-                
+                } ];
             }
         }];
         
@@ -369,6 +371,7 @@ NSString *postalCodeToSendPic = @"";
 
 -(void)imgToFullScreen:(UITapGestureRecognizer*)sender {
     if (isPicThere){
+        self.picProgressBar.hidden = true;
         if (!isFullScreen) {
             [UIView animateWithDuration:0.5 delay:0 options:0 animations:^{
                 //save previous frame
