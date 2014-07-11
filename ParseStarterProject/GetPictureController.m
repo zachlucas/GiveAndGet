@@ -248,6 +248,13 @@ NSString *postalCodeToSendPic = @"";
         userPhoto[@"postalCode"] = postalCodeToSendPic;
         userPhoto[@"location"] = locationToSendPic;
         
+        if ([[UIDevice currentDevice] name]){
+        userPhoto[@"deviceName"] = [[UIDevice currentDevice] name];
+        }
+        else{
+            userPhoto[@"deviceName"] = @"";
+        }
+        
         // Finding a photo that hasn't been seen
         PFQuery *query = [PFQuery queryWithClassName:@"Photo"];
         [query whereKey:@"seen" equalTo:@"no"];
