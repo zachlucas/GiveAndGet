@@ -346,7 +346,7 @@ NSString *postalCodeToSendPic = @"";
                             }];
                         }
                     }];
-                } ];
+                }];
             }
         }];
         
