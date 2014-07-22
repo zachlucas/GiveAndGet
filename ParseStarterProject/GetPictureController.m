@@ -398,6 +398,9 @@ NSString *postalCodeToSendPic = @"";
             _logoButton.hidden = YES;
             _cameraButton.hidden = YES;
             _useExistingButton.hidden = YES;
+            _doneButton.hidden = YES;
+            _otherGetPicButton.hidden = YES;
+            _flagButton.hidden = NO;
             //_successMessage.hidden = YES;
             return;
         }
@@ -421,6 +424,9 @@ NSString *postalCodeToSendPic = @"";
             _logoButton.hidden = NO;
             _cameraButton.hidden = NO;
             _useExistingButton.hidden = NO;
+            _doneButton.hidden = NO;
+            _otherGetPicButton.hidden = NO;
+            _flagButton.hidden = YES;
             return;
         }
     }

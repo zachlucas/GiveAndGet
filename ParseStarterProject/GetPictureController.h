@@ -33,5 +33,6 @@
 @property (strong, nonatomic) IBOutlet UIButton *useExistingButton;
 @property (strong, nonatomic) IBOutlet UIProgressView *picProgressBar;
 @property (strong, nonatomic) IBOutlet UIButton *otherGetPicButton;
+@property (strong, nonatomic) IBOutlet UIImageView *flagButton;
 
 @end

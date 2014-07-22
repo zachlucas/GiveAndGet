@@ -24,6 +24,7 @@
 		2FCDD6B014A573F500295AAC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FCDD6AF14A573F500295AAC /* QuartzCore.framework */; };
 		4998650515BF305000803E05 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4998650415BF305000803E05 /* StoreKit.framework */; };
 		743D7B6D157DA60100084B67 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 743D7B6C157DA60100084B67 /* CoreGraphics.framework */; };
+		9809587A197EB6320023B656 /* flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 98095879197EB6320023B656 /* flag.png */; };
 		98B655F518EF2CEA00D33B20 /* PHFComposeBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 98B655F018EF2CEA00D33B20 /* PHFComposeBarView.m */; };
 		98B655F618EF2CEA00D33B20 /* PHFComposeBarView_Button.m in Sources */ = {isa = PBXBuildFile; fileRef = 98B655F218EF2CEA00D33B20 /* PHFComposeBarView_Button.m */; };
 		98B655F718EF2CEA00D33B20 /* PHFComposeBarView_TextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 98B655F418EF2CEA00D33B20 /* PHFComposeBarView_TextView.m */; };
@@ -78,6 +79,7 @@
 		6372FF571613CC47002132AF /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		743D7B6C157DA60100084B67 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		97E18B1E1624CB5700B17A67 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		98095879197EB6320023B656 /* flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flag.png; sourceTree = "<group>"; };
 		98B655EF18EF2CEA00D33B20 /* PHFComposeBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHFComposeBarView.h; sourceTree = "<group>"; };
 		98B655F018EF2CEA00D33B20 /* PHFComposeBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHFComposeBarView.m; sourceTree = "<group>"; };
 		98B655F118EF2CEA00D33B20 /* PHFComposeBarView_Button.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHFComposeBarView_Button.h; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 		09ABC06213A1D52D009C3FCF = {
 			isa = PBXGroup;
 			children = (
+				98095879197EB6320023B656 /* flag.png */,
 				98C6CF0D18EB3CD9008A6AAA /* Images.xcassets */,
 				98C49AB118FED4A10070644C /* download.png */,
 				98C49AAB18FDDE990070644C /* shareIcon.png */,
@@ -270,6 +273,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0510;
+				TargetAttributes = {
+					09ABC06C13A1D52D009C3FCF = {
+						DevelopmentTeam = X5SBJL3778;
+					};
+				};
 			};
 			buildConfigurationList = 09ABC06713A1D52D009C3FCF /* Build configuration list for PBXProject "GiveAndGet" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -304,6 +312,7 @@
 				09ABC07C13A1D52D009C3FCF /* InfoPlist.strings in Resources */,
 				98C6CF0A18EA1B29008A6AAA /* Storyboard.storyboard in Resources */,
 				98C49AB218FED4A10070644C /* download.png in Resources */,
+				9809587A197EB6320023B656 /* flag.png in Resources */,
 				98C49AAF18FDE4100070644C /* iOSskiing.png in Resources */,
 				09144A7313C2997E00388B00 /* Entitlements.plist in Resources */,
 				C4C51B571613CE0800959FDC /* Default.png in Resources */,
@@ -406,7 +415,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Zachary Lucas (6DCMQ8R29T)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -417,7 +426,7 @@
 				GCC_PREFIX_HEADER = "ParseStarterProject/GiveAndGet-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "ParseStarterProject/GiveAndGet-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = GiveAndGet;
 				PROVISIONING_PROFILE = "F0CBC007-C66D-4B1F-AE54-EF5A51A5474B";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -433,7 +442,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Zachary Lucas (6DCMQ8R29T)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -443,7 +452,7 @@
 				GCC_PREFIX_HEADER = "ParseStarterProject/GiveAndGet-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "ParseStarterProject/GiveAndGet-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = GiveAndGet;
 				PROVISIONING_PROFILE = "F0CBC007-C66D-4B1F-AE54-EF5A51A5474B";
 				TARGETED_DEVICE_FAMILY = 1;

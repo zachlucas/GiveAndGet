@@ -38,8 +38,16 @@ NSString *colorToAnimate = @"a2b7e0";
     // Checking if the app has been run before
     NSString *flag = [[NSUserDefaults standardUserDefaults] stringForKey:@"has_been_run"];
     if (!flag) {
+        UIAlertView *secondAlert = [[UIAlertView alloc]initWithTitle: @"One more thing..."
+                                                       message: @"There's no tolerance for objectionable content.  Any G&G user who shares objectionable content will immediately be banned.  If you find objectionable content, tap the flag icon to flag it for immediate deletion."
+                                                      delegate: self
+                                             cancelButtonTitle:@"I agree"
+                                             otherButtonTitles:nil,nil];
+        
+        
+        [secondAlert show];
         UIAlertView *alert = [[UIAlertView alloc]initWithTitle: @"Welcome To G&G!"
-                                                       message: @"It's simple. You send a text or a picture message, and you get a random one in return. No texts or pictures are seen twice, as soon as they are seen they are removed from the almighty cloud! Enjoy ^_^"
+                                                       message: @"It's simple. You send a text or a picture message, and you get a random one in return. No texts or pictures are seen twice, as soon as they are seen they are removed from the almighty cloud! Be nice, and enjoy ^_^"
                                                       delegate: self
                                              cancelButtonTitle:@"Sounds good!"
                                              otherButtonTitles:nil,nil];
