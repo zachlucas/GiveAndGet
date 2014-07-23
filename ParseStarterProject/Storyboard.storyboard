@@ -466,9 +466,13 @@
                                     <action selector="goBackToText:" destination="juf-tN-yrL" eventType="touchUpInside" id="fn4-Ji-em2"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u95-4h-kCH">
-                                <rect key="frame" x="143" y="414" width="34" height="65"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u95-4h-kCH">
+                                <rect key="frame" x="146" y="424" width="28" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="Mow-KN-o2b"/>
+                                    <constraint firstAttribute="width" constant="28" id="t7g-NW-xKZ"/>
+                                </constraints>
                                 <state key="normal" title="Button" image="flag.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -481,6 +485,7 @@
                         <constraints>
                             <constraint firstItem="2dk-Ob-08b" firstAttribute="leading" secondItem="zF1-xn-XGM" secondAttribute="leading" constant="272" id="0Zq-4p-7RK"/>
                             <constraint firstAttribute="bottom" secondItem="65L-PM-MQC" secondAttribute="bottom" constant="-6" id="6AO-2R-oC9"/>
+                            <constraint firstItem="u95-4h-kCH" firstAttribute="leading" secondItem="zF1-xn-XGM" secondAttribute="leading" constant="146" id="BLW-1I-D5G"/>
                             <constraint firstItem="Waw-zU-ojy" firstAttribute="top" secondItem="YRR-TR-gcT" secondAttribute="bottom" constant="7" id="C2A-pw-vBO"/>
                             <constraint firstItem="YRR-TR-gcT" firstAttribute="leading" secondItem="omg-Ot-jXx" secondAttribute="trailing" constant="-1" id="OC4-MZ-H2Y"/>
                             <constraint firstItem="ncz-Nb-K6l" firstAttribute="leading" secondItem="zF1-xn-XGM" secondAttribute="leading" constant="7" id="UVD-kc-2dW"/>
@@ -488,6 +493,7 @@
                             <constraint firstItem="Waw-zU-ojy" firstAttribute="top" secondItem="2dk-Ob-08b" secondAttribute="bottom" constant="10" id="aXm-u8-Bfx"/>
                             <constraint firstItem="Waw-zU-ojy" firstAttribute="top" secondItem="omg-Ot-jXx" secondAttribute="bottom" constant="7" id="j7i-YN-Wkz"/>
                             <constraint firstItem="65L-PM-MQC" firstAttribute="leading" secondItem="zF1-xn-XGM" secondAttribute="leading" constant="295" id="ojX-Lc-CbJ"/>
+                            <constraint firstItem="Waw-zU-ojy" firstAttribute="top" secondItem="u95-4h-kCH" secondAttribute="bottom" constant="7" id="rep-yE-Igz"/>
                             <constraint firstItem="Waw-zU-ojy" firstAttribute="top" secondItem="ncz-Nb-K6l" secondAttribute="bottom" constant="10" id="t6J-hf-yMG"/>
                         </constraints>
                     </view>

@@ -10,7 +10,7 @@
 #import <MobileCoreServices/UTCoreTypes.h>
 #import <QuartzCore/QuartzCore.h>
 
-@interface GetPictureController ()
+@interface GetPictureController () <UIAlertViewDelegate>
 
 @end
 
@@ -38,7 +38,7 @@ NSString *postalCodeToSendPic = @"";
 
     //_doneButton.layer.cornerRadius = 5.0;
     
-    self.picProgressBar.hidden = true;
+    //self.picProgressBar.hidden = true;
     isFullScreen = FALSE;
     // method exists...??
     tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imgToFullScreen)];
@@ -340,8 +340,8 @@ NSString *postalCodeToSendPic = @"";
                                     
                                 }
                             }progressBlock:^(int percentDone) {
-                                self.picProgressBar.hidden = false;
-                                self.picProgressBar.progress = percentDone;
+                                //self.picProgressBar.hidden = false;
+                                //self.picProgressBar.progress = percentDone;
                                 NSLog(@"ok percent done: %d",percentDone);
                             }];
                         }
@@ -371,7 +371,7 @@ NSString *postalCodeToSendPic = @"";
 
 -(void)imgToFullScreen:(UITapGestureRecognizer*)sender {
     if (isPicThere){
-        self.picProgressBar.hidden = true;
+        //self.picProgressBar.hidden = true;
         if (!isFullScreen) {
             [UIView animateWithDuration:0.5 delay:0 options:0 animations:^{
                 //save previous frame
@@ -471,7 +471,29 @@ NSString *postalCodeToSendPic = @"";
     [alert show];
 }
 - (IBAction)flagButtonClicked:(id)sender {
-    NSLog(@"flag clicked");
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle: @"Flag User"
+                                                   message: @"Are you sure that you want to flag this content as inappropriate?"
+                                                  delegate: self
+                                         cancelButtonTitle:@"No"
+                                         otherButtonTitles:@"Yes",nil];
+    
+    [alert show];
+    
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    NSString *title = [alertView buttonTitleAtIndex:buttonIndex];
+    
+    if([title isEqualToString:@"Yes"])
+    {
+        NSLog(@"Button 1 was selected.");
+    }
+    else if([title isEqualToString:@"No"])
+    {
+        NSLog(@"Button 2 was selected.");
+    }
+
 }
 -(UIColor*)colorWithHexString:(NSString*)hex
 {
