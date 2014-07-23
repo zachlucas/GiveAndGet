@@ -470,6 +470,9 @@ NSString *postalCodeToSendPic = @"";
     
     [alert show];
 }
+- (IBAction)flagButtonClicked:(id)sender {
+    NSLog(@"flag clicked");
+}
 -(UIColor*)colorWithHexString:(NSString*)hex
 {
     NSString *cString = [[hex stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] uppercaseString];
