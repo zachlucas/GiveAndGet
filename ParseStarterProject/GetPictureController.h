@@ -34,5 +34,5 @@
 
 @property (strong, nonatomic) IBOutlet UIButton *otherGetPicButton;
 @property (strong, nonatomic) IBOutlet UIButton *flagButton;
-
+@property (strong, nonatomic) NSString* userIDFromPic;
 @end

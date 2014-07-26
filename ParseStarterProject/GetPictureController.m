@@ -37,7 +37,7 @@ NSString *postalCodeToSendPic = @"";
     // Do any additional setup after loading the view.
 
     //_doneButton.layer.cornerRadius = 5.0;
-    
+    _userIDFromPic = @"";
     //self.picProgressBar.hidden = true;
     isFullScreen = FALSE;
     // method exists...??
@@ -243,6 +243,18 @@ NSString *postalCodeToSendPic = @"";
             userPhoto[@"name"] = _usernameToSendWithPic;
         }
         
+        // Current User:
+        PFUser *currentUser = [PFUser currentUser];
+        if (currentUser) {
+            // do stuff with the user
+            NSLog(@"user is active");
+            userPhoto[@"userID"] = currentUser.objectId;
+        } else {
+            NSLog(@"no user signed in");
+            userPhoto[@"userID"] = @"noID";
+            // show the signup or login screen
+        }
+        
         // Setting the other attributes:
         userPhoto[@"imageFile"] = imageFile;
         userPhoto[@"seen"] = @"no";
@@ -302,7 +314,8 @@ NSString *postalCodeToSendPic = @"";
                                     // Lets forget about that we were drawing
                                     UIGraphicsEndImageContext();
                                     
-                                    
+                                    // user that sent the photo:
+                                    _userIDFromPic = [textdu objectForKey:@"userID"];
                                     
                                     //_imageView.image = image;
                                     isPicThere = YES;
@@ -487,7 +500,8 @@ NSString *postalCodeToSendPic = @"";
     
     if([title isEqualToString:@"Yes"])
     {
-        NSLog(@"Button 1 was selected.");
+        NSLog(@"Yes was selected.");
+        NSLog(@"user id to ban: %@", _userIDFromPic);
     }
     else if([title isEqualToString:@"No"])
     {
