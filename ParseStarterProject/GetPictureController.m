@@ -501,7 +501,12 @@ NSString *postalCodeToSendPic = @"";
     if([title isEqualToString:@"Yes"])
     {
         NSLog(@"Yes was selected.");
-        NSLog(@"user id to ban: %@", _userIDFromPic);
+        
+        PFUser* userToDelete = [PFQuery getUserObjectWithId:_userIDFromPic];
+        NSLog(@"user to flag: %@",userToDelete.username);
+        // Mods will delete users that are flagged:
+        userToDelete[@"flagged"] = @"flagged";
+        [userToDelete saveInBackground];
     }
     else if([title isEqualToString:@"No"])
     {

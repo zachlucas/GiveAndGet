@@ -7,11 +7,11 @@ cCompileC build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-
 cCompileC build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/x86_64/PHFDelegateChain.o /Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/PHFComposer/PHFDelegateChain/PHFDelegateChain.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/x86_64/main.o /Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/main.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/x86_64/PHFComposeBarView_TextView.o /Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/PHFComposer/PHFComposeBarView_TextView.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/x86_64/GetPictureController.o /Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/GetPictureController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/x86_64/ParseStarterProjectAppDelegate.o /Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/ParseStarterProjectAppDelegate.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/x86_64/ParseStarterProjectViewController.o /Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/ParseStarterProjectViewController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/x86_64/PHFComposeBarView.o /Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/PHFComposer/PHFComposeBarView.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/x86_64/ComposerViewController.o /Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/ComposerViewController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/x86_64/ParseStarterProjectViewController.o /Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/ParseStarterProjectViewController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/x86_64/GetPictureController.o /Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/GetPictureController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cLd /Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/GiveAndGet normal x86_64
 cCpResource shareIcon.png build/Debug-iphonesimulator/GiveAndGet.app/shareIcon.png
 cCpResource locationIconReceived.png build/Debug-iphonesimulator/GiveAndGet.app/locationIconReceived.png
@@ -476,9 +476,9 @@ t1406391642
 s1444
 
 N/Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/GetPictureController.m
-c0000000053D3D5F00000000000005914
-t1406391792
-s22804
+c0000000053D3DCBD0000000000005B2C
+t1406393533
+s23340
 
 N/Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/GiveAndGet-Info.plist
 c0000000053D3CCC8000000000000044A
@@ -581,11 +581,11 @@ t1398212695
 s309919
 
 N/Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app
-t1406391794
+t1406393535
 s1054
 
 N/Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app.dSYM
-t1406391234
+t1406393081
 s102
 
 N/Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/Camera@2x.png
@@ -613,8 +613,8 @@ t1396400998
 s62
 
 N/Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/GiveAndGet
-t1406391794
-s2522128
+t1406393535
+s2526224
 
 N/Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/Icon.png
 t1396400988
@@ -734,8 +734,8 @@ t1406390996
 s74420
 
 N/Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/x86_64/GetPictureController.o
-t1406391793
-s168584
+t1406393534
+s169448
 
 N/Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/x86_64/GiveAndGet.LinkFileList
 c0000000053D3D2D30000000000000552
@@ -852,6 +852,11 @@ N/usr/lib/system/libcorecrypto.dylib
 c000000005269C22100000000000BD920
 t1382662689
 s776480
+
+N/usr/lib/system/libdyld.dylib
+c00000000537D48FD00000000000141F0
+t1400719613
+s82416
 
 N/usr/lib/system/libkeymgr.dylib
 c000000005269C223000000000000A120
@@ -999,7 +1004,7 @@ r0
 
 CCheck dependencies
 r0
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies585696710d84b941^b8ce97710d84b941^---0#1#1#--18"Check dependencies36"EE1B9259-6A4B-4A6C-AD9B-1ECC3A69876C-
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies6d8e9f3e1484b941^7fa0a03e1484b941^---0#1#1#--18"Check dependencies36"6353827C-BC0B-450B-8814-074E43EA183B-
 
 CCompileAssetCatalog /Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app /Users/gohome190/Documents/Code/GiveAndGet/GiveAndGet/Images.xcassets
 s428083801.232263
@@ -1299,8 +1304,8 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection95"Compile
 bC3D54864-8361-4AFE-8ADA-4684BFFFB545
 
 CCompileC build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/x86_64/GetPictureController.o /Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/GetPictureController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s428084593.597836
-e428084593.942288
+s428086334.633714
+e428086334.942629
 r1
 xCompileC
 xbuild/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/x86_64/GetPictureController.o
@@ -1347,8 +1352,8 @@ o/Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/GetPictureContro
 o        locationManager.delegate = self;
 o                                 ^ ~~~~
 o2 warnings generated.
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection93"Compile /Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/GetPictureController.m228"CompileC build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/x86_64/GetPictureController.o ParseStarterProject/GetPictureController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler842a99710d84b941^465ff1710d84b941^-646"/Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/GetPictureController.m:44:71: warning: undeclared selector 'imgToFullScreen' [-Wundeclared-selector]    tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imgToFullScreen)];                                                                      ^/Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/GetPictureController.m:72:34: warning: assigning to 'id<CLLocationManagerDelegate>' from incompatible type 'GetPictureController *const __strong'        locationManager.delegate = self;                                 ^ ~~~~2 warnings generated.2(36%IDEClangDiagnosticActivityLogMessage2@37"Undeclared selector 'imgToFullScreen'-428084593#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@92"file:///Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/GetPictureController.m0000000000000000^43#70#43#70#1028#0#14"Semantic Issue--2@106"Assigning to 'id<CLLocationManagerDelegate>' from incompatible type 'GetPictureController *const __strong'-428084593#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@92"file:///Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/GetPictureController.m0000000000000000^71#33#71#33#2187#0#14"Semantic Issue1(3@92"file:///Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/GetPictureController.m0000000000000000^71#35#71#39#2189#0#-0#0#1#-19%DVTDocumentLocation4@92"file:///Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/GetPictureController.m0000000000000000^3616"CompileC build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/x86_64/GetPictureController.o ParseStarterProject/GetPictureController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/gohome190/Documents/Code/GiveAndGet    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/GiveAndGet-generated-files.hmap -I/Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/GiveAndGet-own-target-headers.hmap -I/Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/GiveAndGet-all-target-headers.hmap -iquote /Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/GiveAndGet-project-headers.hmap -I/Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/DerivedSources/x86_64 -I/Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/DerivedSources -F/Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator -F/Users/gohome190/Documents/Code/GiveAndGet -include /var/folders/h7/m5985s451mgf9_cflndjn1kr0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/GiveAndGet-Prefix-hfscjzxyvtrufhcwcgnajjdrslel/GiveAndGet-Prefix.pch -MMD -MT dependencies -MF /Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/x86_64/GetPictureController.d --serialize-diagnostics /Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/x86_64/GetPictureController.dia -c /Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/GetPictureController.m -o /Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/x86_64/GetPictureController.o36"5AA69B15-41D5-4906-A4E4-30E94F41A4AE-
-b97E06ED5-175E-4C94-B6A6-F4B4D3930924
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection93"Compile /Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/GetPictureController.m228"CompileC build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/x86_64/GetPictureController.o ParseStarterProject/GetPictureController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler0859a23e1484b941^904ef13e1484b941^-646"/Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/GetPictureController.m:44:71: warning: undeclared selector 'imgToFullScreen' [-Wundeclared-selector]    tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imgToFullScreen)];                                                                      ^/Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/GetPictureController.m:72:34: warning: assigning to 'id<CLLocationManagerDelegate>' from incompatible type 'GetPictureController *const __strong'        locationManager.delegate = self;                                 ^ ~~~~2 warnings generated.2(36%IDEClangDiagnosticActivityLogMessage2@37"Undeclared selector 'imgToFullScreen'-428086334#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@92"file:///Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/GetPictureController.m0000000000000000^43#70#43#70#1028#0#14"Semantic Issue--2@106"Assigning to 'id<CLLocationManagerDelegate>' from incompatible type 'GetPictureController *const __strong'-428086334#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@92"file:///Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/GetPictureController.m0000000000000000^71#33#71#33#2187#0#14"Semantic Issue1(3@92"file:///Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/GetPictureController.m0000000000000000^71#35#71#39#2189#0#-0#0#1#-19%DVTDocumentLocation4@92"file:///Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/GetPictureController.m0000000000000000^3616"CompileC build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/x86_64/GetPictureController.o ParseStarterProject/GetPictureController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/gohome190/Documents/Code/GiveAndGet    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/GiveAndGet-generated-files.hmap -I/Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/GiveAndGet-own-target-headers.hmap -I/Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/GiveAndGet-all-target-headers.hmap -iquote /Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/GiveAndGet-project-headers.hmap -I/Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/DerivedSources/x86_64 -I/Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/DerivedSources -F/Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator -F/Users/gohome190/Documents/Code/GiveAndGet -include /var/folders/h7/m5985s451mgf9_cflndjn1kr0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/GiveAndGet-Prefix-hfscjzxyvtrufhcwcgnajjdrslel/GiveAndGet-Prefix.pch -MMD -MT dependencies -MF /Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/x86_64/GetPictureController.d --serialize-diagnostics /Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/x86_64/GetPictureController.dia -c /Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/GetPictureController.m -o /Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/x86_64/GetPictureController.o36"90333711-23EB-45ED-AD91-23C54A77D469-
+bABB2CEC3-2E14-409C-97B3-756B47D94D35
 
 CCompileC build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/x86_64/PHFComposeBarView.o /Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/PHFComposer/PHFComposeBarView.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s428083796.639234
@@ -1775,14 +1780,14 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection61"Copy bu
 b640059FC-FF39-464B-9960-888653D2D4D5
 
 CGenerateDSYMFile /Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app.dSYM /Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/GiveAndGet
-s428084594.103242
-e428084594.459259
+s428086335.231941
+e428086335.508861
 r1
 xGenerateDSYMFile
 x/Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app.dSYM
 x/Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/GiveAndGet
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection99"Generate /Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app.dSYM118"GenerateDSYMFile build/Debug-iphonesimulator/GiveAndGet.app.dSYM build/Debug-iphonesimulator/GiveAndGet.app/GiveAndGetc37f1a720d84b941^b7d475720d84b941^---0#0#1#-19%DVTDocumentLocation2@98"file:///Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app.dSYM/0000000000000000^655"GenerateDSYMFile build/Debug-iphonesimulator/GiveAndGet.app.dSYM build/Debug-iphonesimulator/GiveAndGet.app/GiveAndGet    cd /Users/gohome190/Documents/Code/GiveAndGet    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/GiveAndGet -o /Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app.dSYM36"BFCADE7A-C8D2-4906-8B0D-679AADCED8C2-
-b97E06ED5-175E-4C94-B6A6-F4B4D3930924
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection99"Generate /Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app.dSYM118"GenerateDSYMFile build/Debug-iphonesimulator/GiveAndGet.app.dSYM build/Debug-iphonesimulator/GiveAndGet.app/GiveAndGet53793b3f1484b941^a3e9843f1484b941^---0#0#1#-19%DVTDocumentLocation2@98"file:///Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app.dSYM/0000000000000000^655"GenerateDSYMFile build/Debug-iphonesimulator/GiveAndGet.app.dSYM build/Debug-iphonesimulator/GiveAndGet.app/GiveAndGet    cd /Users/gohome190/Documents/Code/GiveAndGet    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/GiveAndGet -o /Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app.dSYM36"238D7A23-5865-465C-89FF-89DB3CEA1C3A-
+bABB2CEC3-2E14-409C-97B3-756B47D94D35
 
 CLd /Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/GiveAndGet normal i386
 s426739019.040284
@@ -1875,8 +1880,8 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection101"Link /
 bB0ADD161-B147-4F48-897F-22865313EEA3
 
 CLd /Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/GiveAndGet normal x86_64
-s428084593.945828
-e428084594.098738
+s428086334.946571
+e428086335.184491
 r1
 xLd
 x/Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/GiveAndGet
@@ -1912,6 +1917,7 @@ d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/D
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libSystem.dylib
 d/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.1/lib/darwin/libclang_rt.ios.a
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/PrivateFrameworks/UIFoundation.framework/UIFoundation
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_override.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libcache_sim.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libcommonCrypto_sim.dylib
@@ -1934,7 +1940,6 @@ d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/D
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_configuration.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_asl.dylib
 d/usr/lib/libSystem.B.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/host/libdyld.dylib
 d/usr/lib/system/libcache.dylib
 d/usr/lib/system/libcommonCrypto.dylib
@@ -1962,8 +1967,8 @@ d/usr/lib/system/libsystem_sandbox.dylib
 d/usr/lib/system/libsystem_stats.dylib
 d/usr/lib/system/libunc.dylib
 d/usr/lib/system/libunwind.dylib
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection101"Link /Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/GiveAndGet70"Ld build/Debug-iphonesimulator/GiveAndGet.app/GiveAndGet normal x86_64e739f2710d84b941^414919720d84b941^---0#0#1#--1690"Ld build/Debug-iphonesimulator/GiveAndGet.app/GiveAndGet normal x86_64    cd /Users/gohome190/Documents/Code/GiveAndGet    export IPHONEOS_DEPLOYMENT_TARGET=7.0    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -L/Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator -F/Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator -F/Users/gohome190/Documents/Code/GiveAndGet -filelist /Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/x86_64/GiveAndGet.LinkFileList -Xlinker -objc_abi_version -Xlinker 2 -fobjc-arc -fobjc-link-runtime -Xlinker -no_implicit_dylibs -mios-simulator-version-min=7.0 -framework Accounts -framework Twitter -framework CoreLocation -framework StoreKit -framework CoreGraphics -framework QuartzCore -lz.1.1.3 -framework Security -framework AudioToolbox -framework MobileCoreServices -framework SystemConfiguration -framework CFNetwork -framework UIKit -framework Foundation -framework Parse -Xlinker -dependency_info -Xlinker /Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/x86_64/GiveAndGet_dependency_info.dat -o /Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/GiveAndGet36"6A91EFAD-E91C-4D22-835F-1FFC848A22C0-
-b97E06ED5-175E-4C94-B6A6-F4B4D3930924
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection101"Link /Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/GiveAndGet70"Ld build/Debug-iphonesimulator/GiveAndGet.app/GiveAndGet normal x86_64826ff23e1484b941^444e2f3f1484b941^---0#0#1#--1690"Ld build/Debug-iphonesimulator/GiveAndGet.app/GiveAndGet normal x86_64    cd /Users/gohome190/Documents/Code/GiveAndGet    export IPHONEOS_DEPLOYMENT_TARGET=7.0    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -L/Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator -F/Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator -F/Users/gohome190/Documents/Code/GiveAndGet -filelist /Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/x86_64/GiveAndGet.LinkFileList -Xlinker -objc_abi_version -Xlinker 2 -fobjc-arc -fobjc-link-runtime -Xlinker -no_implicit_dylibs -mios-simulator-version-min=7.0 -framework Accounts -framework Twitter -framework CoreLocation -framework StoreKit -framework CoreGraphics -framework QuartzCore -lz.1.1.3 -framework Security -framework AudioToolbox -framework MobileCoreServices -framework SystemConfiguration -framework CFNetwork -framework UIKit -framework Foundation -framework Parse -Xlinker -dependency_info -Xlinker /Users/gohome190/Documents/Code/GiveAndGet/build/GiveAndGet.build/Debug-iphonesimulator/GiveAndGet.build/Objects-normal/x86_64/GiveAndGet_dependency_info.dat -o /Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/GiveAndGet36"992AFF45-6C0D-4868-B753-ADFEF96115BD-
+bABB2CEC3-2E14-409C-97B3-756B47D94D35
 
 CProcessInfoPlistFile /Users/gohome190/Documents/Code/GiveAndGet/build/Debug-iphonesimulator/GiveAndGet.app/Info.plist /Users/gohome190/Documents/Code/GiveAndGet/ParseStarterProject/GiveAndGet-Info.plist
 s428083827.342761
